@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
-    <link rel="preconnect" href="https://res.cloudinary.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     {% if carousels %}
-      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"/>
-      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"
+    />
     {% endif %}
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
   </head>
   <body>
     <!-- TODO Have the full menu structure as a JSON file -->
+    <div
+      style="display: none"
+      data-page-type="{{ pageType }}"
+      id="page-type"
+    ></div>
     <nav>
       <div class="mobile">
-        <input type="checkbox" id="menu"/>
+        <input type="checkbox" id="menu" />
         <div class="navbar">
-          <a href="/"><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"/></a>
+          <a href="/"
+            ><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"
+          /></a>
           <label for="menu" id="ham-icon-wrapper">
             <div id="ham-icon"></div>
           </label>
         </div>
         <div class="multi-level" id="ml1">
           <div class="item">
-            <input type="checkbox" id="ml1-A"/>
+            <input type="checkbox" id="ml1-A" />
             <div class="label-plus">
               <a href="/page-no-hero">Page No Hero</a>
               <label for="ml1-A">
@@ -50,8 +66,9 @@
             </ul>
           </div>
           <div class="item">
-            <input type="checkbox" id="ml1-B"/>
-            <label for="ml1-B">Get Involved<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml1-B" />
+            <label for="ml1-B"
+              >Get Involved<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
@@ -81,8 +98,9 @@
             </div>
           </div>
           <div class="item">
-            <input type="checkbox" id="ml2-A"/>
-            <label for="ml2-A">projects & campaigns<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml2-A" />
+            <label for="ml2-A"
+              >projects & campaigns<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
@@ -94,13 +112,14 @@
             </ul>
           </div>
           <div class="item">
-            <input type="checkbox" id="ml2-B"/>
-            <label for="ml2-B">history & lessons learnt<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml2-B" />
+            <label for="ml2-B"
+              >history & lessons learnt<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
                 <div class="sub-item">
-                  <input type="checkbox" id="ml1-D-A"/>
+                  <input type="checkbox" id="ml1-D-A" />
                   <label for="ml1-D-A">History</label>
                   <ul>
                     <li>
@@ -127,13 +146,14 @@
             </ul>
           </div>
           <div class="item">
-            <input type="checkbox" id="ml2-C"/>
-            <label for="ml2-C">reports & resources<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml2-C" />
+            <label for="ml2-C"
+              >reports & resources<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
                 <div class="sub-item">
-                  <input type="checkbox" id="ml1-D-A"/>
+                  <input type="checkbox" id="ml1-D-A" />
                   <label for="ml1-D-A">Reports</label>
                   <ul>
                     <li>
@@ -183,7 +203,9 @@
       </div>
       <div class="desk">
         <div class="navbar">
-          <a href="/"><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"/></a>
+          <a href="/"
+            ><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"
+          /></a>
           <div class="menu-groups">
             <div class="multi-level" id="ml1">
               <div class="item">
@@ -194,13 +216,15 @@
                       <a href="/page-hero">Page Hero</a>
                     </li>
                     <li>
-                      <a href="/page-hero-carousel">Page Hero Carousel</a >
+                      <a href="/page-hero-carousel">Page Hero Carousel</a>
                     </li>
                     <li>
                       <a href="/page-pullquote">Page Pullquote</a>
                     </li>
                     <li>
-                      <a href="/page-no-hero/#scrool">Page Anchor Smooth Scroll</a >
+                      <a href="/page-no-hero/#scrool"
+                        >Page Anchor Smooth Scroll</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -382,7 +406,8 @@
 
     <footer>
       <div class="tagline">
-        India's first modern Gurukul, Nrityagram is a one-of-a-kind community where dance is way of life
+        India's first modern Gurukul, Nrityagram is a one-of-a-kind community
+        where dance is way of life
       </div>
       <div class="contact-info">
         <p>
@@ -411,16 +436,21 @@
           |
           <a href="#">Site Credits</a>
         </p>
-        <p>©
-          {% year %}
-          Nrityagram | All Rights Reserved</p>
-        <br/>
+        <p>© {% year %} Nrityagram | All Rights Reserved</p>
+        <br />
         <p class="light-text">Registration number 121232992897EF</p>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     {% if carousels %}
-      <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script>
+    <script
+      src="{{ '/utils/owl.carousel.min.js' | url }}"
+      defer="defer"
+    ></script>
     {% endif %}
     <script>
       var logoImgMob = document.getElementsByClassName("logo")[0];
@@ -434,17 +464,30 @@
       var contentElem = document.getElementsByClassName("content")[0];
       var heroImage = document.getElementsByClassName("hero-image")[0];
       var heroSlider = document.getElementsByClassName("hero-slider")[0];
-      var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
-
+      var vanillaSlideshow = document.getElementById(
+        "vanilla-slideshow-container"
+      );
+      var pageType = document.getElementById("page-type").dataset.pageType;
       // Global variables
-      const navbar_bg_color_solid = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%)";
-      const navbar_bg_color_trans = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)";
+      const navbar_bg_color_solid =
+        "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%)";
+      var navbar_bg_color_trans =
+        "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)";
       const navbar_height = "100px";
       const navbar_height_onscroll = "60px";
       const navbar_desk_height = "140px";
       const navbar_desk_height_onscroll = "110px";
 
-      window.scroll({behavior: "smooth"});
+      window.scroll({ behavior: "smooth" });
+
+      window.addEventListener("load", (event) => {
+        if (pageType == "home") {
+          navbar_bg_color_trans =
+            "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)";
+          navBarDeskElem.style.background = navbar_bg_color_trans;
+          navBarMobElem.style.background = navbar_bg_color_trans;
+        }
+      });
 
       window.addEventListener("scroll", () => {
         let fromTop = window.scrollY;
@@ -486,9 +529,7 @@
           logoImgMob.style.height = "40px";
           logoImgDesk.style.height = "110px";
           navBarMobElem.style.height = navbar_height_onscroll;
-          hamIcon
-            .classList
-            .toggle("ham-open");
+          hamIcon.classList.toggle("ham-open");
         } else {
           mobileElem.style.backgroundColor = "transparent";
           mobileElem.style.minHeight = "100%";
@@ -500,9 +541,7 @@
           logoImgMob.style.height = "80px";
           logoImgDesk.style.height = "110px";
           navBarMobElem.style.height = navbar_height;
-          hamIcon
-            .classList
-            .toggle("ham-open");
+          hamIcon.classList.toggle("ham-open");
         }
       });
 
@@ -525,26 +564,25 @@
     </script>
 
     {% if carousels %}
-      <script src="{{ '/utils/owl_custom.js' | url }}"></script>
-    {% endif %}
-    {% if heroType == "slider" %}
-      <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
-      <script>
-        vanillaSlideshow.init({
-          // auto slideshow, options: true or false
-          slideshow: true,
-          // slideshow delay
-          delay: 3000,
-          // display arrows, options: true or false
-          arrows: true,
-          // display indicators, options: true or false
-          indicators: false,
-          // start slideshow randomly, options: true or false
-          random: false,
-          // animation speed
-          animationSpeed: "1.75s"
-        });
-      </script>
+    <script src="{{ '/utils/owl_custom.js' | url }}"></script>
+    {% endif %} {% if heroType == "slider" %}
+    <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
+    <script>
+      vanillaSlideshow.init({
+        // auto slideshow, options: true or false
+        slideshow: true,
+        // slideshow delay
+        delay: 3000,
+        // display arrows, options: true or false
+        arrows: true,
+        // display indicators, options: true or false
+        indicators: false,
+        // start slideshow randomly, options: true or false
+        random: false,
+        // animation speed
+        animationSpeed: "1.75s",
+      });
+    </script>
     {% endif %}
   </body>
 </html>
