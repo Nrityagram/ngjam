@@ -14,10 +14,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2em;
+  padding: 0 1.5em;
+  margin: 0;
   background-color: var(--navbar-bg-color);
   transition: all 0.5s;
   z-index: var(--navbar-z-index);
+  .logo {
+    height: 110px;
+  }
 }
 
 .desk .navbar.trans {
@@ -39,6 +43,7 @@
 
       a {
         text-decoration: none;
+        text-transform: uppercase;
         color: var(--navbar-item-color);
         font-size: 14px;
         &:hover {
@@ -184,7 +189,7 @@
     color: sngma-color("primary");
   }
 
-  justify-content: flex-start;
+  justify-content: flex-end;
 
   // setting margin-left to auto makes the button-bar align right
   .button-bar {
