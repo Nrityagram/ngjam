@@ -1,0 +1,47 @@
+---
+layout: base.njk
+heroType: "image"
+---
+
+{% if heroDesk %}
+<div
+  class="hero-image"
+  data-hero-image-desk="{{ heroDesk }}"
+  data-hero-image-tablet="{{ heroTab }}"
+  data-hero-image-mobile="{{ heroMob }}"
+  alt="hero image description"
+>
+  <div class="hero-text">{{ heroText }}</div>
+  <div
+    class="hero-credit"
+    data-hero-credit-desk="{{ heroDeskCredit }}"
+    data-hero-credit-tablet="{{ heroTabCredit }}"
+    data-hero-credit-mobile="{{ heroMobCredit }}"
+  ></div>
+</div>
+{% endif %}
+
+<main>
+  {{ content | safe }}
+</main>
+
+{% if heroText %}
+<script>
+  gsap.to(".hero-text", { duration: 2, y: 30 });
+</script>
+{% endif %}
+
+<script>
+  var heroImage = document.getElementsByClassName("hero-image")[0];
+  var heroCredit = document.getElementsByClassName("hero-credit")[0];
+  if (window.innerWidth > 1199) {
+    heroImage.style.backgroundImage = heroImage.dataset.heroImageDesk;
+    heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditDesk;
+  } else if (window.innerWidth > 599) {
+    heroImage.style.backgroundImage = heroImage.dataset.heroImageTablet;
+    heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditTablet;
+  } else {
+    heroImage.style.backgroundImage = heroImage.dataset.heroImageMobile;
+    heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditMobile;
+  }
+</script>

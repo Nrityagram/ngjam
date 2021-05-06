@@ -1,0 +1,58 @@
+---
+layout: base.njk
+hero: "slider"
+---
+
+{% if heroImage %}
+<div class="hero-image" style="background-image: {{ heroImage }}">
+  <div class="hero-text">Home</div>
+</div>
+{% else %}
+<div class="hero-image pattern">
+  <div class="hero-text">Home</div>
+  <div class="hero-item round" id="img-1">
+    <img
+      src="https://res.cloudinary.com/achanda/image/upload/v1616745229/playshed/drink-2.svg"
+      alt="cocktail 1"
+    />
+    <div class="hero-item-hover">
+      <img
+        src="https://res.cloudinary.com/achanda/image/upload/v1616747874/playshed/drink-2-hover.svg"
+        alt="cocktail 2 on hover"
+      />
+    </div>
+  </div>
+  <div class="hero-item" id="img-2">
+    <img
+      src="https://res.cloudinary.com/achanda/image/upload/v1616747874/playshed/drink-1.svg"
+      alt="cocktail 2"
+    />
+    <div class="hero-item-hover">
+      <img
+        src="https://res.cloudinary.com/achanda/image/upload/v1616747875/playshed/drink-1-hover.svg"
+        alt="cocktail 2 on hover"
+      />
+    </div>
+  </div>
+  <div class="hero-item round" id="img-3">
+    <img
+      src="https://res.cloudinary.com/achanda/image/upload/v1616747874/playshed/drink-3.svg"
+      alt="cocktail 3"
+    />
+    <div class="hero-item-hover">
+      <img
+        src="https://res.cloudinary.com/achanda/image/upload/v1616747874/playshed/drink-3-hover.svg"
+        alt="cocktail 3 on hover"
+      />
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<main>
+  {{ content | safe }}
+</main>
+
+<script>
+  gsap.to(".hero-text", { duration: 2, y: 100 });
+</script>

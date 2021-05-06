@@ -1,0 +1,73 @@
+<div id="vanilla-slideshow">
+  {% for slide in heroSlider %}
+  <div class="vanilla-slide">
+    <picture>
+      <source srcset="{{ slide[0] }}" media="(min-width: 1000px)" />
+      <source srcset="{{ slide[1] }}" media="(min-width: 600px)" />
+      <img src="{{ slide[2] }}" alt="slides" height="auto" />
+    </picture>
+    <div class="home-credit">Credit: Raghuram Rajan Challapati</div>
+  </div>
+  {% endfor %}
+</div>
+
+<div id="vanilla-slideshow">
+  <div class="vanilla-slide">
+    <picture>
+      <source
+        srcset="
+          https://res.cloudinary.com/nrityagram/image/upload/v1580617696/dance-professionals-desk_q1mnsc.jpg
+        "
+        media="(min-width: 1000px)"
+      />
+      <source
+        srcset="
+          https://res.cloudinary.com/nrityagram/image/upload/v1589039867/ipad/dance-professionals_kximrn.jpg
+        "
+        media="(min-width: 600px)"
+      />
+      <img
+        src="https://res.cloudinary.com/nrityagram/image/upload/v1580617695/mobile/dance-professionals-mob_jwkl0j.jpg"
+        alt="slide 2"
+        height="auto"
+      />
+    </picture>
+    <div class="home-credit">Credit: Raghuram Rajan Challapati</div>
+  </div>
+
+  <div class="vanilla-slide">
+    <picture>
+      <source
+        srcset="
+          https://res.cloudinary.com/nrityagram/image/upload/v1595320104/space_desk_pf6xpx.jpg
+        "
+        media="(min-width: 1000px)"
+      />
+      <source
+        srcset="
+          https://res.cloudinary.com/nrityagram/image/upload/v1589047081/ipad/space_yvvwsu.jpg
+        "
+        media="(min-width: 600px)"
+      />
+      <img
+        src="https://res.cloudinary.com/nrityagram/image/upload/v1576171495/mobile/space_eyaqcj.jpg"
+        alt="slide 1"
+        height="auto"
+      />
+    </picture>
+    <div class="home-credit">Credit: Raghuram Rajan Challapati</div>
+  </div>
+</div>
+
+<!-- heroImageSelect: function() {
+    // You can have a JavaScript function here!
+    var heroImg = "";
+    if (window.innerWidth > 599) {
+      heroImg = "url('https://res.cloudinary.com/nrityagram/image/upload/v1589047081/ipad/space_yvvwsu.jpg')";
+    } else if (window.innerWidth > 999) {
+      heroImg = "url('https://res.cloudinary.com/nrityagram/image/upload/v1595320104/space_desk_pf6xpx.jpg')";
+    } else {
+      heroImg = "url('https://res.cloudinary.com/nrityagram/image/upload/v1576171495/mobile/space_eyaqcj.jpg')"
+    }
+    return heroImg;
+  } -->

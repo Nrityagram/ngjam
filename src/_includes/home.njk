@@ -1,0 +1,108 @@
+---
+layout: base.njk
+heroType: "slider"
+---
+
+{% if heroImage %}
+<div class="hero-image" style="background-image: {{ heroImage }}">
+  <div class="hero-text">{{ heroText }}</div>
+  <div class="hero-credit">Credit: Vodkarani Codes</div>
+</div>
+{% endif %} {% if heroSlider %}
+<div id="vanilla-slideshow-container">
+  <div id="vanilla-slideshow">
+    <div class="vanilla-slide">
+      <picture>
+        <source
+          srcset="
+            https://res.cloudinary.com/nrityagram/image/upload/v1580617696/dance-professionals-desk_q1mnsc.jpg
+          "
+          media="(min-width: 1000px)"
+        />
+        <source
+          srcset="
+            https://res.cloudinary.com/nrityagram/image/upload/v1589039867/ipad/dance-professionals_kximrn.jpg
+          "
+          media="(min-width: 600px)"
+        />
+        <img
+          src="https://res.cloudinary.com/nrityagram/image/upload/v1580617695/mobile/dance-professionals-mob_jwkl0j.jpg"
+          alt="slide 2"
+          height="auto"
+        />
+      </picture>
+      <div class="home-credit">Credit: Raghuram Rajan Challapati</div>
+    </div>
+
+    <div class="vanilla-slide">
+      <picture>
+        <source
+          srcset="
+            https://res.cloudinary.com/nrityagram/image/upload/v1595320104/space_desk_pf6xpx.jpg
+          "
+          media="(min-width: 1000px)"
+        />
+        <source
+          srcset="
+            https://res.cloudinary.com/nrityagram/image/upload/v1589047081/ipad/space_yvvwsu.jpg
+          "
+          media="(min-width: 600px)"
+        />
+        <img
+          src="https://res.cloudinary.com/nrityagram/image/upload/v1576171495/mobile/space_eyaqcj.jpg"
+          alt="slide 1"
+          height="auto"
+        />
+      </picture>
+      <div class="home-credit">Credit: Sonia Manchanda</div>
+    </div>
+
+    <div class="vanilla-slide">
+      <picture>
+        <source
+          srcset="
+            https://res.cloudinary.com/nrityagram/image/upload/v1569697662/bijayini_d44uhh.jpg
+          "
+          media="(min-width: 1000px)"
+        />
+        <source
+          srcset="
+            https://res.cloudinary.com/nrityagram/image/upload/v1589036580/ipad/Bijayini-Sathpathy_eqcdcp.jpg
+          "
+          media="(min-width: 600px)"
+        />
+        <img
+          src="https://res.cloudinary.com/nrityagram/image/upload/v1576166191/mobile/Bijayini-Sathpathy_tdfb4l.jpg"
+          alt="slide 1"
+          height="auto"
+        />
+      </picture>
+      <div class="home-credit">Credit: Bijayini Satpathy</div>
+    </div>
+  </div>
+
+  <!-- slideshow arrows -->
+  <div id="vanilla-slideshow-previous">
+    <img src="{{ '/img/left-chevron.svg' | url }}" alt="slider arrow" />
+  </div>
+  <div id="vanilla-slideshow-next">
+    <img src="{{ '/img/right-chevron.svg' | url }}" alt="slider arrow" />
+  </div>
+  <div id="home_tagline">
+    <div class="tagline-text">
+      “These are among the world’s greatest dancers!”
+    </div>
+    <div class="tagline-credit">The New York Times</div>
+  </div>
+</div>
+{% endif %}
+
+<main>
+  {{ content | safe }}
+</main>
+
+{% if heroText %}
+<script>
+  gsap.to(".hero-text", { duration: 2, y: 30 });
+</script>
+{% endif %}

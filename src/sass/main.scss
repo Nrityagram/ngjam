@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+html,
+body {
+  min-height: fit-content;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  font-size: 20px;
+  position: relative;
+  // overflow: hidden;
+}
+
+//  Enable smooth scrolling on the whole document
+html {
+  scroll-behavior: smooth;
+}
+
+// protect image download by blocking mouse events
+img {
+  pointer-events: none;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// Desktop + Tablet
+@media only screen and (min-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@import "variables";
+@import "navbar";
+@import "navbar-desk";
+@import "hero";
+@import "content";
+@import "footer";

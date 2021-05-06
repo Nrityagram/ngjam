@@ -1,0 +1,222 @@
+.content {
+  // max-width: 60%;
+  max-width: 100%;
+  min-height: fit-content;
+  padding: 0.1em 0;
+  margin: 0 auto 1em;
+  // border: 1px solid limegreen;
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+p {
+  max-width: 67%;
+  padding: 0.5em 0;
+  margin: 0 auto;
+  // border: 1px solid limegreen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  max-width: 67%;
+  margin: 0 auto;
+}
+
+// Scroll control offset: make the anchored elements sit below the navbar
+// https://css-tricks.com/hash-tag-links-padding/
+:target::before {
+  display: block;
+  content: " ";
+  margin-top: calc(var(--navbar-desk-height) * -1);
+  height: var(--navbar-desk-height);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+// Mobile & Tablet
+@media only screen and (max-width: 800px) {
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+// Desktop
+@media only screen and (min-width: 800px) {
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+@media only screen and (min-width: 1350px) {
+  img {
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.img-plus {
+  max-width: 60%;
+  margin: 0 auto;
+  position: relative;
+  .img-caption {
+    position: absolute;
+    top: 100.5%;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75em;
+    line-height: 0.95em;
+    padding: 0;
+  }
+  .img-credit {
+    position: absolute;
+    writing-mode: vertical-rl;
+    bottom: 30px;
+    right: 2px;
+    font-size: calc(7px + 0.3vw);
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  }
+  .img-title {
+    max-width: 75%;
+    text-align: right;
+    color: #fff;
+    font-size: 3em;
+    line-height: 1em;
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  .img-subtitle {
+    color: #fff;
+    font-size: 1.75em;
+    position: absolute;
+    top: 52%;
+    right: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.pullquote-layout {
+  max-width: 80%;
+  display: flex;
+  .pullquote {
+    align-self: center;
+    // border: 1px solid cadetblue;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.5em;
+    .quote {
+      text-align: right;
+      font-size: 1.75em;
+    }
+
+    .attribution {
+      text-align: right;
+      font-size: 1em;
+    }
+  }
+  .pullquote-content {
+    // flex-basis: 60%;
+    p {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .img-plus {
+      max-width: 100%;
+    }
+  }
+}
+
+.img-grid {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .img-plus {
+    flex-basis: 47%;
+    margin: 0.25em 0;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+// Mobile + Tablet
+@media only screen and (max-width: 800px) {
+  .content {
+    // max-width: 75%;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    max-width: 75%;
+    margin: 0.3em auto 0.05em;
+  }
+
+  p {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 0.5em 0 0;
+  }
+
+  // Scroll control offset: make the anchored elements sit below the navbar
+  // https://css-tricks.com/hash-tag-links-padding/
+  :target::before {
+    display: block;
+    content: " ";
+    margin-top: calc(var(--navbar-height) * -1);
+    height: var(--navbar-height);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .pullquote-layout {
+    display: flex;
+    flex-direction: column;
+    .pullquote {
+      padding: 0.5em 0;
+      .attribution {
+        font-size: 0.8em;
+        text-align: center;
+      }
+      .quote {
+        font-size: 1.3em;
+        text-align: center;
+      }
+    }
+    .pullquote-content {
+      p {
+        max-width: 75%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .img-plus {
+    max-width: 100%;
+  }
+
+  .img-grid {
+    max-width: 100%;
+    .img-plus {
+      flex-basis: 100%;
+    }
+  }
+}

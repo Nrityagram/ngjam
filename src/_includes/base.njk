@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://res.cloudinary.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    {% if carousels %}
+      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"/>
+      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"/>
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- TODO Have the full menu structure as a JSON file -->
+    <nav>
+      <div class="mobile">
+        <input type="checkbox" id="menu"/>
+        <div class="navbar">
+          <a href="/"><img src="{{ '/img/logo.png' | url }}" alt="" class="logo"/></a>
+          <label for="menu" id="ham-icon-wrapper">
+            <div id="ham-icon"></div>
+          </label>
+        </div>
+        <div class="multi-level" id="ml1">
+          <div class="item">
+            <input type="checkbox" id="ml1-A"/>
+            <div class="label-plus">
+              <a href="/page-no-hero">Page No Hero</a>
+              <label for="ml1-A">
+                <i class="fas fa-chevron-right"></i>
+              </label>
+            </div>
+            <ul>
+              <li>
+                <a href="/page-hero">Page Hero</a>
+              </li>
+              <li>
+                <a href="/page-hero-carousel">Page Hero Carousel</a>
+              </li>
+              <li>
+                <a href="/page-pullquote">Page Pullquote</a>
+              </li>
+              <li>
+                <a href="/page-no-hero/#scrool">Page Anchor Smooth Scroll</a>
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="ml1-B"/>
+            <label for="ml1-B">Get Involved<i class="fas fa-chevron-right"></i>
+            </label>
+            <ul>
+              <li>
+                <a href="#">Volunteers</a>
+              </li>
+              <li>
+                <a href="#">Interns</a>
+              </li>
+              <li>
+                <a href="#">Corporates</a>
+              </li>
+              <li>
+                <a href="#">Work with Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="label-plus">
+              <a href="/contact-us/">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="multi-level" id="ml2">
+          <div class="item">
+            <div class="label-plus">
+              <a href="/">focus areas</a>
+            </div>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="ml2-A"/>
+            <label for="ml2-A">projects & campaigns<i class="fas fa-chevron-right"></i>
+            </label>
+            <ul>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Campaigns</a>
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="ml2-B"/>
+            <label for="ml2-B">history & lessons learnt<i class="fas fa-chevron-right"></i>
+            </label>
+            <ul>
+              <li>
+                <div class="sub-item">
+                  <input type="checkbox" id="ml1-D-A"/>
+                  <label for="ml1-D-A">History</label>
+                  <ul>
+                    <li>
+                      <a href="#">Organisational Milestones</a>
+                    </li>
+                    <li>
+                      <a href="#">Awards & Recognitions</a>
+                    </li>
+                    <li>
+                      <a href="#">Journey of Causes</a>
+                    </li>
+                    <li>
+                      <a href="#">Donor History</a>
+                    </li>
+                    <li>
+                      <a href="#">Alliances & Partnerships</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">Lessons Learnt</a>
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="ml2-C"/>
+            <label for="ml2-C">reports & resources<i class="fas fa-chevron-right"></i>
+            </label>
+            <ul>
+              <li>
+                <div class="sub-item">
+                  <input type="checkbox" id="ml1-D-A"/>
+                  <label for="ml1-D-A">Reports</label>
+                  <ul>
+                    <li>
+                      <a href="#">Project Reports</a>
+                    </li>
+                    <li>
+                      <a href="#">Financial Reports</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">Resources</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="button-bars">
+          <div class="button-bar">
+            <div class="button round">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+            <div class="button round">
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div class="button round">
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+            <div class="button round">
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="button-bar">
+            <div class="button">
+              <a href="#">Donate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desk">
+        <div class="navbar">
+          <a href="/"><img src="{{ '/img/logo.png' | url }}" alt="" class="logo"/></a>
+          <div class="menu-groups">
+            <div class="multi-level" id="ml1">
+              <div class="ml1-menu-section">
+                <div class="item">
+                  <div class="item-name">
+                    <a href="/page-no-hero">Page No Hero</a>
+                    <ul>
+                      <li>
+                        <a href="/page-hero">Page Hero</a>
+                      </li>
+                      <li>
+                        <a href="/page-hero-carousel/#samhara">Page Hero Carousel</a>
+                      </li>
+                      <li>
+                        <a href="/page-pullquote">Page Pullquote</a>
+                      </li>
+                      <li>
+                        <a href="/page-no-hero/#scrool">Page Anchor Smooth Scroll</a >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-name">
+                    <a href="#">Get Involved</a>
+                    <ul>
+                      <li>
+                        <a href="/">Volunteers</a>
+                      </li>
+                      <li>
+                        <a href="/">Interns</a>
+                      </li>
+                      <li>
+                        <a href="/">Corporates</a>
+                      </li>
+                      <li>
+                        <a href="/">Work with Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-name">
+                    <a href="/contact-us/">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+              <div class="button-bar">
+                <div class="button round">
+                  <a href="#">
+                    DONATE
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="multi-level" id="ml2">
+              <div class="item">
+                <div class="item-name">
+                  <a href="#">focus areas</a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-name">
+                  <a href="#">projects & campaigns</a>
+                  <ul>
+                    <li>
+                      <a href="#">Projects</a>
+                    </li>
+                    <li>
+                      <a href="#">Campaigns</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-name">
+                  <a href="#">history & lessons learnt</a>
+                  <ul>
+                    <li>
+                      <div class="sub-item">
+                        <div class="item-name">
+                          <a href="#">History</a>
+                          <ul>
+                            <li>
+                              <a href="#">Organisational Milestones</a>
+                            </li>
+                            <li>
+                              <a href="#">Awards & Recognitions</a>
+                            </li>
+                            <li>
+                              <a href="#">Journey of Causes</a>
+                            </li>
+                            <li>
+                              <a href="#">Donor History</a>
+                            </li>
+                            <li>
+                              <a href="#">Alliances & Partnerships</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">Lessons Learnt</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-name">
+                  <a href="#">reports & resources</a>
+                  <ul>
+                    <li>
+                      <div class="sub-item">
+                        <div class="item-name">
+                          <a href="#">Reports</a>
+                          <ul>
+                            <li>
+                              <a href="#">Project Reports</a>
+                            </li>
+                            <li>
+                              <a href="#">Financial Reports</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">Resources</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    {{ content | safe }}
+
+    <footer>
+      <div class="tagline">
+        India's first modern Gurukul, Nrityagram is a one-of-a-kind community where dance is way of life
+      </div>
+      <div class="contact-info">
+        <p>
+          <a href="mailto:info@nrityagram.org">
+            <i class="far fa-envelope"></i>
+            info@nrityagram.org
+          </a>
+        </p>
+        <p>
+          <a href="tel:+918028466312">
+            <i class="fas fa-phone-alt"></i>
+            +91 80 28466312 / 3 / 4
+          </a>
+        </p>
+      </div>
+      <div class="address">
+        <p>address line 1</p>
+        <p>address line 2</p>
+        <p>address line 3</p>
+      </div>
+      <div class="terms-n-conditions">
+        <p>
+          <a href="#">Privacy Policy</a>
+          |
+          <a href="#">Terms & Conditions</a>
+          |
+          <a href="#">Site Credits</a>
+        </p>
+        <p>©
+          {% year %}
+          Nrityagram | All Rights Reserved</p>
+        <br>
+        <p class="light-text">Registration number 121232992897EF</p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    {% if carousels %}
+      <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script>
+    {% endif %}
+    <script>
+      var logoImgMob = document.getElementsByClassName("logo")[0];
+      var logoImgDesk = document.getElementsByClassName("logo")[1];
+      var mobileElem = document.getElementsByClassName("mobile")[0];
+      var navElem = document.getElementsByTagName("nav")[0];
+      var navBarMobElem = document.getElementsByClassName("navbar")[0];
+      var navBarDeskElem = document.getElementsByClassName("navbar")[1];
+      var hamMenuElem = document.getElementById("menu");
+      var hamIcon = document.getElementById("ham-icon");
+      var contentElem = document.getElementsByClassName("content")[0];
+      var heroImage = document.getElementsByClassName("hero-image")[0];
+      var heroSlider = document.getElementsByClassName("hero-slider")[0];
+      var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
+
+      // Global variables
+      const navbar_bg_color_solid = "rgba(248, 133, 56, 1.0)";
+      const navbar_bg_color_trans = "rgba(248, 133, 56, 0.5)";
+      const navbar_height = "100px";
+      const navbar_height_onscroll = "60px";
+      const navbar_desk_height = "120px";
+      const navbar_desk_height_onscroll = "100px";
+
+      window.scroll({behavior: "smooth"});
+
+      window.addEventListener("scroll", () => {
+        let fromTop = window.scrollY;
+
+        if (fromTop > 0) {
+          logoImgMob.style.height = "40px";
+          logoImgDesk.style.height = "60px";
+          navBarMobElem.style.height = navbar_height_onscroll;
+          navBarDeskElem.style.height = navbar_desk_height_onscroll;
+          navBarDeskElem.style.backgroundColor = navbar_bg_color_solid;
+          if (contentElem) {
+            navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
+          }
+        }
+
+        if (fromTop < 1) {
+          if (!hamMenuElem.checked) {
+            logoImgMob.style.height = "80px";
+            logoImgDesk.style.height = "80px";
+            navBarMobElem.style.height = navbar_height;
+            navBarDeskElem.style.height = navbar_desk_height;
+            navBarDeskElem.style.backgroundColor = navbar_bg_color_trans;
+            if (contentElem) {
+              navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
+            }
+          }
+        }
+      });
+
+      hamMenuElem.addEventListener("click", () => {
+        if (hamMenuElem.checked) {
+          mobileElem.style.backgroundColor = navbar_bg_color_solid;
+          mobileElem.style.minHeight = "100vh";
+          if (contentElem) {
+            contentElem.style.overflow = "hidden";
+            contentElem.style.position = "fixed";
+            navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
+          }
+          logoImgMob.style.height = "40px";
+          logoImgDesk.style.height = "60px";
+          navBarMobElem.style.height = navbar_height_onscroll;
+          hamIcon
+            .classList
+            .toggle("ham-open");
+        } else {
+          mobileElem.style.backgroundColor = "transparent";
+          mobileElem.style.minHeight = "100%";
+          if (contentElem) {
+            contentElem.style.overflow = "auto";
+            contentElem.style.position = "static";
+            navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
+          }
+          logoImgMob.style.height = "80px";
+          logoImgDesk.style.height = "80px";
+          navBarMobElem.style.height = navbar_height;
+          hamIcon
+            .classList
+            .toggle("ham-open");
+        }
+      });
+
+      if (window.innerWidth > 799) {
+        if (heroImage) {
+          heroImage.style.marginTop = "-" + navbar_desk_height;
+        }
+
+        if (heroSlider) {
+          heroSlider.style.marginTop = "-" + navbar_desk_height;
+        }
+      }
+
+      // prevent download of images through mouse events
+      $(document).ready(function () {
+        $("img").bind("contextmenu", function (e) {
+          return false;
+        });
+      });
+    </script>
+
+    {% if carousels %}
+      <script src="{{ '/utils/owl_custom.js' | url }}"></script>
+    {% endif %}
+
+    {% if heroType == "slider" %}
+      <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
+      <script>
+        vanillaSlideshow.init({
+          // auto slideshow, options: true or false
+          slideshow: true,
+          // slideshow delay
+          delay: 3000,
+          // display arrows, options: true or false
+          arrows: true,
+          // display indicators, options: true or false
+          indicators: false,
+          // start slideshow randomly, options: true or false
+          random: false,
+          // animation speed
+          animationSpeed: "1.75s"
+        });
+      </script>
+    {% endif %}
+
+  </body>
+</html>

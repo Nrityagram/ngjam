@@ -1,0 +1,66 @@
+---
+layout: base.njk
+heroType: "image"
+---
+
+{% if heroImage %}
+<!-- <div class="hero-image-container">
+  <div class="hero-image">
+    <picture>
+      <source
+        srcset="
+          https://res.cloudinary.com/nrityagram/image/upload/v1595320104/space_desk_pf6xpx.jpg
+        "
+        media="(min-width: 1000px)"
+      />
+      <source
+        srcset="
+          https://res.cloudinary.com/nrityagram/image/upload/v1589047081/ipad/space_yvvwsu.jpg
+        "
+        media="(min-width: 600px)"
+      />
+      <img
+        src="https://res.cloudinary.com/nrityagram/image/upload/v1576171495/mobile/space_eyaqcj.jpg"
+        alt="slide 1"
+        height="auto"
+      />
+    </picture>
+  </div>
+  <div class="hero-text">{{ heroText }}</div>
+  <div class="hero-credit">Credit: {{ heroCredit }}</div>
+</div> -->
+
+<div
+  class="hero-image"
+  style="
+    background-image: {{ heroImageDetails[slug][2] }};
+  "
+>
+  <div class="hero-text">{{ heroText }}</div>
+  <div class="hero-credit">Credit - {{ heroCredit }}</div>
+</div>
+{% endif %}
+
+<main>
+  {{ content | safe }}
+</main>
+
+{% if heroText %}
+<script>
+  gsap.to(".hero-text", { duration: 2, y: 30 });
+</script>
+{% endif %} {% if heroImage %}
+<script>
+  var heroImage = document.getElementsByClassName("hero-image")[0];
+  if (window.innerWidth > 599) {
+    heroImage.style.backgroundImage =
+      "url('https://res.cloudinary.com/nrityagram/image/upload/v1589047081/ipad/space_yvvwsu.jpg')";
+  } else if (window.innerWidth > 999) {
+    heroImage.style.backgroundImage =
+      "url('https://res.cloudinary.com/nrityagram/image/upload/v1595320104/space_desk_pf6xpx.jpg')";
+  } else {
+    heroImage.style.backgroundImage =
+      "url('https://res.cloudinary.com/nrityagram/image/upload/v1576171495/mobile/space_eyaqcj.jpg')";
+  }
+</script>
+{% endif %}
