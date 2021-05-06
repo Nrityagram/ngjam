@@ -8,7 +8,8 @@
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.5) 100%
   );
-  --navbar-item-font-type: "Lato", sans-serif;
+  --sans-serif-font-family: "Lato", sans-serif;
+  --serif-font-family: "EB Garamond", serif;
   --navbar-item-color: #fff;
   --navbar-subitem-color: #cfcfcf;
   --navbar--accent-color: #f88538;
@@ -25,12 +26,14 @@
   --fullscreen-slideshow-z-index: 5;
   --primary-color: rgb(210, 31, 38);
   --accent-color-1: rgb(219, 61, 69);
-  --accent-color-2: #c27644;
+  --accent-color-2: rgb(177, 36, 28);
   --body-text-color: #fff;
   --medium-font-weight: 400;
   --strong-font-weight: 600;
-  --image-credit-font-family: "Lato", sans-serif;
   --image-credit-font-size: calc(8px + 0.3vw);
   --image-credit-font-size-large: calc(10px + 0.3vw);
   --image-credit-font-colour: #ddd;
+  --cta-font-size-large: calc(28px + 0.3vw);
+  --cta-font-size: calc(15px + 0.3vw);
+  --cta-font-colour: #ddd;
 }
