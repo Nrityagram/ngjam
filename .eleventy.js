@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   eleventyConfig.addPlugin(lazyImagesPlugin, {
-    imgSelector: "img .hero-image picture", // custom image selector
+    imgSelector: "img .hero-image", // custom image selector
     cacheFile: "", // don't cache results to a file
   });
 

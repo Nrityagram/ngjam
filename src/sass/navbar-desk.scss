@@ -22,6 +22,7 @@
   .logo {
     height: 110px;
   }
+  position: relative;
 }
 
 .desk .navbar.trans {
@@ -29,9 +30,12 @@
 }
 
 .desk .menu-groups {
+  position: absolute;
+  top: var(--navbar-desk-top-pos);
+  right: var(--navbar-desk-right-pos);
   display: flex;
   flex-direction: column;
-  margin-top: -50px;
+  // margin-top: var(--navbar-desk-vertical-pos);
 
   .multi-level {
     display: flex;
@@ -40,7 +44,7 @@
 
     .item {
       position: relative;
-      padding-left: 1.5em;
+      padding-left: 1.1em;
 
       a {
         text-decoration: none;
@@ -209,8 +213,8 @@
   padding-top: 3px;
   .item-name > a {
     text-transform: uppercase;
-    // font-weight: var(--strong-font-weight);
-    font-size: 20px;
+    font-weight: var(--medium-font-weight);
+    font-size: 22px;
     color: #fff;
   }
 }

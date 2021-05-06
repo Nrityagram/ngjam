@@ -1,15 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700&display=swap");
 
 html,
 body {
   min-height: fit-content;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "EB Garamond", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fff;
-  font-size: 20px;
+  background-color: #000;
+  font-size: 22px;
   position: relative;
   // overflow: hidden;
 }
@@ -33,7 +34,7 @@ img {
 // Desktop + Tablet
 @media only screen and (min-width: 800px) {
   body {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 

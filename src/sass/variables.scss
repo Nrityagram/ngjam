@@ -1,7 +1,8 @@
 :root {
   --navbar-height: 100px;
   --navbar-desk-height: 140px;
-  // --navbar-bg-color: rgba(248, 133, 56, 0.5);
+  --navbar-desk-top-pos: 20px;
+  --navbar-desk-right-pos: 30px;
   --navbar-bg-color: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0) 0%,
@@ -23,8 +24,13 @@
   --ham-menu-icon-color: #fff;
   --fullscreen-slideshow-z-index: 5;
   --primary-color: rgb(210, 31, 38);
-  --accent-color-1: #fac890;
+  --accent-color-1: rgb(219, 61, 69);
   --accent-color-2: #c27644;
   --body-text-color: #fff;
+  --medium-font-weight: 400;
   --strong-font-weight: 600;
+  --image-credit-font-family: "Lato", sans-serif;
+  --image-credit-font-size: calc(8px + 0.3vw);
+  --image-credit-font-size-large: calc(10px + 0.3vw);
+  --image-credit-font-colour: #ddd;
 }
