@@ -16,8 +16,8 @@
   align-items: center;
   padding: 0 1.5em;
   margin: 0;
-  background-color: var(--navbar-bg-color);
-  transition: all 0.5s;
+  background: var(--navbar-bg-color);
+  transition: all 0.5s ease-in-out;
   z-index: var(--navbar-z-index);
   .logo {
     height: 110px;
@@ -31,6 +31,7 @@
 .desk .menu-groups {
   display: flex;
   flex-direction: column;
+  margin-top: -50px;
 
   .multi-level {
     display: flex;
@@ -45,7 +46,7 @@
         text-decoration: none;
         text-transform: uppercase;
         color: var(--navbar-item-color);
-        font-size: 14px;
+        // font-size: 16px;
         &:hover {
           text-decoration: underline;
           text-decoration-color: var(--navbar--accent-color);
@@ -54,7 +55,7 @@
       }
 
       .item-name {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 100;
         color: var(--navbar-item-color);
         cursor: pointer;
@@ -95,7 +96,7 @@
               .item-name {
                 & > a {
                   text-transform: uppercase;
-                  font-size: 14px;
+                  font-size: 16px;
                 }
                 ul {
                   position: static;
@@ -105,7 +106,7 @@
                     border: none;
                     & > a {
                       text-transform: none;
-                      font-size: 14px;
+                      font-size: 16px;
                       color: var(--navbar-subitem-color);
                     }
                   }
@@ -172,7 +173,7 @@
 }
 
 .desk .multi-level .item > .item-name > a {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .desk .multi-level#ml1 {
@@ -186,7 +187,7 @@
   .item-name > a {
     text-transform: uppercase;
     font-weight: var(--strong-font-weight);
-    color: sngma-color("primary");
+    color: var(--primary-color);
   }
 
   justify-content: flex-end;
@@ -206,4 +207,10 @@
 
 .desk .multi-level#ml2 {
   padding-top: 3px;
+  .item-name > a {
+    text-transform: uppercase;
+    // font-weight: var(--strong-font-weight);
+    font-size: 20px;
+    color: #fff;
+  }
 }
