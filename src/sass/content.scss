@@ -15,7 +15,7 @@
 
 p {
   max-width: 67%;
-  padding: 0.5em 0 0.75em;
+  padding: 0 0 0.5em;
   margin: 0 auto;
   // border: 1px solid limegreen;
 }
@@ -27,6 +27,7 @@ h4,
 h5 {
   max-width: 67%;
   margin: 0 auto;
+  padding: 0.5em 0 0;
 }
 
 // Scroll control offset: make the anchored elements sit below the navbar
@@ -170,13 +171,13 @@ h5 {
   h4,
   h5 {
     max-width: 75%;
-    margin: 0.3em auto 0.05em;
+    padding: 0.4em 0 0;
   }
 
   p {
     max-width: 75%;
     margin: 0 auto;
-    padding: 0.5em 0 0;
+    padding: 0 0 0.3em;
   }
 
   // Scroll control offset: make the anchored elements sit below the navbar
