@@ -1,10 +1,11 @@
 #cta-box {
   display: block;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
-  border: 1px solid rgba(212, 184, 185, 0.16);
+  border-top: 1px solid rgba(211, 195, 195, 0.2);
+  border-left: 1px solid rgba(211, 195, 195, 0.2);
   max-width: 30vw;
   max-height: fit-content;
   position: absolute;
