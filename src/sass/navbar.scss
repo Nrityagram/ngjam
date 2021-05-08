@@ -9,7 +9,7 @@
 nav {
   position: sticky;
   top: 0;
-  font-family: "Lato", sans-serif;
+  font-family: var(--sans-serif-font-family);
   width: 100%;
   transition: height 0.5s;
   z-index: var(--navbar-z-index);
@@ -40,7 +40,8 @@ nav .mobile a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1em;
+  padding: 0 0.4em;
+  padding-right: 0.7rem;
   background: var(--navbar-bg-color);
   transition: all 0.5s;
 }

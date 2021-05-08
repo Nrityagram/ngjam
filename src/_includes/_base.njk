@@ -489,7 +489,7 @@
         }
       });
 
-      window.addEventListener("scroll", () => {
+      function _setnavbar_bgcolour() {
         let fromTop = window.scrollY;
 
         if (fromTop > 0) {
@@ -515,11 +515,14 @@
             }
           }
         }
+      }
+
+      window.addEventListener("scroll", () => {
+        _setnavbar_bgcolour();
       });
 
       hamMenuElem.addEventListener("click", () => {
         if (hamMenuElem.checked) {
-          mobileElem.style.background = navbar_bg_color_solid;
           mobileElem.style.minHeight = "100vh";
           if (contentElem) {
             contentElem.style.overflow = "hidden";
@@ -531,16 +534,12 @@
           navBarMobElem.style.height = navbar_height_onscroll;
           hamIcon.classList.toggle("ham-open");
         } else {
-          mobileElem.style.backgroundColor = "transparent";
           mobileElem.style.minHeight = "100%";
           if (contentElem) {
             contentElem.style.overflow = "auto";
             contentElem.style.position = "static";
-            navBarMobElem.style.background = navbar_bg_color_trans;
+            _setnavbar_bgcolour();
           }
-          logoImgMob.style.height = "80px";
-          logoImgDesk.style.height = "110px";
-          navBarMobElem.style.height = navbar_height;
           hamIcon.classList.toggle("ham-open");
         }
       });
