@@ -2,7 +2,8 @@
 
 html,
 body {
-  min-height: fit-content;
+  min-height: -moz-fit-content;
+  min-height: -webkit-fit-content;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;

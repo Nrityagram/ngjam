@@ -1,7 +1,8 @@
 .content {
   // max-width: 60%;
   max-width: 100%;
-  min-height: fit-content;
+  min-height: -moz-fit-content;
+  min-height: -webkit-fit-content;
   padding: 0;
   margin: 0 auto;
   background-color: #fff;

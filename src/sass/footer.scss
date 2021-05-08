@@ -1,6 +1,7 @@
 footer {
   max-width: 100%;
-  min-height: fit-content;
+  min-height: -moz-fit-content;
+  min-height: -webkit-fit-content;
   background-color: var(--primary-color);
   color: var(--body-text-color);
   text-align: center;

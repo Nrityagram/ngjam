@@ -69,7 +69,8 @@
           position: absolute;
           top: 18px;
           width: max-content;
-          height: fit-content;
+          height: -moz-fit-content;
+          height: -webkit-fit-content;
           // keep top margin at 2px only
           // greater than 2px will make the dropdown disappear
           // when mouse moves off the item

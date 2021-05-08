@@ -57,7 +57,8 @@
 button.owl-next,
 button.owl-prev {
   background: transparent !important;
-  width: fit-content !important;
+  width: -moz-fit-content !important;
+  width: -webkit-fit-content !important;
 }
 
 //  Desktop
