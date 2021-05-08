@@ -10,6 +10,9 @@ pageType: "inner"
   data-hero-image-desk="{{ heroDesk }}"
   data-hero-image-tablet="{{ heroTab }}"
   data-hero-image-mobile="{{ heroMob }}"
+  data-hero-image-desk-x2="{{ heroDesk_x2 }}"
+  data-hero-image-tablet-x2="{{ heroTab_x2 }}"
+  data-hero-image-mobile-x2="{{ heroMob_x2 }}"
   alt="hero image description"
 >
   <div class="hero-text">{{ heroText }}</div>
@@ -35,14 +38,45 @@ pageType: "inner"
 <script>
   var heroImage = document.getElementsByClassName("hero-image")[0];
   var heroCredit = document.getElementsByClassName("hero-credit")[0];
-  if (window.innerWidth > 1199) {
-    heroImage.style.backgroundImage = heroImage.dataset.heroImageDesk;
+  if (window.innerWidth > 1024) {
+    if (window.devicePixelRatio > 1) {
+      heroImage.style.backgroundImage =
+        "image-set(url('" +
+        heroImageDeskX2 +
+        "') 2x, url('" +
+        heroImageDeskX2 +
+        "') 3x);";
+    } else {
+      heroImage.style.backgroundImage = heroImage.dataset.heroImageDesk;
+    }
+    // heroImage.style.backgroundImage = heroImage.dataset.heroImageDesk;
     heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditDesk;
   } else if (window.innerWidth > 599) {
-    heroImage.style.backgroundImage = heroImage.dataset.heroImageTablet;
+    if (window.devicePixelRatio > 1) {
+      heroImage.style.backgroundImage =
+        "image-set(url('" +
+        heroImageTabletX2 +
+        "') 2x, url('" +
+        heroImageTabletX2 +
+        "') 3x);";
+    } else {
+      heroImage.style.backgroundImage = heroImage.dataset.heroImageTablet;
+    }
+    // heroImage.style.backgroundImage = heroImage.dataset.heroImageTablet;
     heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditTablet;
   } else {
-    heroImage.style.backgroundImage = heroImage.dataset.heroImageMobile;
+    if (window.devicePixelRatio > 1) {
+      heroImage.style.backgroundImage =
+        "image-set(url('" +
+        heroImageMobileX2 +
+        "') 2x, url('" +
+        heroImageMobileX2 +
+        "') 3x);";
+    } else {
+      heroImage.style.backgroundImage = heroImage.dataset.heroImageMobile;
+    }
+    // heroImage.style.backgroundImage = heroImage.dataset.heroImageMobile;
     heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditMobile;
   }
+  heroCredit.innerHTML = window.devicePixelRatio;
 </script>
