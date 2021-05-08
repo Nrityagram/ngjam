@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: _base.njk
 heroType: "image"
 pageType: "inner"
 ---
@@ -43,6 +43,5 @@ pageType: "inner"
   } else {
     heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditMobile;
   }
-  heroCredit.innerHTML = window.devicePixelRatio;
 </script>
 {% endif %}
