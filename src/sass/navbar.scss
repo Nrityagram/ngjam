@@ -30,9 +30,10 @@ nav .mobile ul {
 }
 
 nav .mobile a {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-underline-offset: 4px;
+  text-decoration: none;
+  // text-decoration-style: solid;
+  // text-decoration-color: var(--ham-link-underline-color);
+  // text-underline-offset: 4px;
 }
 
 .mobile .navbar {
@@ -159,19 +160,24 @@ nav input[type="checkbox"],
     text-decoration: none;
     color: var(--ham-menu-item-color);
   }
+  position: relative;
 }
 
 .mobile .multi-level .item > .label-plus label {
   display: inline-block;
+  padding-bottom: 0.2em;
 }
 
 .mobile .multi-level .item > .label-plus label i {
+  position: absolute;
+  top: 1.2em;
+  right: 0;
   padding-right: 2.5em;
   font-size: 0.7em;
   color: var(--ham-menu-chevron-color);
   transform: rotate(0deg);
   transform-origin: left;
-  transition: transform 0.5s;
+  transition: all 0.5s;
 }
 
 #ham-icon-wrapper {
@@ -230,6 +236,7 @@ nav input[type="checkbox"],
 
 .mobile .multi-level .item > input:checked + .label-plus label i {
   transform: rotate(90deg);
+  top: 1em;
 }
 
 .mobile .button-bars {

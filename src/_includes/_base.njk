@@ -45,20 +45,48 @@
           <div class="item">
             <input type="checkbox" id="ml1-A" />
             <div class="label-plus">
-              <a href="/page-no-hero">Page No Hero</a>
+              <a href="/about">About</a>
               <label for="ml1-A">
                 <i class="fas fa-chevron-right"></i>
               </label>
             </div>
             <ul>
               <li>
-                <a href="/page-hero">Page Hero</a>
+                <a href="/vision">Vision</a>
               </li>
               <li>
-                <a href="/page-hero-carousel">Page Hero Carousel</a>
+                <a href="/history">History</a>
               </li>
               <li>
-                <a href="/page-pullquote">Page Pullquote</a>
+                <div class="sub-item">
+                  <input type="checkbox" id="ml1-A-1" />
+                  <label for="ml1-A-1">
+                    <a href="/space">Space</a>
+                  </label>
+                  <ul>
+                    <li>
+                      <a href="/space/#temple">Temple</a>
+                    </li>
+                    <li>
+                      <a href="/space/#yoga-centre">Yoga Centre</a>
+                    </li>
+                    <li>
+                      <a href="/space/#odissi-gurukul">Odissi Gurukul</a>
+                    </li>
+                    <li>
+                      <a href="/space/#dining-hall">Dining Hall</a>
+                    </li>
+                    <li>
+                      <a href="/space/#cottages">Cottages</a>
+                    </li>
+                    <li>
+                      <a href="/space/#kula">Kula</a>
+                    </li>
+                    <li>
+                      <a href="/space/#amphitheatre">Amphitheatre</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <a href="/page-no-hero/#scrool">Page Anchor Smooth Scroll</a>
@@ -561,10 +589,9 @@
         });
       });
     </script>
-
     {% if carousels %}
     <script src="{{ '/utils/owl_custom.js' | url }}"></script>
-    {% endif %} {% if heroType == "slider" %}
+    {% endif %} {% if heroSlider %}
     <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
     <script>
       vanillaSlideshow.init({

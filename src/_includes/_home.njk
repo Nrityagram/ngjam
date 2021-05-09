@@ -5,9 +5,21 @@ pageType: "home"
 ---
 
 {% if heroImage %}
-<div class="hero-image" style="background-image: {{ heroImage }}">
+<div class="hero-image-container">
+  <div class="hero-image">
+    <picture>
+      <source srcset="{{ heroDesk | url }}" media="(min-width: 1025px)" />
+      <source srcset="{{ heroTab | url }}" media="(min-width: 600px)" />
+      <img src="{{ heroMob | url }}" alt="hero" height="auto" />
+    </picture>
+  </div>
   <div class="hero-text">{{ heroText }}</div>
-  <div class="hero-credit">Credit: Vodkarani Codes</div>
+  <div
+    class="hero-credit"
+    data-hero-credit-desk="{{ heroDeskCredit }}"
+    data-hero-credit-tablet="{{ heroTabCredit }}"
+    data-hero-credit-mobile="{{ heroMobCredit }}"
+  ></div>
 </div>
 {% endif %} {% if heroSlider %}
 <div id="vanilla-slideshow-container">
