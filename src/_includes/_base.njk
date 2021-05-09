@@ -576,6 +576,7 @@
       hamMenuElem.addEventListener("click", () => {
         if (hamMenuElem.checked) {
           initial_scrollY_pos = window.scrollY;
+          window.scrollTo(0, 0);
           console.log("open menu scrollY = " + initial_scrollY_pos);
           mobileElem.style.minHeight = "100vh";
           if (contentElem) {
@@ -598,7 +599,6 @@
           }
           hamIcon.classList.toggle("ham-open");
           window.scrollTo(0, initial_scrollY_pos);
-          console.log("close menu scrollY = " + initial_scrollY_pos);
         }
       });
 

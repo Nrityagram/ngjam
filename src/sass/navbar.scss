@@ -168,10 +168,10 @@ nav input[type="checkbox"],
 .mobile .multi-level .item > .label-plus label {
   display: inline-block;
   height: 100%;
-  flex-basis: 10%;
+  flex-basis: 15%;
   position: relative;
   padding-bottom: 0.2em;
-  // border: 1px dotted hotpink;
+  border: 1px dotted hotpink;
 }
 
 .mobile .multi-level .item > .label-plus label i {
