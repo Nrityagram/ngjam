@@ -614,6 +614,7 @@
           mainElem.style.position = "static";
           _setnavbar_bgcolour();
         }
+        
         if (hamIcon.classList.contains("ham-open")) {
           hamIcon.classList.remove("ham-open");
         }
@@ -628,7 +629,10 @@
           navBarDeskElem.style.background = navbar_bg_color_trans;
           navBarMobElem.style.background = navbar_bg_color_trans;
         }
+        // make sure mobile menu is closed
+        _close_menu();
       });
+
 
       window.addEventListener("unload", (event) => {
         // make sure mobile menu is closed
