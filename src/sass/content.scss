@@ -183,6 +183,7 @@ h5 {
 
   // Scroll control offset: make the anchored elements sit below the navbar
   // https://css-tricks.com/hash-tag-links-padding/
+  // TODO: <h*> are not sitting below the navbar
   :target::before {
     display: block;
     content: " ";

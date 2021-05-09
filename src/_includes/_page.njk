@@ -4,28 +4,26 @@ heroType: "image"
 pageType: "inner"
 ---
 
-<main>
-  {% if heroDesk %}
-  <div class="hero-image-container">
-    <div class="hero-image">
-      <picture>
-        <source srcset="{{ heroDesk | url }}" media="(min-width: 1025px)" />
-        <source srcset="{{ heroTab | url }}" media="(min-width: 600px)" />
-        <img src="{{ heroMob | url }}" alt="hero" height="auto" />
-      </picture>
-    </div>
-    <div class="hero-text">{{ heroText }}</div>
-    <div
-      class="hero-credit"
-      data-hero-credit-desk="{{ heroDeskCredit }}"
-      data-hero-credit-tablet="{{ heroTabCredit }}"
-      data-hero-credit-mobile="{{ heroMobCredit }}"
-    ></div>
+{% if heroDesk %}
+<div class="hero-image-container">
+  <div class="hero-image">
+    <picture>
+      <source srcset="{{ heroDesk | url }}" media="(min-width: 1025px)" />
+      <source srcset="{{ heroTab | url }}" media="(min-width: 600px)" />
+      <img src="{{ heroMob | url }}" alt="hero" height="auto" />
+    </picture>
   </div>
-  {% endif %}
+  <div class="hero-text">{{ heroText }}</div>
+  <div
+    class="hero-credit"
+    data-hero-credit-desk="{{ heroDeskCredit }}"
+    data-hero-credit-tablet="{{ heroTabCredit }}"
+    data-hero-credit-mobile="{{ heroMobCredit }}"
+  ></div>
+</div>
+{% endif %}
 
-  {{ content | safe }}
-</main>
+{{ content | safe }}
 
 {% if heroText %}
 <script>
