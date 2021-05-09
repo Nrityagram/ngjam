@@ -82,7 +82,7 @@
                 </div>
               </li> -->
               <a href="/future"><li>Future</li></a>
-              <!-- <li>
+              <li>
                 <div class="sub-item">
                   <ul>
                     <a href="/future/#arts-centre" {% if '/future' in page.url %} onclick="_close_menu();" {% endif %}
@@ -93,8 +93,8 @@
                     >
                   </ul>
                 </div>
-              </li> -->
-              <a href="/board-of-trustees"><li>Board of Trustees</li></a>
+              </li>
+              <a href="/board"><li>Board of Trustees</li></a>
             </ul>
           </div>
 
@@ -681,7 +681,8 @@
           logoImgMob.style.height = "40px";
           logoImgDesk.style.height = "110px";
           navBarMobElem.style.height = navbar_height_onscroll;
-          hamIcon.classList.toggle("ham-open");
+          hamIcon.classList.add("ham-open");
+          // hamIcon.classList.toggle("ham-open");
         } else {
           mobileElem.style.minHeight = "100%";
           if (contentElem) {
@@ -689,7 +690,10 @@
             mainElem.style.position = "static";
             _setnavbar_bgcolour();
           }
-          hamIcon.classList.toggle("ham-open");
+          // hamIcon.classList.toggle("ham-open");
+          if (hamIcon.classList.contains("ham-open")) {
+            hamIcon.classList.remove("ham-open");
+          }
           window.scrollTo(0, initial_scrollY_pos);
         }
       });
