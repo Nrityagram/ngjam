@@ -45,76 +45,70 @@
           <div class="item">
             <input type="checkbox" id="ml1-A" />
             <div class="label-plus">
-              <a href="/about/" onclick="close_menu();">About</a>
+              <a href="/about/">About</a>
               <label for="ml1-A">
                 <i class="fas fa-chevron-right"></i>
               </label>
             </div>
             <ul>
-              <a href="/vision" onclick="close_menu();"><li>Vision</li></a>
-              <a href="/history" onclick="close_menu();"><li>History</li></a>
-              <a href="/space" onclick="close_menu();"><li>Space</li></a>
+              <a href="/vision"><li>Vision</li></a>
+              <a href="/history"><li>History</li></a>
+              <a href="/space"><li>Space</li></a>
               <!-- <li>
                 <div class="sub-item">
                   <ul>
-                    <a href="/space/#temple" onclick="close_menu();"
+                    <a href="/space/#temple"  {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Temple</li></a
                     >
-                    <a href="/space/#yoga" onclick="close_menu();"
+                    <a href="/space/#yoga" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Yoga Centre</li></a
                     >
-                    <a href="/space/#odissi" onclick="close_menu();"
+                    <a href="/space/#odissi" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Odissi Gurukul</li></a
                     >
-                    <a href="/space/#dining" onclick="close_menu();"
+                    <a href="/space/#dining" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Dining Hall</li></a
                     >
-                    <a href="/space/#cottages" onclick="close_menu();"
+                    <a href="/space/#cottages" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Cottages</li></a
                     >
-                    <a href="/space/#kula" onclick="close_menu();"
+                    <a href="/space/#kula" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Kula</li></a
                     >
-                    <a href="/space/#amphitheatre" onclick="close_menu();"
+                    <a href="/space/#amphitheatre" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Amphitheatre</li></a
                     >
                   </ul>
                 </div>
               </li> -->
-              <a href="/future" onclick="close_menu();"><li>Future</li></a>
+              <a href="/future"><li>Future</li></a>
               <!-- <li>
                 <div class="sub-item">
                   <ul>
-                    <a href="/future/#arts-centre" onclick="close_menu();"
+                    <a href="/future/#arts-centre" {% if '/future' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Performing Arts Centre</li></a
                     >
-                    <a href="/future/#resource-centre" onclick="close_menu();"
+                    <a href="/future/#resource-centre" {% if '/future' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Nrityagyān Resource Centre</li></a
                     >
                   </ul>
                 </div>
               </li> -->
-              <a href="/board-of-trustees" onclick="close_menu();"
-                ><li>Board of Trustees</li></a
-              >
+              <a href="/board-of-trustees"><li>Board of Trustees</li></a>
             </ul>
           </div>
 
           <div class="item">
             <input type="checkbox" id="ml1-B" />
             <div class="label-plus">
-              <a href="/visit/" onclick="close_menu();">Visit</a>
+              <a href="/visit/">Visit</a>
               <label for="ml1-B">
                 <i class="fas fa-chevron-right"></i>
               </label>
             </div>
             <ul>
-              <a href="/thingstodo" onclick="close_menu();"
-                ><li>Things to do</li></a
-              >
-              <a href="/findyourway" onclick="close_menu();"
-                ><li>Find your Way</li></a
-              >
+              <a href="/thingstodo"><li>Things to do</li></a>
+              <a href="/findyourway"><li>Find your Way</li></a>
               <a
                 href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656"
                 target="_blank"
@@ -126,41 +120,31 @@
           <div class="item">
             <input type="checkbox" id="ml1-C" />
             <div class="label-plus">
-              <a href="/support/" onclick="close_menu();">Support</a>
+              <a href="/support/">Support</a>
               <label for="ml1-C">
                 <i class="fas fa-chevron-right"></i>
               </label>
             </div>
             <ul>
-              <a href="/vardan" onclick="close_menu();"><li>Join Vardān</li></a>
+              <a href="/vardan"><li>Join Vardān</li></a>
               <li>
                 <div class="sub-item">
                   <ul>
-                    <a href="/friendsofng/" onclick="close_menu();"
-                      ><li>Friends of Nrityagram</li></a
-                    >
-                    <a href="/ngangels/" onclick="close_menu();"
-                      ><li>Nrityagram &nbsp;Angels</li></a
-                    >
+                    <a href="/friendsofng/"><li>Friends of Nrityagram</li></a>
+                    <a href="/ngangels/"><li>Nrityagram &nbsp;Angels</li></a>
                   </ul>
                 </div>
               </li>
-              <a href="/donate/" onclick="close_menu();"><li>Donate</li></a>
-              <a href="/corpusfund/" onclick="close_menu();"
-                ><li>Support the Corpus Fund</li></a
-              >
-              <a href="/otherwaystogive/" onclick="close_menu();"
-                ><li>Other ways to Give</li></a
-              >
-              <a href="/sponsorship/" onclick="close_menu();"
-                ><li>Sponsorship</li></a
-              >
+              <a href="/donate/"><li>Donate</li></a>
+              <a href="/corpusfund/"><li>Support the Corpus Fund</li></a>
+              <a href="/otherwaystogive/"><li>Other ways to Give</li></a>
+              <a href="/sponsorship/"><li>Sponsorship</li></a>
             </ul>
           </div>
 
           <div class="item">
             <div class="label-plus">
-              <a href="/press/" onclick="close_menu();">Press</a>
+              <a href="/press/">Press</a>
             </div>
           </div>
 
@@ -170,14 +154,10 @@
               >Media<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
-              <a href="/showtime" onclick="close_menu();"><li>Showtime</li></a>
-              <a href="/behindthescenes" onclick="close_menu();"
-                ><li>Behind the Scenes</li></a
-              >
-              <a href="/lifeatng" onclick="close_menu();"
-                ><li>Life at Nrityagram</li></a
-              >
-              <a href="/downtime" onclick="close_menu();"><li>Downtime</li></a>
+              <a href="/showtime"><li>Showtime</li></a>
+              <a href="/behindthescenes"><li>Behind the Scenes</li></a>
+              <a href="/lifeatng"><li>Life at Nrityagram</li></a>
+              <a href="/downtime"><li>Downtime</li></a>
             </ul>
           </div>
         </div>
@@ -185,82 +165,70 @@
           <div class="item">
             <input type="checkbox" id="ml2-A" />
             <div class="label-plus">
-              <a href="/ensemble/" onclick="close_menu();">Ensemble</a>
+              <a href="/ensemble/">Ensemble</a>
               <label for="ml2-A">
                 <i class="fas fa-chevron-right"></i>
               </label>
             </div>
             <ul>
-              <a href="/repertoire" onclick="close_menu();"
-                ><li>Repertoire</li></a
-              >
+              <a href="/repertoire"><li>Repertoire</li></a>
               <!-- <li>
                 <div class="sub-item">
                   <ul>
-                    <a href="/repertoire/#sri" onclick="close_menu();"
+                    <a href="/repertoire/#sri"  {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Śrī: In Search of the Goddess</li></a
                     >
-                    <a href="/repertoire/#ansh" onclick="close_menu();"
+                    <a href="/repertoire/#ansh" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Ansh</li></a
                     >
-                    <a href="/repertoire/#sspace" onclick="close_menu();"
+                    <a href="/repertoire/#sspace" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Sacred Space</li></a
                     >
-                    <a href="/repertoire/#pratima" onclick="close_menu();"
+                    <a href="/repertoire/#pratima" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Pratimā: Reflection</li></a
                     >
-                    <a href="/repertoire/#sriyah" onclick="close_menu();"
+                    <a href="/repertoire/#sriyah" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Śriyaḥ</li></a
                     >
-                    <a href="/repertoire/#samhara" onclick="close_menu();"
+                    <a href="/repertoire/#samhara" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Saṃhāra</li></a
                     >
-                    <a href="/repertoire/#samyoga" onclick="close_menu();"
+                    <a href="/repertoire/#samyoga" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Saṃyoga</li></a
                     >
-                    <a href="/repertoire/#lovelong" onclick="close_menu();"
+                    <a href="/repertoire/#lovelong" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Songs of Love and Longing</li></a
                     >
-                    <a href="/repertoire/#yadu" onclick="close_menu();"
+                    <a href="/repertoire/#yadu" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Yadunandana</li></a
                     >
-                    <a href="/repertoire/#ahuti" onclick="close_menu();"
+                    <a href="/repertoire/#ahuti" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Āhuti</li></a
                     >
                   </ul>
                 </div>
               </li> -->
-              <a href="/performancemap" onclick="close_menu();"
-                ><li>Performances</li></a
-              >
+              <a href="/performancemap"><li>Performances</li></a>
             </ul>
           </div>
 
           <div class="item">
             <input type="checkbox" id="ml2-B" />
             <div class="label-plus">
-              <a href="/gurukula/" onclick="close_menu();">School</a>
+              <a href="/gurukula/">School</a>
               <label for="ml2-B">
                 <i class="fas fa-chevron-right"></i>
               </label>
             </div>
             <ul>
-              <a href="/danceprof/" onclick="close_menu();"
-                ><li>Dance Professionals</li></a
-              >
-              <a href="/danceunlimited" onclick="close_menu();"
-                ><li>Dance Unlimited</li></a
-              >
+              <a href="/danceprof/"><li>Dance Professionals</li></a>
+              <a href="/danceunlimited"><li>Dance Unlimited</li></a>
               <li>
                 <div class="sub-item">
                   <ul>
-                    <a
-                      href="/danceunlimited/#residential"
-                      onclick="close_menu();"
-                      ><li>Residential Workshops</li></a
+                    <a href="/danceunlimited/#residential" {% if '/danceunlimited' in page.url %} onclick="_close_menu();" {% endif %} ><li>Residential Workshops</li></a
                     >
-                    <a href="/danceunlimited/#parttime" onclick="close_menu();"
-                      ><li>Non-Residential Training</li></a
+                    <a href="/danceunlimited/#parttime" {% if '/danceunlimited' in page.url %} onclick="_close_menu();" {% endif %} ><li>Non-Residential Training</li></a
                     >
                   </ul>
                 </div>
@@ -271,31 +239,23 @@
           <div class="item">
             <input type="checkbox" id="ml2-C" />
             <div class="label-plus">
-              <a href="/community/" onclick="close_menu();">Community</a>
+              <a href="/community/">Community</a>
               <label for="ml2-C">
                 <i class="fas fa-chevron-right"></i>
               </label>
             </div>
             <ul>
-              <a href="/danceaware/" onclick="close_menu();"
-                ><li>Dance Awareness</li></a
-              >
-              <a href="/villageoutreach" onclick="close_menu();"
-                ><li>Village Outreach</li></a
-              >
-              <a href="/supportingartists" onclick="close_menu();"
-                ><li>Supporting Artists</li></a
-              >
-              <a href="/popularisingarts" onclick="close_menu();"
-                ><li>Popularising the Arts</li></a
-              >
+              <a href="/danceaware/"><li>Dance Awareness</li></a>
+              <a href="/villageoutreach"><li>Village Outreach</li></a>
+              <a href="/supportingartists"><li>Supporting Artists</li></a>
+              <a href="/popularisingarts"><li>Popularising the Arts</li></a>
               <li>
                 <div class="sub-item">
                   <ul>
-                    <a href="/popularisingarts/#vasant" onclick="close_menu();"
+                    <a href="/popularisingarts/#vasant" {% if '/popularisingarts' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Vasantahabba</li></a
                     >
-                    <a href="/popularisingarts/#ajji" onclick="close_menu();"
+                    <a href="/popularisingarts/#ajji" {% if '/popularisingarts' in page.url %} onclick="_close_menu();" {% endif %}
                       ><li>Ajji Kathegaḷu</li></a
                     >
                   </ul>
@@ -306,7 +266,7 @@
 
           <div class="item">
             <div class="label-plus">
-              <a href="/rasa/" onclick="close_menu();">Rasā</a>
+              <a href="/rasa/">Rasā</a>
             </div>
           </div>
 
@@ -316,16 +276,10 @@
               >People<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
-              <a href="/protima" onclick="close_menu();"
-                ><li>Protima Gauri</li></a
-              >
-              <a href="/surupa" onclick="close_menu();"><li>Surupa Sen</li></a>
-              <a href="/pavithra" onclick="close_menu();"
-                ><li>Pavithra Reddy</li></a
-              >
-              <a href="/lynne" onclick="close_menu();"
-                ><li>Lynne Fernandez</li></a
-              >
+              <a href="/protima"><li>Protima Gauri</li></a>
+              <a href="/surupa"><li>Surupa Sen</li></a>
+              <a href="/pavithra"><li>Pavithra Reddy</li></a>
+              <a href="/lynne"><li>Lynne Fernandez</li></a>
             </ul>
           </div>
         </div>
@@ -652,6 +606,19 @@
       // issue: when mobile menu is long and user scrolls the page below also scrolls
       var initial_scrollY_pos = 0;
 
+      function _close_menu() {
+        hamMenuElem.checked = false;
+        mobileElem.style.minHeight = "100%";
+        if (contentElem) {
+          contentElem.style.overflow = "auto";
+          mainElem.style.position = "static";
+          _setnavbar_bgcolour();
+        }
+        if (hamIcon.classList.contains("ham-open")) {
+          hamIcon.classList.remove("ham-open");
+        }
+      }
+
       window.scroll({ behavior: "smooth" });
 
       window.addEventListener("load", (event) => {
@@ -661,6 +628,11 @@
           navBarDeskElem.style.background = navbar_bg_color_trans;
           navBarMobElem.style.background = navbar_bg_color_trans;
         }
+      });
+
+      window.addEventListener("unload", (event) => {
+        // make sure mobile menu is closed
+        _close_menu();
       });
 
       function _setnavbar_bgcolour() {
@@ -730,17 +702,6 @@
         if (heroSlider) {
           heroSlider.style.marginTop = "-" + navbar_desk_height;
         }
-      }
-
-      function close_menu() {
-        hamMenuElem.checked = false;
-        mobileElem.style.minHeight = "100%";
-        if (contentElem) {
-          contentElem.style.overflow = "auto";
-          mainElem.style.position = "static";
-          _setnavbar_bgcolour();
-        }
-        hamIcon.classList.toggle("ham-open");
       }
 
       // prevent download of images through mouse events
