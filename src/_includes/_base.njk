@@ -89,7 +89,25 @@
                 </div>
               </li>
               <li>
-                <a href="/page-no-hero/#scrool">Page Anchor Smooth Scroll</a>
+                <div class="sub-item">
+                  <input type="checkbox" id="ml1-A-1" />
+                  <label for="ml1-A-1">
+                    <a href="/future">Future</a>
+                  </label>
+                  <ul>
+                    <li>
+                      <a href="/future/#arts-centre">Performing Arts Centre</a>
+                    </li>
+                    <li>
+                      <a href="/future/#resource-centre"
+                        >Nrityagyān Resource Centre</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="/board-of-trustees">Board of Trustees</a>
               </li>
             </ul>
           </div>
@@ -489,6 +507,7 @@
       var navBarDeskElem = document.getElementsByClassName("navbar")[1];
       var hamMenuElem = document.getElementById("menu");
       var hamIcon = document.getElementById("ham-icon");
+      var mainElem = document.getElementsByTagName("main")[0];
       var contentElem = document.getElementsByClassName("content")[0];
       var heroImage = document.getElementsByClassName("hero-image")[0];
       var heroSlider = document.getElementsByClassName("hero-slider")[0];
@@ -505,6 +524,11 @@
       const navbar_height_onscroll = "60px";
       const navbar_desk_height = "140px";
       const navbar_desk_height_onscroll = "110px";
+
+      // save scrollY position when ham menu opens
+      // and use it to scroll back the page below when menu closes
+      // issue: when mobile menu is long and user scrolls the page below also scrolls
+      var initial_scrollY_pos = 0;
 
       window.scroll({ behavior: "smooth" });
 
@@ -551,10 +575,13 @@
 
       hamMenuElem.addEventListener("click", () => {
         if (hamMenuElem.checked) {
+          initial_scrollY_pos = window.scrollY;
+          console.log("open menu scrollY = " + initial_scrollY_pos);
           mobileElem.style.minHeight = "100vh";
           if (contentElem) {
             contentElem.style.overflow = "hidden";
-            contentElem.style.position = "fixed";
+            // contentElem.style.position = "fixed";
+            mainElem.style.position = "fixed";
             navBarMobElem.style.background = navbar_bg_color_solid;
           }
           logoImgMob.style.height = "40px";
@@ -565,10 +592,13 @@
           mobileElem.style.minHeight = "100%";
           if (contentElem) {
             contentElem.style.overflow = "auto";
-            contentElem.style.position = "static";
+            // contentElem.style.position = "static";
+            mainElem.style.position = "static";
             _setnavbar_bgcolour();
           }
           hamIcon.classList.toggle("ham-open");
+          window.scrollTo(0, initial_scrollY_pos);
+          console.log("close menu scrollY = " + initial_scrollY_pos);
         }
       });
 
