@@ -121,6 +121,9 @@ nav input[type="checkbox"],
 
 .mobile .multi-level .item > label {
   border-bottom: 1px solid var(--ham-menu-border-color);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: var(--medium-font-weight);
 }
 
 .mobile .multi-level .item:first-child > label {
@@ -151,8 +154,8 @@ nav input[type="checkbox"],
 }
 
 .mobile .multi-level .item > label i {
-  padding-right: 2.5em;
-  font-size: 0.65em;
+  padding-right: 2em;
+  font-size: 0.9em;
   color: var(--ham-menu-chevron-color);
   transform: rotate(0deg);
   transform-origin: left;
