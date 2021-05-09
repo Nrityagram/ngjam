@@ -99,6 +99,14 @@ nav input[type="checkbox"],
   background-color: var(--ham-menu-bg-color);
 }
 
+.mobile .item a {
+  font-size: 20px;
+}
+
+.mobile .sub-item li a {
+  font-size: 16px;
+}
+
 .mobile .sub-item label {
   padding-left: 0;
 }
@@ -121,6 +129,10 @@ nav input[type="checkbox"],
 
 .mobile .multi-level .item > .label-plus {
   border-bottom: 1px solid var(--ham-menu-border-color);
+  a {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
 }
 
 .mobile .multi-level .item:first-child > .label-plus {
@@ -140,7 +152,7 @@ nav input[type="checkbox"],
 
 .mobile .multi-level .item > label i {
   padding-right: 2.5em;
-  font-size: 0.7em;
+  font-size: 0.65em;
   color: var(--ham-menu-chevron-color);
   transform: rotate(0deg);
   transform-origin: left;
@@ -156,12 +168,10 @@ nav input[type="checkbox"],
   justify-content: space-between;
   align-items: center;
   a {
-    // flex-grow: 1;
     flex-basis: 80%;
     padding-left: 1.2em;
     text-decoration: none;
     color: var(--ham-menu-item-color);
-    // border: 1px dotted lime;
   }
 }
 
@@ -171,14 +181,13 @@ nav input[type="checkbox"],
   flex-basis: 15%;
   position: relative;
   padding-bottom: 0.2em;
-  border: 1px dotted hotpink;
 }
 
 .mobile .multi-level .item > .label-plus label i {
   position: absolute;
   top: -5px;
   right: 30px;
-  font-size: 0.7em;
+  font-size: 0.65em;
   color: var(--ham-menu-chevron-color);
   transform: rotate(0deg);
   transform-origin: left;
@@ -276,7 +285,7 @@ nav input[type="checkbox"],
     &.round {
       padding: 6px 11px;
       text-align: center;
-      border-radius: 25px;
+      border-radius: 50%;
       font-size: 18px;
     }
     a {
