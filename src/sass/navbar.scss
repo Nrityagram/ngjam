@@ -278,7 +278,7 @@ nav input[type="checkbox"],
     background-color: var(--ham-menu-bg-color);
     border: none;
     border-radius: 3px;
-    color: var(--navbar-subitem-color);
+    color: var(--primary-color);
     padding: 4px 16px;
     text-align: center;
     text-decoration: none;
@@ -301,7 +301,7 @@ nav input[type="checkbox"],
       }
     }
     a {
-      color: var(--navbar-subitem-color);
+      color: var(--primary-color);
       font-size: 14px;
       font-weight: var(--medium-font-weight);
       text-decoration: none;
