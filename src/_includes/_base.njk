@@ -733,14 +733,16 @@
       }
 
       function close_menu() {
-        hamMenuElem.checked = false;
-        mobileElem.style.minHeight = "100%";
-        if (contentElem) {
-          contentElem.style.overflow = "auto";
-          mainElem.style.position = "static";
-          _setnavbar_bgcolour();
-        }
-        hamIcon.classList.toggle("ham-open");
+        window.onbeforeunload = function () {
+          hamMenuElem.checked = false;
+          mobileElem.style.minHeight = "100%";
+          if (contentElem) {
+            contentElem.style.overflow = "auto";
+            mainElem.style.position = "static";
+            _setnavbar_bgcolour();
+          }
+          hamIcon.classList.toggle("ham-open");
+        };
       }
 
       // prevent download of images through mouse events
