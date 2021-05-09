@@ -10,6 +10,7 @@ nav {
   position: sticky;
   top: 0;
   font-family: var(--sans-serif-font-family);
+  font-weight: var(--thin-font-weight);
   width: 100%;
   transition: height 0.5s;
   z-index: var(--navbar-z-index);
@@ -91,7 +92,7 @@ nav input[type="checkbox"],
   margin: 0;
   padding: 0;
   padding-left: 1.2em;
-  font-weight: 300;
+  font-weight: var(--thin-font-weight);
 }
 
 .mobile .item > label {
@@ -128,7 +129,7 @@ nav input[type="checkbox"],
 
 .mobile .item > label {
   color: var(--ham-menu-item-color);
-  font-weight: 400;
+  font-weight: var(--thin-font-weight);
   //   this makes the label element lie above the arrow
   //   so you can click anywhere on the label
   z-index: calc(var(--navbar-z-index) + 1);
@@ -148,31 +149,35 @@ nav input[type="checkbox"],
 
 .mobile .multi-level .item > .label-plus {
   color: var(--ham-menu-item-color);
-  font-weight: 400;
+  font-weight: var(--medium-font-weight);
   line-height: 50px;
   z-index: calc(var(--navbar-z-index) + 1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   a {
-    flex-grow: 2;
+    // flex-grow: 1;
+    flex-basis: 80%;
     padding-left: 1.2em;
     text-decoration: none;
     color: var(--ham-menu-item-color);
+    // border: 1px dotted lime;
   }
-  position: relative;
 }
 
 .mobile .multi-level .item > .label-plus label {
   display: inline-block;
+  height: 100%;
+  flex-basis: 10%;
+  position: relative;
   padding-bottom: 0.2em;
+  // border: 1px dotted hotpink;
 }
 
 .mobile .multi-level .item > .label-plus label i {
   position: absolute;
-  top: 1.2em;
-  right: 0;
-  padding-right: 2.5em;
+  top: -5px;
+  right: 30px;
   font-size: 0.7em;
   color: var(--ham-menu-chevron-color);
   transform: rotate(0deg);
@@ -236,7 +241,7 @@ nav input[type="checkbox"],
 
 .mobile .multi-level .item > input:checked + .label-plus label i {
   transform: rotate(90deg);
-  top: 1em;
+  top: -10px;
 }
 
 .mobile .button-bars {
