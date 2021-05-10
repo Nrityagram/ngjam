@@ -1,0 +1,25 @@
+/**
+ * $distance (pixels) - The shadow distance 
+ * $blur (pixels) - The shadow blur 
+ * $intensity (percentage) - The shadow color intansity 
+ * $inset (boolean) - Whether the shadow is inner or outer
+ */
+@mixin neumorphism($distance, $blur, $intensity, $inset: false) {
+  box-shadow: $distance $distance $blur mix(#5a5a5a, transparent, $intensity)
+      if($inset, inset, null),
+    -#{$distance} -#{$distance} $blur mix(#ffffff, transparent, $intensity)
+      if($inset, inset, null);
+}
+
+$distance: 3px;
+$blur: 5px;
+$intensity: 50%;
+
+.neu-simple-rect {
+  width: 100%;
+  height: fit-content;
+  height: -moz-fit-content;
+
+  border-radius: 10px;
+  @include neumorphism($distance, $blur, $intensity);
+}

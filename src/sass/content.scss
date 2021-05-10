@@ -3,7 +3,7 @@
   max-width: 100%;
   min-height: -moz-fit-content;
   min-height: -webkit-fit-content;
-  padding: 0;
+  padding: 1.5em 0;
   margin: 0 auto;
   background-color: #fff;
   // border: 1px solid limegreen;
@@ -16,9 +16,11 @@
 
 p {
   max-width: 67%;
-  padding: 0 0 0.5em;
+  padding: 0.2em 0 0.5em;
   margin: 0 auto;
-  // border: 1px solid limegreen;
+  &.pad-top {
+    padding-top: 0.5em;
+  }
 }
 
 h1,
@@ -178,7 +180,10 @@ h5 {
   p {
     max-width: 75%;
     margin: 0 auto;
-    padding: 0 0 0.3em;
+    padding: 0.1em 0 0.3em;
+    &.pad-top {
+      padding-top: 0.5em;
+    }
   }
 
   // Scroll control offset: make the anchored elements sit below the navbar

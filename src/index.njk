@@ -3,44 +3,33 @@ layout: _home.njk
 heroSlider: true
 carousels: false
 title: Home
+cta_headline: "Lorem ipsum dolor"
+cta_bodytext: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam earum
+ipsa accusamus quis eius itaque."
 ---
 
 <div class="content">
-  <h1>H1 Title</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam ut quod,
-    aspernatur deleniti quae nostrum eum recusandae. Non a ullam quisquam modi
-    odit aut nulla id harum, maiores pariatur praesentium.
+  <div id="cta-box-mobile">
+    <div class="cta-headline">{{ cta_headline }}</div>
+    <div class="cta-bodytext">
+      {{ cta_bodytext }}
+    </div>
+    <div class="red-glass-button no-dropshadow">Subscribe</div>
+  </div>
+
+  <p class="pad-top">
+    A village of dancers (artistes) dedicated to the practice and nurture of a
+    2000-year-old art form, Nrityagram is home to a school inspired by the
+    Gurukula, an ancient teaching paradigm, and an internationally renowned
+    Dance Ensemble.
+    <br />
+    Our mission is
+    <em>
+      To nurture dance professionals through the gurukula system, perform on a
+      global stage and enrich the community through outreach.
+    </em>
   </p>
-  <h1>Vision</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam obcaecati
-    officiis optio fuga aspernatur? Fugiat nisi dolore sequi unde ipsa rem
-    delectus necessitatibus eligendi repudiandae. Voluptatibus blanditiis veniam
-    nam facere.
-  </p>
-  <h2>H2 Title - Mission</h2>
-  <p>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-    perferendis consectetur nam delectus reiciendis at officia sequi similique!
-    Et eum hic amet perferendis dicta consequatur fugiat quo sequi corporis
-    nostrum.
-  </p>
-  <h3>H3 Title</h3>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius illo omnis
-    reprehenderit iure possimus sint totam autem voluptates, voluptate optio
-    error vero mollitia est fugit! Optio aspernatur facere veritatis tenetur
-    repellendus deleniti officia deserunt sequi quibusdam ex sed animi minima
-    officiis, dicta dolores molestiae aut sit nemo autem harum ipsam. Amet
-    veritatis molestias itaque vitae. Voluptas aut veniam deleniti tenetur amet
-    libero aliquid modi iusto ducimus, soluta obcaecati inventore atque tempore
-    optio rerum suscipit nobis eius adipisci doloribus est eveniet. Veritatis
-    soluta laudantium alias inventore libero voluptas iure itaque nulla! Qui
-    esse sapiente neque earum tempore laudantium explicabo, recusandae ullam at
-    facilis sit aliquam a excepturi voluptate sint minus animi. Autem neque rem
-    libero aperiam atque. Numquam assumenda dolor natus.
-  </p>
+
   <p></p>
   {{ content | safe }}
 </div>
