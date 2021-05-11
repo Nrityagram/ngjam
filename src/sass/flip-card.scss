@@ -1,0 +1,13 @@
+.flipcard-container {
+  display: grid;
+  place-items: center;
+
+  .flipcard {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: var(--font-sans);
+  }
+}
