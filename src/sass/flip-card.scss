@@ -1,13 +1,18 @@
-.flipcard-container {
+.flip-card-grid {
   display: grid;
-  place-items: center;
+  grid-gap: 1em;
+  padding: 1em 0;
+  max-width: 67%;
+  margin: 0 auto;
+  font-family: var(--sans-serif-font-family);
+}
 
-  .flipcard {
-    display: grid;
-    grid-gap: 1rem;
-    padding: 1rem;
-    max-width: 1024px;
-    margin: 0 auto;
-    font-family: var(--font-sans);
+.flip-card-container {
+  .flip-card {
+    .card-front {
+    }
+
+    .card-back {
+    }
   }
 }
