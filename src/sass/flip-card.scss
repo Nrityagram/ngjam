@@ -4,6 +4,8 @@
   max-width: 67%;
   margin: 0 auto;
   font-family: var(--sans-serif-font-family);
+  color: #fff;
+
   @media (min-width: 800px) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 4vw;
@@ -12,7 +14,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2vw;
   }
-  background-color: lime;
 }
 
 .flip-card-container {
@@ -25,7 +26,10 @@
   }
   @media (min-width: 1200px) {
     width: 15vw;
-    height: 350px;
+    height: 375px;
+  }
+  @media (min-width: 1700px) {
+    height: 450px;
   }
 
   .flip-card {
@@ -51,15 +55,53 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+        0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+        0 16px 16px rgba(0, 0, 0, 0.1);
     }
 
     .card-front {
       transform: rotateY(0deg);
       z-index: 2;
-      background-color: lightslategray;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top center;
+
+      .card-title {
+        display: block;
+        position: absolute;
+        font-weight: var(--medium-font-weight);
+        font-size: var(--cta-font-size-large);
+        text-transform: uppercase;
+
+        writing-mode: vertical-rl;
+        bottom: 40px;
+        left: 18px;
+        z-index: 3;
+      }
+    }
+
+    .card-front::after {
+      content: "";
+      display: block;
+      position: fixed;
+      padding: 100px 0;
+      width: 45%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #000;
+      background: -webkit-linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0)
+      );
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0)
+      );
     }
 
     .card-back {
