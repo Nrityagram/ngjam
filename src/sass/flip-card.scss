@@ -4,10 +4,11 @@
   margin: 0 auto;
   font-family: var(--sans-serif-font-family);
   color: #fff;
+  min-height: fit-content;
 
   @media (max-width: 799px) {
     max-width: 50%;
-    grid-template-columns: 1;
+    grid-template-columns: 100%;
     grid-gap: 4vw;
   }
   @media (min-width: 800px) {
@@ -20,41 +21,28 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2.5vw;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1220px) {
     max-width: 80%;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.2vw;
   }
 }
 
+// .flip-card-grid .flip-card-container {
+//   width: 100%;
+// }
+
+.flip-card-grid .flip-card::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  padding-bottom: calc(100% / (var(--card-aspect-ratio)));
+}
+
 .flip-card-container {
   margin: 0;
   perspective: 1000px;
-
-  @media (max-width: 799px) {
-    width: 45vw;
-    height: 500px;
-  }
-  @media (min-width: 800px) {
-    width: 30vw;
-    height: 440px;
-  }
-  @media (min-width: 1100px) {
-    width: 25vw;
-    height: 460px;
-  }
-  @media (min-width: 1200px) {
-    width: 18vw;
-    height: 380px;
-  }
-  @media (min-width: 1400px) {
-    width: 19vw;
-    height: 460px;
-  }
-  @media (min-width: 1700px) {
-    width: 18vw;
-    height: 520px;
-  }
 
   .flip-card {
     width: inherit;
@@ -74,12 +62,16 @@
       left: 0;
       overflow: hidden;
 
+      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
 
       display: flex;
       justify-content: center;
       align-items: center;
 
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+        0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1),
+        0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
         0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
         0 16px 16px rgba(0, 0, 0, 0.1);
@@ -102,36 +94,70 @@
         writing-mode: vertical-rl;
         bottom: 40px;
         left: 18px;
-        z-index: 3;
+        // z-index: 3;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
       }
-    }
-
-    .card-front::after {
-      content: "";
-      display: block;
-      position: fixed;
-      padding: 100px 0;
-      width: 45%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background: #000;
-      background: -webkit-linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0)
-      );
-      background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0)
-      );
     }
 
     .card-back {
       transform: rotateY(180deg);
       z-index: 1;
       background-color: var(--primary-color);
+
+      .card-title {
+        font-family: var(--serif-font-family);
+        font-size: calc(30px + 0.3vw);
+        display: block;
+        position: absolute;
+        top: 1vw;
+        text-align: center;
+      }
+      .card-content {
+        font-family: var(--serif-font-family);
+        font-size: calc(16px + 0.3vw);
+        // TODO: media query for font sizes
+        display: block;
+        position: absolute;
+        top: 4vw;
+        // TODO: media query for top values
+        text-align: center;
+        padding: 1em 2em;
+      }
+      .card-tagline {
+        font-family: var(--sans-serif-font-family);
+        font-size: calc(20px + 0.3vw);
+        font-weight: var(--strong-font-weight);
+        display: block;
+        position: absolute;
+        text-align: center;
+        bottom: 2vw;
+        padding: 0 2em;
+      }
+
+      // @media (max-width: 799px) {
+      //   width: 45vw;
+      //   height: 520px;
+      // }
+      // @media (min-width: 800px) {
+      //   width: 30vw;
+      //   height: 440px;
+      // }
+      // @media (min-width: 1100px) {
+      //   width: 25vw;
+      //   height: 460px;
+      // }
+      // @media (min-width: 1220px) {
+      //   width: 18vw;
+      //   height: 380px;
+      // }
+      // @media (min-width: 1400px) {
+      //   width: 19vw;
+      //   height: 460px;
+      // }
+      // @media (min-width: 1700px) {
+      //   width: 18vw;
+      //   height: 520px;
+      // }
     }
   }
 }
