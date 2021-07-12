@@ -1,18 +1,29 @@
 .flip-card-grid {
   display: grid;
   padding: 1em 0;
-  max-width: 67%;
   margin: 0 auto;
   font-family: var(--sans-serif-font-family);
   color: #fff;
 
-  @media (min-width: 800px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 799px) {
+    max-width: 50%;
+    grid-template-columns: 1;
     grid-gap: 4vw;
   }
+  @media (min-width: 800px) {
+    max-width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.5vw;
+  }
+  @media (min-width: 1100px) {
+    max-width: 60%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.5vw;
+  }
   @media (min-width: 1200px) {
+    max-width: 80%;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2vw;
+    grid-gap: 1.2vw;
   }
 }
 
@@ -20,16 +31,29 @@
   margin: 0;
   perspective: 1000px;
 
+  @media (max-width: 799px) {
+    width: 45vw;
+    height: 500px;
+  }
   @media (min-width: 800px) {
     width: 30vw;
-    height: 450px;
+    height: 440px;
+  }
+  @media (min-width: 1100px) {
+    width: 25vw;
+    height: 460px;
   }
   @media (min-width: 1200px) {
-    width: 15vw;
-    height: 375px;
+    width: 18vw;
+    height: 380px;
+  }
+  @media (min-width: 1400px) {
+    width: 19vw;
+    height: 460px;
   }
   @media (min-width: 1700px) {
-    height: 450px;
+    width: 18vw;
+    height: 520px;
   }
 
   .flip-card {
