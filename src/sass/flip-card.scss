@@ -111,6 +111,9 @@
         position: absolute;
         top: 1vw;
         text-align: center;
+        width: 75%;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       }
       .card-content {
         font-family: var(--serif-font-family);
@@ -138,22 +141,66 @@
       //   width: 45vw;
       //   height: 520px;
       // }
-      // @media (min-width: 800px) {
-      //   width: 30vw;
-      //   height: 440px;
-      // }
+      @media (min-width: 900px) {
+        .card-title {
+          font-size: calc(32px + 0.3vw);
+          top: 1.5vw;
+          padding-bottom: 1.5vw;
+        }
+        .card-content {
+          font-size: calc(18px + 0.3vw);
+          top: 7vw;
+        }
+        .card-tagline {
+          font-size: calc(20px + 0.3vw);
+        }
+      }
       // @media (min-width: 1100px) {
       //   width: 25vw;
       //   height: 460px;
       // }
-      // @media (min-width: 1220px) {
-      //   width: 18vw;
-      //   height: 380px;
-      // }
-      // @media (min-width: 1400px) {
-      //   width: 19vw;
-      //   height: 460px;
-      // }
+      @media (min-width: 1220px) {
+        .card-title {
+          font-size: calc(26px + 0.3vw);
+          top: 0.5vw;
+          padding-bottom: 0.5vw;
+        }
+        .card-content {
+          font-size: calc(12px + 0.3vw);
+          top: 4vw;
+        }
+        .card-tagline {
+          font-size: calc(16px + 0.3vw);
+        }
+      }
+      @media (min-width: 1300px) {
+        .card-title {
+          font-size: calc(30px + 0.3vw);
+          top: 0.75vw;
+          padding-bottom: 0.75vw;
+        }
+        .card-content {
+          font-size: calc(13px + 0.3vw);
+          top: 5vw;
+        }
+        .card-tagline {
+          font-size: calc(18px + 0.3vw);
+        }
+      }
+      @media (min-width: 1400px) {
+        .card-title {
+          font-size: calc(30px + 0.3vw);
+          top: 1vw;
+          padding-bottom: 1vw;
+        }
+        .card-content {
+          font-size: calc(16px + 0.3vw);
+          top: 5vw;
+        }
+        .card-tagline {
+          font-size: calc(20px + 0.3vw);
+        }
+      }
       // @media (min-width: 1700px) {
       //   width: 18vw;
       //   height: 520px;
