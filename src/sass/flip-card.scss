@@ -42,8 +42,8 @@
   display: inline-block;
   width: 1px;
   height: 0;
-  // padding-bottom: calc(100% / (var(--card-aspect-ratio)));
-  padding-bottom: calc(100% / 0.608);
+  --card-aspect-ratio: 310/510;
+  padding-bottom: calc(100% / (var(--card-aspect-ratio)));
 }
 
 .flip-card-container {
