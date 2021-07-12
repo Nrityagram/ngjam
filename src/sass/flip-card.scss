@@ -9,14 +9,14 @@
   @media (max-width: 599px) {
     max-width: 70%;
     grid-template-columns: 100%;
-    grid-gap: 4vw;
+    grid-gap: 6vw;
   }
   @media (min-width: 600px) {
     max-width: 60%;
     grid-template-columns: 100%;
     grid-gap: 4vw;
   }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     max-width: 70%;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2.5vw;
@@ -32,10 +32,6 @@
     grid-gap: 1.2vw;
   }
 }
-
-// .flip-card-grid .flip-card-container {
-//   width: 100%;
-// }
 
 .flip-card-grid .flip-card::before {
   content: "";
@@ -106,16 +102,16 @@
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 
         @media (max-width: 589px) {
-          font-size: calc(42px + 0.3vw);
-          bottom: 50px;
-          left: 22px;
+          font-size: calc(36px + 0.3vw);
+          bottom: 35px;
+          left: 20px;
         }
         @media (min-width: 590px) {
           font-size: calc(52px + 0.3vw);
           bottom: 60px;
           left: 24px;
         }
-        @media (min-width: 800px) {
+        @media (min-width: 700px) {
           font-size: calc(28px + 0.3vw);
           bottom: 40px;
           left: 18px;
@@ -157,23 +153,41 @@
         display: block;
         position: absolute;
         text-align: center;
+        padding: 0 1.5em;
         bottom: 2vw;
-        padding: 0 2em;
       }
 
-      @media (max-width: 569px) {
+      @media (max-width: 374px) {
+        .card-title {
+          font-size: calc(30px + 0.1vw);
+          top: 1vw;
+          padding-bottom: 1vw;
+        }
+        .card-content {
+          font-size: calc(16px + 0.15vw);
+          line-height: 19px;
+          top: 12vw;
+        }
+        .card-tagline {
+          font-size: calc(18px + 0.1vw);
+          padding: 0 1em;
+          bottom: 4vw;
+        }
+      }
+      @media (min-width: 375px) {
         .card-title {
           font-size: calc(30px + 0.3vw);
           top: 1vw;
           padding-bottom: 1vw;
         }
         .card-content {
-          font-size: calc(16px + 0.3vw);
-          top: 8vw;
+          font-size: calc(18px + 0.3vw);
+          line-height: 22px;
+          top: 12vw;
         }
         .card-tagline {
-          font-size: calc(16px + 0.3vw);
-          bottom: 3vw;
+          font-size: calc(18px + 0.3vw);
+          bottom: 5vw;
         }
       }
       @media (min-width: 570px) {
@@ -199,6 +213,7 @@
         }
         .card-content {
           font-size: calc(20px + 0.3vw);
+          line-height: 24px;
           top: 10vw;
         }
         .card-tagline {
@@ -206,7 +221,7 @@
           bottom: 5vw;
         }
       }
-      @media (min-width: 800px) {
+      @media (min-width: 700px) {
         .card-title {
           font-size: calc(30px + 0.3vw);
           top: 1vw;
@@ -214,6 +229,7 @@
         }
         .card-content {
           font-size: calc(16px + 0.3vw);
+          line-height: 20px;
           top: 7vw;
         }
         .card-tagline {
@@ -229,16 +245,13 @@
         }
         .card-content {
           font-size: calc(18px + 0.3vw);
+          line-height: 24px;
           top: 7vw;
         }
         .card-tagline {
           font-size: calc(20px + 0.3vw);
         }
       }
-      // @media (min-width: 1100px) {
-      //   width: 25vw;
-      //   height: 460px;
-      // }
       @media (min-width: 1220px) {
         .card-title {
           font-size: calc(26px + 0.3vw);
