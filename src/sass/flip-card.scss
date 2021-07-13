@@ -132,10 +132,15 @@
         // z-index: 3;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 
-        @media (max-width: 699px) {
-          font-size: calc(58px + 0.3vw);
-          bottom: 50px;
-          left: 20px;
+        @media (max-width: 359px) {
+          font-size: calc(44px + 0.3vw);
+          bottom: 20px;
+          left: 10px;
+        }
+        @media (min-width: 360px) {
+          font-size: calc(52px + 0.3vw);
+          bottom: 20px;
+          left: 10px;
         }
         @media (min-width: 700px) {
           font-size: calc(48px + 0.3vw);
@@ -203,8 +208,25 @@
         border: 1px solid lime;
         // outline: 1px solid var(--primary-color);
       }
-
-      @media (max-width: 374px) {
+      @media (max-width: 329px) {
+        .card-title {
+          font-size: calc(26px + 0.1vw);
+          line-height: calc(29px + 0.3vw);
+          top: 3vw;
+          padding-bottom: 3vw;
+        }
+        .card-content {
+          font-size: calc(14px + 0.15vw);
+          line-height: calc(18px + 0.3vw);
+          top: 12vw;
+        }
+        .card-tagline {
+          font-size: calc(16px + 0.1vw);
+          // padding: 0 1em;
+          bottom: 4vw;
+        }
+      }
+      @media (min-width: 330px) {
         .card-title {
           font-size: calc(26px + 0.1vw);
           line-height: calc(29px + 0.3vw);
@@ -222,7 +244,7 @@
           bottom: 4vw;
         }
       }
-      @media (min-width: 375px) {
+      @media (min-width: 380px) {
         .card-title {
           font-size: calc(30px + 0.3vw);
           line-height: calc(33px + 0.3vw);
@@ -230,8 +252,25 @@
           padding-bottom: 2vw;
         }
         .card-content {
-          font-size: calc(20px + 0.3vw);
-          line-height: calc(24px + 0.3vw);
+          font-size: calc(18px + 0.3vw);
+          line-height: calc(22px + 0.3vw);
+          top: 12vw;
+        }
+        .card-tagline {
+          font-size: calc(18px + 0.3vw);
+          bottom: 5vw;
+        }
+      }
+      @media (min-width: 450px) {
+        .card-title {
+          font-size: calc(30px + 0.3vw);
+          line-height: calc(33px + 0.3vw);
+          top: 2vw;
+          padding-bottom: 2vw;
+        }
+        .card-content {
+          font-size: calc(22px + 0.3vw);
+          line-height: calc(26px + 0.3vw);
           top: 12vw;
         }
         .card-tagline {
@@ -281,8 +320,8 @@
           padding-bottom: 1vw;
         }
         .card-content {
-          font-size: calc(14px + 0.3vw);
-          line-height: calc(17px + 0.3vw);
+          font-size: calc(15px + 0.3vw);
+          line-height: calc(19px + 0.3vw);
           top: 7vw;
         }
         .card-tagline {
