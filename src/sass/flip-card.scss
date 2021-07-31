@@ -203,10 +203,10 @@
         display: block;
         position: absolute;
         width: 80%;
+        max-width: fit-content;
         text-align: center;
         bottom: 2vw;
-        border: 1px solid lime;
-        // outline: 1px solid var(--primary-color);
+        outline: 1px solid var(--accent-color-3);
       }
       @media (max-width: 329px) {
         .card-title {
