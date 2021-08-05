@@ -28,7 +28,7 @@
       transition: filter 0.2s;
 
       &:hover {
-        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
       }
     }
 
@@ -70,4 +70,22 @@
   > div:nth-child(n + 2) {
     margin-left: 50px;
   }
+}
+
+.space-below {
+  margin-bottom: calc(3em + 5vw);
+}
+.space-above {
+  margin-top: calc(3em + 5vw);
+}
+
+.pad-top {
+  padding-top: 0.75em;
+}
+.no-top-padding {
+  padding-top: 0;
+}
+
+.full-width {
+  max-width: 100%;
 }
