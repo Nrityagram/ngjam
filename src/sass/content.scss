@@ -27,14 +27,29 @@ p {
   }
 }
 
+.full-width {
+  max-width: 100%;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
   max-width: 67%;
-  margin: 0 auto;
+  // margin: 0 auto;
   padding: 0.5em 0 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: clamp(32px, 3vw, 50px);
+  line-height: clamp(30px, 2.95vw, 48px);
 }
 
 // Scroll control offset: make the anchored elements sit below the navbar
@@ -163,6 +178,9 @@ h5 {
 
 .center {
   text-align: center;
+}
+.right {
+  text-align: right;
 }
 
 // Mobile + Tablet
