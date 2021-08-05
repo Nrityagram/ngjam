@@ -66,6 +66,7 @@
 
   a {
     color: #fff;
+    text-decoration: none;
   }
 
   .flip-card {
@@ -445,5 +446,4 @@
 .flip-card-container:hover .flip-card,
 .flip-card-container:focus-within .flip-card {
   transform: rotateY(180deg);
-  cursor: pointer;
 }

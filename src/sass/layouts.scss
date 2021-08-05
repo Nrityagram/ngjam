@@ -6,14 +6,12 @@
 .quad-mosaic-grid-fixed {
   display: grid;
   height: 100%;
-  grid-template-rows: repeat(12, 2vw);
-  grid-template-columns: repeat(9, 2vw);
+  grid-template-rows: repeat(12, 2.75vw);
+  grid-template-columns: repeat(9, 2.75vw);
   grid-gap: 20px;
 
   .grid-item {
-    // background-color: lightskyblue;
     display: flex;
-    // justify-content: baseline;
     align-items: flex-end;
     font-size: clamp(9px, 3vw, 1.2em);
     border-radius: 8px;
@@ -24,6 +22,7 @@
     // position: relative;
     a {
       color: #fff;
+      font-size: var(--medium-fontsize);
       padding: 5px;
       filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
       transition: filter 0.2s;
