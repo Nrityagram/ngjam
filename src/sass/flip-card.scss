@@ -193,8 +193,10 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       }
       .card-content {
+        // max character count that fits = 341 (incl spaces)
         font-family: var(--serif-font-family);
         font-size: calc(16px + 0.3vw);
+        font-weight: var(--medium-font-weight);
         display: block;
         position: absolute;
         top: 4vw;
