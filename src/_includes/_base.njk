@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://res.cloudinary.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     {% if carousels %}
-      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"/>
-      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"/>
+      <!-- <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"/> -->
+      <!-- <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"/> -->
+      <link rel="stylesheet" href="{{ '/utils/flickity.min.css' | url }}"/>
     {% endif %}
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
@@ -619,9 +620,13 @@
       </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     {% if carousels %}
-      <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script>
+      <!-- <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script> -->
+      <!-- <script src="{{ '/utils/owl_custom.js' | url }}"></script> -->
+      <script src="{{ '/utils/flickity.pkgd.min.js' | url }}" defer="defer"></script>
     {% endif %}
+    
     <script>
       var logoImgMob = document.getElementsByClassName("logo")[0];
       var logoImgDesk = document.getElementsByClassName("logo")[1];
@@ -777,9 +782,7 @@
         });
       });
     </script>
-    {% if carousels %}
-      <script src="{{ '/utils/owl_custom.js' | url }}"></script>
-    {% endif %}
+    
     {% if heroSlider %}
       <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
       <script>
