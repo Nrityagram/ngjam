@@ -268,12 +268,12 @@
         </div>
         <div class="button-bars">
           <div class="button-bar">
-            <div class="button block">
+            <div class="block button">
               <a href="mailto:info@nrityagram.org">
                 <i class="far fa-envelope"></i>
                 &nbsp; info@nrityagram.org</a >
             </div>
-            <div class="button block">
+            <div class="block button">
               <a href="tel:+918028466312">
                 <i class="fas fa-phone-alt"></i>
                 &nbsp; +91 80 28466312 / 3 / 4</a >
@@ -619,14 +619,24 @@
         </div>
       </footer>
     </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
     {% if carousels %}
       <!-- <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script> -->
       <!-- <script src="{{ '/utils/owl_custom.js' | url }}"></script> -->
-      <script src="{{ '/utils/flickity.pkgd.min.js' | url }}" defer="defer"></script>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script>
+        var flktyWrapAroundAuto = document.getElementsByClassName("flick-carousel--wraparound-autoplay")[0];
+        if (flktyWrapAroundAuto) {
+          var flkty_wrap = new Flickity(flktyWrapAroundAuto, {
+            wrapAround: true,
+            autoPlay: true
+          });
+        }
+      </script>
     {% endif %}
-    
+
     <script>
       var logoImgMob = document.getElementsByClassName("logo")[0];
       var logoImgDesk = document.getElementsByClassName("logo")[1];
