@@ -70,6 +70,9 @@
   > div:nth-child(n + 2) {
     margin-left: 50px;
   }
+  > div {
+    align-self: center;
+  }
 }
 
 .space-below {
@@ -77,6 +80,9 @@
 }
 .space-above {
   margin-top: calc(3em + 5vw);
+}
+.headline-space-above {
+  margin-top: calc(1em + 5vw);
 }
 
 .pad-top {
@@ -88,4 +94,12 @@
 
 .full-width {
   max-width: 100%;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }

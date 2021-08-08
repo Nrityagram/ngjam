@@ -631,7 +631,13 @@
         if (flktyWrapAroundAuto) {
           var flkty_wrap = new Flickity(flktyWrapAroundAuto, {
             wrapAround: true,
-            autoPlay: true
+            autoPlay: true,
+            freeScroll: true,
+            prevNextButtons: false,
+            pageDots: false
+          });
+          flkty_wrap.on('pointerUp', function (event, pointer) {
+            flkty_wrap.playPlayer();
           });
         }
       </script>

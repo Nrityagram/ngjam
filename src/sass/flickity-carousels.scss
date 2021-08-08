@@ -1,39 +1,47 @@
-.flick-carousel--wraparound-autoplay {
-  //   &.flick-carousel--wraparound-autoplay {
-  //   width: 100%;
-  height: 300px;
-  //   }
+.venues {
+  height: 100px;
+  margin: 1.75em 0 0;
+
   // mobile screens
   .carousel-cell {
     width: 50%;
-    height: 300px;
-    margin-right: 30px;
+    height: 120px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
+    counter-increment: carousel-cell;
 
     .slide-img {
       img {
         width: 100%;
-        height: 100px;
+        height: 80px;
         object-fit: scale-down;
       }
     }
 
     .slide-caption {
       font-family: var(--sans-serif-font-family);
-      font-size: var(--very-small-fontsize);
+      font-size: var(--small-fontsize);
+      line-height: var(--small-line-height);
       color: var(--dark-grey-color);
       text-align: center;
     }
   }
-  // tablet screens
+
   @media screen and (min-width: 800px) {
     .carousel-cell {
-      width: 30%;
+      width: 28%;
+      margin-right: 20px;
     }
   }
-  // desktop screens
-  @media screen and (min-width: 1400px) {
+
+  @media screen and (min-width: 1200px) {
+    .carousel-cell {
+      width: 22%;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
     .carousel-cell {
       width: 20%;
     }
@@ -41,7 +49,7 @@
   // very large screens
   @media screen and (min-width: 1800px) {
     .carousel-cell {
-      width: 10%;
+      width: 15%;
     }
   }
 }
