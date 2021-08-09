@@ -90,7 +90,7 @@
   .review-content {
     grid-row: span 8;
     grid-column: span 15;
-    overflow-x: hidden;
+    overflow: hidden;
     border-radius: 8px 0 0 8px;
     // position: relative;
     // .button-accent {
@@ -107,14 +107,14 @@
   .review-content--carousel {
     background: var(--light-grey-color);
     color: var(--dark-grey-color);
-    font-size: clamp(12px, 1.15vw, 18px);
+    font-size: clamp(14px, 1.35vw, 20px);
     font-family: var(--serif-font-family);
     height: calc(8 * var(--cell-size));
     .carousel-cell {
       width: 100%;
       counter-increment: carousel-cell;
       p {
-        padding: calc(1.5 * var(--cell-size)) 4em 1em;
+        padding: calc(1.1 * var(--cell-size)) 3.1em 1em;
         &:nth-child(n + 2) {
           padding-top: 0;
         }
@@ -129,12 +129,8 @@
   }
   .review-img--carousel {
     background: var(--dark-grey-color);
-    height: calc(7 * var(--cell-size));
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: top center;
     .carousel-cell {
-      width: 100%;
+      width: 105%;
       height: 100%;
       margin: 0;
       img {
@@ -150,18 +146,25 @@
     grid-column: span 2;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    background-color: var(--accent-color-2);
     .button {
+      display: flex;
+      justify-content: center;
+      align-content: center;
       height: 100%;
       padding: 0 20px;
       font-size: calc(0.7 * var(--cell-size));
-      color: #fff;
+      color: var(--light-grey-color);
       background-color: var(--primary-color);
+      border-width: 2px;
+      border-style: solid;
+      border-color: var(--accent-color-2);
+      border-radius: 3px 3px 3px 0;
       &:hover {
         background-color: var(--accent-color-1);
       }
       &:nth-child(2) {
-        border-radius: 0 0 8px 0;
+        border-radius: 0 0 4px 3px;
       }
     }
   }
