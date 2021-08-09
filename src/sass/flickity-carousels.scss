@@ -58,13 +58,22 @@
   }
 }
 
-// this layout works well uptil min-width = 900px
+// this layout works well uptil min-width = 1050px
+.reviews {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.airgap {
+  width: 50px;
+}
 .review-sliders--grid-container {
+  --cell-size: 3.17vw;
   display: grid;
-  width: 83.5vw;
+  //   width: 83.5vw;
   height: 100%;
-  grid-template-rows: repeat(9, 3vw);
-  grid-template-columns: repeat(26, 3vw);
+  grid-template-rows: repeat(8, var(--cell-size));
+  grid-template-columns: repeat(26, var(--cell-size));
 
   .flickity-button {
     display: none;
@@ -79,8 +88,9 @@
   }
 
   .review-content {
-    grid-row: span 9;
+    grid-row: span 8;
     grid-column: span 15;
+    overflow-x: hidden;
     border-radius: 8px 0 0 8px;
     // position: relative;
     // .button-accent {
@@ -95,18 +105,16 @@
     // }
   }
   .review-content--carousel {
-    background: var(--very-light-grey-color);
+    background: var(--light-grey-color);
     color: var(--dark-grey-color);
-    font-size: clamp(12px, 1.25vw, 18px);
-    font-family: var(--sans-serif-font-family);
+    font-size: clamp(12px, 1.15vw, 18px);
+    font-family: var(--serif-font-family);
+    height: calc(8 * var(--cell-size));
     .carousel-cell {
       width: 100%;
-      max-height: 27vw;
-      //   height: 100%;
       counter-increment: carousel-cell;
-      border: 1px solid lime;
       p {
-        padding: clamp(1.5em, 3vw, 3em) 4em 1em;
+        padding: calc(1.5 * var(--cell-size)) 4em 1em;
         &:nth-child(n + 2) {
           padding-top: 0;
         }
@@ -117,33 +125,43 @@
   .review-img {
     grid-row: span 7;
     grid-column: span 11;
+    overflow-x: hidden;
   }
   .review-img--carousel {
     background: var(--dark-grey-color);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
+    height: calc(7 * var(--cell-size));
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: top center;
     .carousel-cell {
       width: 100%;
       height: 100%;
-      border-radius: 5px;
+      margin: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
   .review-nav-buttons {
-    grid-row: span 2;
-    grid-column: span 3;
+    grid-row: span 1;
+    grid-column: span 2;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     .button {
-      padding: 10px 25px;
-      font-size: 35px;
+      height: 100%;
+      padding: 0 20px;
+      font-size: calc(0.7 * var(--cell-size));
       color: #fff;
       background-color: var(--primary-color);
       &:hover {
         background-color: var(--accent-color-1);
       }
       &:nth-child(2) {
-        border-radius: 0 0 6px 0;
+        border-radius: 0 0 8px 0;
       }
     }
   }
