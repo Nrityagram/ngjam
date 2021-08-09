@@ -20,6 +20,15 @@ p {
   margin: 0 auto;
 }
 
+a.light-grey-deco {
+  text-decoration: underline;
+  text-decoration-color: var(--very-light-grey);
+}
+a.light-red-deco {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color-1);
+}
+
 h1,
 h2,
 h3,

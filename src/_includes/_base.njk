@@ -640,6 +640,46 @@
             flkty_wrap.playPlayer();
           });
         }
+
+        var review_content_flkty = document.getElementById("review-content-flkty");
+        var review_img_flkty = document.getElementById("review-img-flkty");
+        var review_nav_buttons = document.getElementById("review-nav-buttons");
+
+        if (review_content_flkty && review_img_flkty && review_nav_buttons) {
+          var flkty__review_content = new Flickity('.review-content--carousel', {
+            wrapAround: true,
+            prevNextButtons: false,
+            pageDots: false,
+            draggable: false
+          });
+          var flkty__review_img = new Flickity('.review-img--carousel', {
+            wrapAround: true,
+            prevNextButtons: false,
+            pageDots: false,
+            draggable: false
+          });
+          // This avoids FOUC -- flash of unstyled content
+          // Turn on opacity after intialising flickity sliders
+          review_content_flkty.style.opacity = 1.0;
+          review_img_flkty.style.opacity = 1.0;
+          review_nav_buttons.style.opacity = 1.0;
+
+          var previousButton = document.querySelector('.button--previous');
+          if (previousButton) {
+            previousButton.addEventListener( 'click', function() {
+              flkty__review_content.previous();
+              flkty__review_img.previous();
+            });
+          }
+
+          var nextButton = document.querySelector('.button--next');
+          if (nextButton) {
+            nextButton.addEventListener( 'click', function() {
+              flkty__review_content.next();
+              flkty__review_img.next();
+            });
+          }
+        }
       </script>
     {% endif %}
 
