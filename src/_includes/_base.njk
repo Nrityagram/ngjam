@@ -631,11 +631,13 @@
         if (flktyWrapAroundAuto) {
           var flkty_wrap = new Flickity(flktyWrapAroundAuto, {
             wrapAround: true,
-            autoPlay: true,
+            autoPlay: 2500,
             freeScroll: true,
             prevNextButtons: false,
             pageDots: false
           });
+          // This avoids FOUC -- flash of unstyled content
+          flktyWrapAroundAuto.style.opacity = 1.0;
           flkty_wrap.on('pointerUp', function (event, pointer) {
             flkty_wrap.playPlayer();
           });
@@ -644,6 +646,8 @@
         var review_content_flkty = document.getElementById("review-content-flkty");
         var review_img_flkty = document.getElementById("review-img-flkty");
         var review_nav_buttons = document.getElementById("review-nav-buttons");
+        var view_all_button = document.getElementById("view-all-button");
+
 
         if (review_content_flkty && review_img_flkty && review_nav_buttons) {
           var flkty__review_content = new Flickity('.review-content--carousel', {
@@ -663,6 +667,7 @@
           review_content_flkty.style.opacity = 1.0;
           review_img_flkty.style.opacity = 1.0;
           review_nav_buttons.style.opacity = 1.0;
+          if (view_all_button) view_all_button.style.opacity = 1.0;
 
           var previousButton = document.querySelector('.button--previous');
           if (previousButton) {
