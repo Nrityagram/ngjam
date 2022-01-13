@@ -242,7 +242,7 @@
 
           <div class="item">
             <div class="label-plus">
-              <a href="/rasa/">Rasā</a>
+              <a href="/rasa/">Rasa</a>
             </div>
           </div>
 
@@ -549,7 +549,7 @@
               </div>
               <div class="item">
                 <div class="item-name">
-                  <a href="/rasa">Rasā</a>
+                  <a href="/rasa">Rasa</a>
                 </div>
               </div>
               <div class="item">
@@ -621,7 +621,7 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    
+
     {% if carousels %}
       <!-- <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script> -->
       <!-- <script src="{{ '/utils/owl_custom.js' | url }}"></script> -->
@@ -648,7 +648,6 @@
         var review_nav_buttons = document.getElementById("review-nav-buttons");
         var view_all_button = document.getElementById("view-all-button");
 
-
         if (review_content_flkty && review_img_flkty && review_nav_buttons) {
           var flkty__review_content = new Flickity('.review-content--carousel', {
             wrapAround: true,
@@ -667,11 +666,12 @@
           review_content_flkty.style.opacity = 1.0;
           review_img_flkty.style.opacity = 1.0;
           review_nav_buttons.style.opacity = 1.0;
-          if (view_all_button) view_all_button.style.opacity = 1.0;
-
+          if (view_all_button) 
+            view_all_button.style.opacity = 1.0;
+          
           var previousButton = document.querySelector('.button--previous');
           if (previousButton) {
-            previousButton.addEventListener( 'click', function() {
+            previousButton.addEventListener('click', function () {
               flkty__review_content.previous();
               flkty__review_img.previous();
             });
@@ -679,7 +679,7 @@
 
           var nextButton = document.querySelector('.button--next');
           if (nextButton) {
-            nextButton.addEventListener( 'click', function() {
+            nextButton.addEventListener('click', function () {
               flkty__review_content.next();
               flkty__review_img.next();
             });
@@ -694,11 +694,15 @@
       <script>
         //Resize Facebook feed
         $(window).on('resize', function () {
-          setTimeout(function () { changeFBPagePlugin() }, 500);
+          setTimeout(function () {
+            changeFBPagePlugin()
+          }, 500);
         });
 
         $(window).on('load', function () {
-          setTimeout(function () { changeFBPagePlugin() }, 1500);
+          setTimeout(function () {
+            changeFBPagePlugin()
+          }, 1500);
         });
 
         changeFBPagePlugin = function () {
@@ -706,10 +710,14 @@
           console.log("FB container width = " + container_width);
           var container_height = Number($('.fb-container').height()).toFixed(0);
           if (!isNaN(container_width) && !isNaN(container_height)) {
-            $(".fb-page").attr("data-width", container_width).attr("data-height", container_height);
+            $(".fb-page")
+              .attr("data-width", container_width)
+              .attr("data-height", container_height);
           }
           if (typeof FB !== 'undefined') {
-            FB.XFBML.parse();
+            FB
+              .XFBML
+              .parse();
           }
         };
       </script>
@@ -870,7 +878,7 @@
         });
       });
     </script>
-    
+
     {% if heroSlider %}
       <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
       <script>
