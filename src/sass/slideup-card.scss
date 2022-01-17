@@ -11,6 +11,10 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 	max-width: 100%;
 	margin: 0 auto;
 
+  &.card-pair {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 	@media (min-width: $wnd-md) {
 		grid-template-columns: repeat(2, 1fr);
 	}
