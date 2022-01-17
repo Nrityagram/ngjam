@@ -25,8 +25,9 @@
   max-height: -moz-fit-content;
   max-height: -webkit-fit-content;
   position: absolute;
-  bottom: calc(2vh + 110px);
-  right: 80px;
+  // bottom: calc(2vh + 110px);
+  bottom: 4vh;
+  right: 60px;
   padding: 0.5em 1.7em 0.5em;
   .cta-headline {
     color: var(--cta-font-colour-light);
