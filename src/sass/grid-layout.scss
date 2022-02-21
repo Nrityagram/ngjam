@@ -9,6 +9,13 @@
     &.salmon {
         background-color: var(--accent-color-5);
     }
+    &.red {
+        background-color: var(--primary-color);
+        color: #fff;
+        h1, h2, h3 {
+            color: #fff;
+        }
+    }
 
     // Grid Types
     display: grid;
@@ -35,9 +42,15 @@
     grid-column: 1 / 4;
 }
 
-.wide-narrow-2-column {
+.two-column-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    &.wide-narrow {
+        grid-template-columns: 2fr 1fr;
+    }
+    &.equal {
+        grid-template-columns: 1fr 1fr;
+    }
+    
     align-items: end;
     grid-gap: 1rem;
     .left-edge {
@@ -49,7 +62,14 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    // max-width: 100%;
+}
+
+.multi-row-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    min-height: 100%;
 }
 
 .quad-mosaic-grid-fixed {

@@ -5,10 +5,12 @@
 
 .fb-container {
   min-width: 25vw;
+  // max-width: 100% !important;
   max-width: 25vw;
   min-height: 87%;
   border-radius: 12px;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .video-container {
