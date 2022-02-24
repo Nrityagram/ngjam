@@ -326,3 +326,22 @@
     z-index: 2;
   }
 }
+
+.two-column-grid {
+  display: grid;
+
+  &.wide-narrow {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  &.equal {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  align-items: end;
+  grid-gap: 1rem;
+
+  .left-edge {
+    justify-self: end;
+  }
+}
