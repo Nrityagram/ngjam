@@ -43,6 +43,9 @@ $wnd-lg: 1230px;
     &.less-top-pad {
         padding-top: 2.5em !important;
     }
+    &.less-bottom-pad {
+        padding-bottom: 2.5em !important;
+    }
     // Grid Types
     display: grid;
     &.ultra-wide {
