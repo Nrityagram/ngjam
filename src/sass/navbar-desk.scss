@@ -185,7 +185,7 @@
 }
 
 .desk .multi-level .item > .item-name > a {
-  font-size: 1.05em;
+  font-size: 1.08em;
 }
 
 .desk .multi-level#ml1 {
@@ -206,7 +206,7 @@
   .item-name {
     > a {
       text-transform: uppercase;
-      font-weight: var(--strong-sserif-font-weight);
+      font-weight: var(--medium-sserif-font-weight);
       color: var(--true-red);
     }
     .sub-item .item-name {
