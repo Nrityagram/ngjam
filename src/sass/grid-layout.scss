@@ -229,12 +229,14 @@ $wnd-lg: 1230px;
     }
 
     display: grid;
+    grid-gap: 1em;
     
     &.wide-narrow {
         grid-template-columns: 2fr 1fr;
     }
     &.narrow-wide {
         grid-template-columns: 0.85fr 2.15fr;
+        grid-gap: 0.75em !important;
     }
     &.equal {
         grid-template-columns: 1fr 1fr;
@@ -244,7 +246,7 @@ $wnd-lg: 1230px;
     }
     
     align-items: end;
-    grid-gap: 1em;
+    
     &.extra-gap {
         grid-gap: 1.5em;
     }
