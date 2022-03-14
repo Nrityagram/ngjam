@@ -47,6 +47,9 @@ $wnd-lg: 1230px;
         &.more-top-margin {
             margin-top: 1.65em;
         }
+        &.less-top-margin {
+            margin-top: 1em;
+        }
         &:last-of-type {
             margin-bottom: 0;
         }
