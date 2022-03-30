@@ -9,12 +9,14 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
+    gap: 1.5vw;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem;
+    gap: 3px;
+    // padding: 1rem 0.1vw;
 }
 
 .desc.bio {
@@ -22,6 +24,8 @@
 }
 
 .biopic {
+    width: 100%;
+    
     &:hover {
         cursor: pointer;
     }
@@ -50,8 +54,6 @@
     font-weight: var(--light-serif-font-weight);
     color: var(--body-text-color);
     line-height: 1.05em;
-    // prevent the text from wrapping
-    white-space: nowrap;
 }
 
 .board-wrap {
@@ -65,24 +67,26 @@
 /* Desktop Media Query */
 @media screen and (min-width: 800px) {
     .cardwrapper {
-        align-items: stretch;
+        // align-items: stretch;
         gap: 0.25em;
     }
 
     .cardwrapper.card-pair {
-        margin: 0 16vw;
+        margin: 0 20vw;
     }
 
     .board-wrap {
         flex-wrap: nowrap;
     }
 
-    .card { 
-        padding: 0 1rem;
-        outline: 1px solid hotpink;
+    .common-desc.bio {
+        padding: 0.5rem 0;
     }
 
-    .common-desc.bio {
-        padding: 0.5rem 1rem;
+    .photo-caption {
+        font-size: calc(0.2em + 0.75vw);
+        &.mobile {
+            display: none;
+        }
     }
 }
