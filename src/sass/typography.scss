@@ -27,6 +27,12 @@ p {
     color: var(--primary-color);
     a {
         text-decoration-color: var(--primary-color) !important;
+        &:link {
+            color: var(--primary-color) !important;
+        }
+        &:visited {
+            color: var(--primary-color) !important;
+        }
     }
 }
 .black-text {
