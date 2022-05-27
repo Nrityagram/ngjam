@@ -289,10 +289,17 @@ $wnd-lg: 1230px;
     }
     
     align-items: end;
+    .align-top {
+        align-self: flex-start;
+    }
     
     &.extra-gap {
         grid-gap: 1.5em;
     }
+    &.x-x-gap {
+        grid-gap: 2.5em;
+    }
+
     .left-edge {
         justify-self: end;
     }

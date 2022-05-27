@@ -1,0 +1,113 @@
+---
+  layout: "_page.njk"
+  title: "Friends of Nrityagram"
+  heroType: "image"
+  heroText: "Friends of"
+  heroText2: "Nrityagram"
+  heroDesk: "https://res.cloudinary.com/nrityagram/image/upload/v1570033516/friends-of-nrityagram-banner_fg7kzg.jpg"
+  heroTab: "https://res.cloudinary.com/nrityagram/image/upload/v1589077339/ipad/friends-of-nrityagram_ohfsfo.jpg"
+  heroMob: "https://res.cloudinary.com/nrityagram/image/upload/v1576172128/mobile/friends-of-nrityagram_amc3kn.jpg"
+  heroDeskCredit: "Sreedhar Vaidya"
+  heroTabCredit: "Sreedhar Vaidya"
+  heroMobCredit: "Sreedhar Vaidya"
+  parentMenuItem: "Support"
+  carousels: false
+---
+
+<div class="content">
+	<div class="wrapper medium inner-page text-less-top-pad" data-nopad="bottom">
+		<p>
+			Friends of Nrityagram are vital members of our extended family. Your support will help us create uplifting
+			experiences for the community, maintain artistic excellence, expand our unique outreach programs and ensure that
+			Nrityagram continues to inspire future generations of dancers.
+		</p>
+	</div>
+	<div class="wrapper ultra-wide multi-row-subgrids inner-page very-less-top-pad">
+		<h1 class="center light-font no-margin-bottom">Areas of Support</h1>
+		<div class="two-column-grid x-x-gap equal">
+			<div class="align-top">
+				<details
+					open
+					data-imgsrc="https://res.cloudinary.com/nrityagram/image/upload/v1570033519/friendsofng_1_yvj2sr.jpg"
+					data-imgsrc-credit="Photo: Surupa Sen"
+				>
+					<summary class="no-top-pad">Village Children Arts Programme</summary>
+					<p>
+						We believe dance has the power to engage people and motivate them towards excellence. With your Annual
+						donation, we can continue our 30-year old community outreach to bring free dance training to hundreds of
+						village children, which will support their overall success in life.
+					</p>
+				</details>
+				<details
+					data-imgsrc="https://res.cloudinary.com/nrityagram/image/upload/v1570033516/friendsofng_2_cco1jk.jpg"
+					data-imgsrc-credit="Photo: Protima Gauri"
+				>
+					<summary>Re-stage, Restore and Rebuild Early Works</summary>
+					<p>
+						We regularly re-stage works from <a href="/surupa" class="bodylink">Surupa Sen</a>’s repertoire in addition
+						to heritage pieces from Guru Kelucharan Mahapatra’s legacy. Your Annual donation will allow us to rejuvenate
+						and nourish these works of art.
+					</p>
+				</details>
+				<details
+					data-imgsrc="https://res.cloudinary.com/nrityagram/image/upload/v1580797774/friends_of_ng_3_t4jnto.jpg"
+					data-imgsrc-credit="Photo: Lynne Fernandez"
+				>
+					<summary>Nrityagyān: Dance Awareness</summary>
+					<p>
+						We conduct free lecture-demonstrations in schools, universities, and local villages to build knowledge about
+						the classical arts. Over three decades, more than 500,000 children and adults have benefitted from our
+						Project Nrityagyān endeavours. Your Annual donation will enable us to continue this valuable work.
+					</p>
+				</details>
+				<details
+					data-imgsrc="https://res.cloudinary.com/nrityagram/image/upload/v1591011122/4_syzq7f.jpg"
+					data-imgsrc-credit="Photo: Per Bloch Courtesy Sangam House"
+				>
+					<summary>Subsidised Creative Space for Artists</summary>
+					<p>
+						Nrityagram aims to be a place that nurtures artistic growth and exchange. We provide an artistic haven for
+						creative professionals ranging from dancers to writers to theatre practitioners, and offer subsidies of 50%
+						- 100% on Lodge and Board. Your Annual donation will make it possible to help a community that typically
+						lacks support.
+					</p>
+				</details>
+			</div>
+
+			<div class="img-plus">
+				<picture>
+					<img
+						src="https://res.cloudinary.com/nrityagram/image/upload/v1570033519/friendsofng_1_yvj2sr.jpg"
+						alt="Areas of Support"
+						id="areasofsupport-img"
+					/>
+				</picture>
+				<div class="img-credit" id="areasofsupport-img-credit">Photo: Surupa Sen</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Fetch all the details element.
+	const details = document.querySelectorAll('details');
+	// Fetch img element for areas of support
+	const imgElm = document.getElementById('areasofsupport-img');
+	// Fetch img credit element for areas of support
+	const imgElmCredit = document.getElementById('areasofsupport-img-credit');
+
+	// Add the onclick listeners.
+	details.forEach((targetDetail) => {
+		targetDetail.addEventListener('click', () => {
+			// Close all the details that are not targetDetail.
+			details.forEach((detail) => {
+				if (detail !== targetDetail) {
+					detail.removeAttribute('open');
+				}
+			});
+			// Change image for targetDetail
+			imgElm.src = targetDetail.dataset.imgsrc;
+			imgElmCredit.innerHTML = targetDetail.dataset.imgsrcCredit;
+		});
+	});
+</script>
