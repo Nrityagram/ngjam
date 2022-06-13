@@ -155,7 +155,7 @@ var vanillaSlideshow = (function () {
       var indicators = document
         .getElementById(indicatorsContainer)
         .appendChild(node);
-      indicators.addEventListener("click", function () {
+      indicators.addEventListener("pointerdown", function () {
         _indicatorsClick(this);
       });
       indicators.className = indicatorsContainer;
@@ -276,12 +276,12 @@ var vanillaSlideshow = (function () {
       if (defaults.arrows) {
         document
           .getElementById(arrowNext)
-          .addEventListener("click", function () {
+          .addEventListener("pointerdown", function () {
             _nextSlide();
           });
         document
           .getElementById(arrowPrevious)
-          .addEventListener("click", function () {
+          .addEventListener("pointerdown", function () {
             _previousSlide();
           });
         document.getElementById(arrowPrevious).style.display = "block";
