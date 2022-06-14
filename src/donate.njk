@@ -11,7 +11,6 @@
   heroMobCredit: "Guillermo Consejo"
   parentMenuItem: "Support"
   carousels: false
-  donation: true
 ---
 
 <div class="content">
@@ -43,19 +42,19 @@
         <div class="modal-content payment-choice-list">
             <div class="payment-choice">
                 <label for="india" class="radio">
-                    <input type="radio" value="india" name="nationality" class="show-input radio-input" id="india"/>
+                    <input type="radio" value="india" name="nationality" class="show-input radio-input citizen-type" id="india"/>
 					Citizen of India (Tax Deductible)
 				</label>
             </div>
             <div class="payment-choice">
                 <label for="nri" class="radio">
-                    <input type="radio" value="nri" name="nationality" class="show-input radio-input" id="nri"/>
+                    <input type="radio" value="nri" name="nationality" class="show-input radio-input citizen-type" id="nri"/>
 					Non-Resident Indian (Tax Deductible)
 				</label>
             </div>
             <div class="payment-choice">
                 <label for="usa" class="radio">
-                    <input type="radio" value="usa" name="nationality" class="show-input radio-input" id="usa"/>
+                    <input type="radio" value="usa" name="nationality" class="show-input radio-input citizen-type" id="usa"/>
 					Citizen of USA (Tax Deductible)
 				</label>
             </div>
@@ -65,7 +64,7 @@
 						type="radio"
 						value="othercountry"
 						name="nationality"
-						class="show-input radio-input"
+						class="show-input radio-input citizen-type"
 						id="othercountry"
 					/>
 					Citizen of another country
@@ -85,7 +84,7 @@
 
     openModal.addEventListener('click', () => {
         // Clear any previous selection
-        const allOptions = document.querySelectorAll('input');
+        const allOptions = document.querySelectorAll('.citizen-type');
         allOptions.forEach((option) => {
             option.checked = false;
         });
@@ -98,5 +97,29 @@
         modal.close();
         // Enable scroll
         body.style.overflow = 'auto';
+    });
+
+    const allCitizenOptions = document.querySelectorAll('.citizen-type');
+    allCitizenOptions.forEach((targetOption) => {
+        targetOption.addEventListener('click', () => {
+            // Load appropriate donation page based
+            // on the citizenship choice made
+            switch (targetOption.id) {
+                case 'india':
+                    location.href = "/makeadonation";
+                    break;
+                case 'nri':
+                    location.href = "/makeadonation";
+                    break;
+                case 'usa':
+                    location.href = "/makeadonation-usa";
+                    break;
+                case 'othercountry':
+                    location.href = "/makeadonation-other";
+                    break;
+                default:
+                    break;
+            }
+        });
     });
 </script>

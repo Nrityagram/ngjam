@@ -1,54 +1,54 @@
 .vardan-category-list {
 	display: flex;
 	width: 100%;
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
 .vardan-donor-level {
 	margin: clamp(5px, 1vw, 1rem);
 	padding: clamp(5px, 1vw, 1rem);
-    background-color: white;
+	background-color: white;
 	border: 1px solid var(--light-grey-color);
 	border-radius: 8px;
-    box-shadow: none;
-    transition: box-shadow 0.5s ease-in-out;
+	box-shadow: none;
+	transition: box-shadow 0.5s ease-in-out;
 	flex-basis: 25%;
 	flex-grow: 0;
-    &:first-of-type {
-        margin-left: 0;
-    }
-    &:last-of-type {
-        margin-right: 0;
-    }
-    &:hover {
-        cursor: pointer;
-        p {
-            color: var(--primary-color);
-        }
-        box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
-    }
-    &.active {
-        p {
-            color: var(--primary-color);
-        }
-        box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
-    }
+	&:first-of-type {
+		margin-left: 0;
+	}
+	&:last-of-type {
+		margin-right: 0;
+	}
+	&:hover {
+		cursor: pointer;
+		p {
+			color: var(--primary-color);
+		}
+		box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+	}
+	&.active {
+		p {
+			color: var(--primary-color);
+		}
+		box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+	}
 }
 
 .vardan-donor-level-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    p {
-        font-family: var(--serif-font-family);
-        font-size: clamp(14px, 1.5vw, 18px);
-        font-weight: var(--light-serif-font-weight);
-        margin: 0.1em;
-        transition: color 0.5s ease-in-out;
-    }
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	p {
+		font-family: var(--serif-font-family);
+		font-size: clamp(14px, 1.5vw, 18px);
+		font-weight: var(--light-serif-font-weight);
+		margin: 0.1em;
+		transition: color 0.5s ease-in-out;
+	}
 }
 
 .img-stack {
@@ -68,4 +68,61 @@
 	-moz-transition: opacity 1s ease-in-out;
 	-o-transition: opacity 1s ease-in-out;
 	transition: opacity 1s ease-in-out;
+}
+
+.donor-benefits--list {
+	display: flex;
+	gap: 1em;
+
+	.donor-benefits--column {
+		display: flex;
+		flex-direction: column;
+		min-width: 50%;
+		flex-wrap: wrap;
+	}
+}
+
+.donor-benefit--wrapper {
+	input {
+		display: none;
+	}
+	padding-bottom: 1em;
+
+	.donor-benefit {
+		display: flex;
+        p {
+			color: var(--light-grey-color);
+			transition: color 0.3s linear;
+			font-size: 0.95em;
+		}
+		span {
+			padding-right: 0.5rem;
+			color: rgba(223, 15, 28, 0);
+			transition: color 0.3s linear;
+		}
+	}
+
+    .fr12345:checked+.donor-benefit,
+    .fr345:checked+.donor-benefit,
+    .fr3:checked+.donor-benefit,
+    .fr45:checked+.donor-benefit,
+    .fr4:checked+.donor-benefit,
+    .fr5:checked+.donor-benefit {
+        p {
+			color: var(--body-text-color);
+			transition: color 0.3s linear;
+			font-size: 0.95em;
+		}
+		span {
+			padding-right: 0.5rem;
+			color: rgba(223, 15, 28, 1);
+			transition: color 0.3s linear;
+		}
+    }
+}
+
+// set minimum width of red glass donate button 
+// so the button width remains fixed donor level name changes
+#donateButton {
+    min-width: 12vw;
 }
