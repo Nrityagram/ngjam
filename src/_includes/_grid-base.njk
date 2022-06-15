@@ -42,7 +42,7 @@
         {% endif %}
 
         <!-- CRITICAL CSS -->
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ '/css/grid-style.css' | url }}"/>
         <!-- END OF CRITICAL CSS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
@@ -789,29 +789,8 @@
                                             </div>
                                         </nav>
 
-
                                         <main>
                                             {{ content | safe }}
-
-                                            {% if heroSlider %}
-                                            <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
-                                            <script>
-                                                vanillaSlideshow.init({
-                                                    // auto slideshow, options: true or false
-                                                    slideshow: true,
-                                                    // slideshow delay
-                                                    delay: 3500,
-                                                    // display arrows, options: true or false
-                                                    arrows: true,
-                                                    // display indicators, options: true or false
-                                                    indicators: false,
-                                                    // start slideshow randomly, options: true or false
-                                                    random: false,
-                                                    // animation speed
-                                                    animationSpeed: "1.75s"
-                                                });
-                                            </script>
-                                        {% endif %}
 
                                             <footer>
                                                 <div class="tagline">
@@ -1108,7 +1087,7 @@
 
                                                 var AUTOHIDE = Boolean(0);
                                             </script>
-                                            <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
+                                            <script src="https://sibforms.com/forms/end-form/build/main.js" defer="defer"></script>
                                             <!-- TODO: Uncomment reCaptcha JS file below before publishing site on nrityagram.org -->
                                             <!-- <script src="https://www.google.com/recaptcha/api.js?hl=en"></script> -->
                                         </dialog>
@@ -1201,7 +1180,7 @@
                                         {% if slider %}
                                             <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-                                            <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script>
+                                            <script src="{{ '/utils/owl.carousel.min.js' | url }}"></script>
                                             <script src="{{ '/utils/owl_custom.js' | url }}"></script>
                                         {% endif %}
 
@@ -1211,7 +1190,7 @@
                                             <script
       src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
       integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-      crossorigin=""
+      crossorigin="" defer="defer"
     ></script>
                                         {% endif %}
 
