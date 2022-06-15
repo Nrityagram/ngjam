@@ -103,7 +103,11 @@
 	}
 
     .fr12345:checked+.donor-benefit,
+    .fr123:checked+.donor-benefit,
+    .fr12:checked+.donor-benefit,
     .fr345:checked+.donor-benefit,
+    .fr1:checked+.donor-benefit,
+    .fr2:checked+.donor-benefit,
     .fr3:checked+.donor-benefit,
     .fr45:checked+.donor-benefit,
     .fr4:checked+.donor-benefit,
@@ -123,6 +127,10 @@
 
 // set minimum width of red glass donate button 
 // so the button width remains fixed donor level name changes
-#donateButton {
-    min-width: 12vw;
+.wide-pad {
+    min-width: 280px;
+}
+
+.xwide-pad {
+    min-width: 300px;
 }
