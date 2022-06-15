@@ -5,66 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>{{ title }}</title>
         <link rel="preconnect" href="https://res.cloudinary.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" media="print" onload="this.media='all'"/>
         <link rel="shortcut icon" href="{{ '/img/ng_logo-favicon.png' | url }}"/>
 
         <!-- Stylesheet for SendInBlue Subscription Form -->
-        <style>
-            @font-face {
-                font-display: block;
-                font-family: Roboto;
-                src: url("https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2") format("woff2"), url("https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff") format("woff");
-            }
-
-            @font-face {
-                font-display: fallback;
-                font-family: Roboto;
-                font-weight: 600;
-                src: url("https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2") format("woff2"), url("https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff") format("woff");
-            }
-
-            @font-face {
-                font-display: fallback;
-                font-family: Roboto;
-                font-weight: 700;
-                src: url("https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2") format("woff2"), url("https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff") format("woff");
-            }
-
-            #sib-container input:-ms-input-placeholder {
-                text-align: left;
-                font-family: "Helvetica", sans-serif;
-                color: #c0ccda;
-            }
-
-            #sib-container input::placeholder {
-                text-align: left;
-                font-family: "Helvetica", sans-serif;
-                color: #c0ccda;
-            }
-
-            #sib-container textarea::placeholder {
-                text-align: left;
-                font-family: "Helvetica", sans-serif;
-                color: #c0ccda;
-            }
-        </style>
-        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+        <link rel="stylesheet" href="{{ '/utils/sendinblue.min.css' | url }}" media="print" onload="this.media='all'"/>
+        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" media="print" onload="this.media='all'">
         <!-- End of Stylesheet for SendInBlue Subscription Form -->
 
         {% if carousels %}
-            <link rel="stylesheet" href="{{ '/utils/flickity.min.css' | url }}"/>
+            <link rel="stylesheet" href="{{ '/utils/flickity.min.css' | url }}" media="print" onload="this.media='all'"/>
         {% endif %}
         {% if slider %}
-            <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"/>
-            <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"/>
+            <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}" media="print" onload="this.media='all'"/>
+            <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}" media="print" onload="this.media='all'"/>
         {% endif %}
         {% if gismap %}
             <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin=""
+      crossorigin="" media="print" onload="this.media='all'"
 />
         {% endif %}
 
@@ -74,11 +37,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"/> -->
             <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css" media="print" onload="this.media='all'"
 />
         {% endif %}
 
+        <!-- CRITICAL CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="{{ '/css/grid-style.css' | url }}"/>
+        <!-- END OF CRITICAL CSS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     </head>
     <body>
@@ -823,8 +789,30 @@
                                             </div>
                                         </nav>
 
+
                                         <main>
                                             {{ content | safe }}
+
+                                            {% if heroSlider %}
+                                            <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
+                                            <script>
+                                                vanillaSlideshow.init({
+                                                    // auto slideshow, options: true or false
+                                                    slideshow: true,
+                                                    // slideshow delay
+                                                    delay: 3500,
+                                                    // display arrows, options: true or false
+                                                    arrows: true,
+                                                    // display indicators, options: true or false
+                                                    indicators: false,
+                                                    // start slideshow randomly, options: true or false
+                                                    random: false,
+                                                    // animation speed
+                                                    animationSpeed: "1.75s"
+                                                });
+                                            </script>
+                                        {% endif %}
+
                                             <footer>
                                                 <div class="tagline">
             Nrityagram is a one-of-a-kind community of artistes, where dance is a way of life
@@ -1215,191 +1203,6 @@
 
                                             <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script>
                                             <script src="{{ '/utils/owl_custom.js' | url }}"></script>
-                                        {% endif %}
-
-                                        <script>
-                                            var logoImgMob = document.getElementsByClassName("logo")[0];
-                                            var logoImgDesk = document.getElementsByClassName("logo")[1];
-                                            var mobileElem = document.getElementsByClassName("mobile")[0];
-                                            var navElem = document.getElementsByTagName("nav")[0];
-                                            var navBarMobElem = document.getElementsByClassName("navbar")[0];
-                                            var navBarDeskElem = document.getElementsByClassName("navbar")[1];
-                                            var hamMenuElem = document.getElementById("menu");
-                                            var hamIcon = document.getElementById("ham-icon");
-                                            var mainElem = document.getElementsByTagName("main")[0];
-                                            var contentElem = document.getElementsByClassName("content")[0];
-                                            var heroImage = document.getElementsByClassName("hero-image")[0];
-                                            var heroSlider = document.getElementsByClassName("hero-slider")[0];
-                                            var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
-                                            var pageType = document
-                                                .getElementById("page-type")
-                                                .dataset
-                                                .pageType;
-                                            var heroType = document
-                                                .getElementById("hero-type")
-                                                .dataset
-                                                .heroType;
-                                            // Global variables
-                                            const navbar_bg_color_solid = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%)";
-                                            var navbar_bg_color_trans = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)";
-                                            const navbar_height = "100px";
-                                            const navbar_height_onscroll = "60px";
-                                            const navbar_desk_height = "110px";
-                                            const navbar_desk_height_onscroll = "90px";
-
-                                            // save scrollY position when ham menu opens
-                                            // and use it to scroll back the page below when menu closes
-                                            // issue: when mobile menu is long and user scrolls the page below also scrolls
-                                            var initial_scrollY_pos = 0;
-
-                                            function _close_menu() {
-                                                hamMenuElem.checked = false;
-                                                mobileElem.style.minHeight = "100%";
-                                                if (contentElem) {
-                                                    contentElem.style.overflow = "auto";
-                                                    mainElem.style.position = "static";
-                                                    _setnavbar_bgcolour();
-                                                }
-
-                                                if (hamIcon.classList.contains("ham-open")) {
-                                                    hamIcon
-                                                        .classList
-                                                        .remove("ham-open");
-                                                }
-                                            }
-
-                                            window.scroll({behavior: "smooth"});
-
-                                            window.addEventListener("load", (event) => {
-                                                if (pageType == "home") {
-                                                    navbar_bg_color_trans = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)";
-                                                    navBarDeskElem.style.background = navbar_bg_color_trans;
-                                                    navBarMobElem.style.background = navbar_bg_color_trans;
-                                                }
-                                                if (heroType == "none") {
-                                                    navBarDeskElem.style.background = navbar_bg_color_solid;
-                                                    navBarMobElem.style.background = navbar_bg_color_solid;
-                                                }
-
-                                                // make sure mobile menu is closed
-                                                _close_menu();
-                                            });
-
-                                            window.addEventListener("unload", (event) => {
-                                                // make sure mobile menu is closed
-                                                _close_menu();
-                                            });
-
-                                            function _setnavbar_bgcolour() {
-                                                let fromTop = window.scrollY;
-
-                                                if (fromTop > 0) {
-                                                    logoImgMob.style.height = "30px";
-                                                    logoImgDesk.style.height = "60px";
-                                                    navBarMobElem.style.height = navbar_height_onscroll;
-                                                    navBarDeskElem.style.height = navbar_desk_height_onscroll;
-                                                    navBarDeskElem.style.background = navbar_bg_color_solid;
-                                                    if (contentElem) {
-                                                        navBarMobElem.style.background = navbar_bg_color_solid;
-                                                    }
-                                                    if (heroType == "none") {
-                                                        navBarDeskElem.style.background = navbar_bg_color_solid;
-                                                    }
-                                                }
-
-                                                if (fromTop < 1) {
-                                                    if (!hamMenuElem.checked) {
-                                                        logoImgMob.style.height = "60px";
-                                                        // logoImgDesk.style.height = "85px";
-                                                        logoImgDesk.style.height = "92px";
-                                                        navBarMobElem.style.height = navbar_height;
-                                                        navBarDeskElem.style.height = navbar_desk_height;
-                                                        navBarDeskElem.style.background = navbar_bg_color_trans;
-                                                        if (heroType == "none") {
-                                                            navBarDeskElem.style.background = navbar_bg_color_solid;
-                                                        }
-                                                        if (contentElem) {
-                                                            navBarMobElem.style.background = navbar_bg_color_trans;
-                                                        }
-                                                    }
-                                                }
-                                            }
-
-                                            window.addEventListener("scroll", () => {
-                                                _setnavbar_bgcolour();
-                                            });
-
-                                            hamMenuElem.addEventListener("click", () => {
-                                                if (hamMenuElem.checked) {
-                                                    initial_scrollY_pos = window.scrollY;
-                                                    window.scrollTo(0, 0);
-                                                    console.log("open menu scrollY = " + initial_scrollY_pos);
-                                                    mobileElem.style.minHeight = "100vh";
-                                                    if (contentElem) {
-                                                        contentElem.style.overflow = "hidden";
-                                                        mainElem.style.position = "fixed";
-                                                        navBarMobElem.style.background = navbar_bg_color_solid;
-                                                    }
-                                                    logoImgMob.style.height = "40px";
-                                                    logoImgDesk.style.height = "80px";
-                                                    navBarMobElem.style.height = navbar_height_onscroll;
-                                                    hamIcon
-                                                        .classList
-                                                        .add("ham-open");
-                                                    // hamIcon.classList.toggle("ham-open");
-                                                } else {
-                                                    mobileElem.style.minHeight = "100%";
-                                                    if (contentElem) {
-                                                        contentElem.style.overflow = "auto";
-                                                        mainElem.style.position = "static";
-                                                        _setnavbar_bgcolour();
-                                                    }
-                                                    // hamIcon.classList.toggle("ham-open");
-                                                    if (hamIcon.classList.contains("ham-open")) {
-                                                        hamIcon
-                                                            .classList
-                                                            .remove("ham-open");
-                                                    }
-                                                    window.scrollTo(0, initial_scrollY_pos);
-                                                }
-                                            });
-
-                                            if (window.innerWidth > 799) {
-                                                if (heroImage) {
-                                                    heroImage.style.marginTop = "-" + navbar_desk_height;
-                                                }
-
-                                                if (heroSlider) {
-                                                    heroSlider.style.marginTop = "-" + navbar_desk_height;
-                                                }
-                                            }
-
-                                            function displayInfo(el, info) {
-                                                el.innerHTML = " " + info;
-                                            }
-                                            function hideInfo(el) {
-                                                el.innerHTML = "";
-                                            }
-                                        </script>
-
-                                        {% if heroSlider %}
-                                            <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
-                                            <script>
-                                                vanillaSlideshow.init({
-                                                    // auto slideshow, options: true or false
-                                                    slideshow: true,
-                                                    // slideshow delay
-                                                    delay: 3500,
-                                                    // display arrows, options: true or false
-                                                    arrows: true,
-                                                    // display indicators, options: true or false
-                                                    indicators: false,
-                                                    // start slideshow randomly, options: true or false
-                                                    random: false,
-                                                    // animation speed
-                                                    animationSpeed: "1.75s"
-                                                });
-                                            </script>
                                         {% endif %}
 
                                         {% if gismap %}
