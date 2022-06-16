@@ -33,15 +33,7 @@ pageType: 'inner'
 
 {{ content | safe }}
 
-{% if heroText %}
-<script>
-	gsap.to('.hero-text', {
-		duration: 3,
-		y: 70,
-		delay: 0.25,
-	});
-</script>
-{% endif %} {% if heroDesk %}
+{% if heroDesk %}
 <script>
 	// var heroImage = document.getElementsByClassName("hero-image")[0];
 	var heroCredit = document.getElementsByClassName('hero-credit')[0];

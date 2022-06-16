@@ -28,7 +28,7 @@
 
 .hero-text {
   position: absolute;
-  bottom: 30vh;
+  bottom: 0;
   right: 8vw;
   color: #fff;
   text-align: right;
@@ -37,6 +37,20 @@
   line-height: calc(1.85rem + 4vw);
   max-width: 75%;
   text-shadow: 2px 2px 4px #1d1d1d;
+  animation: fadeInDown 2s ease-out forwards;
+}
+
+/* animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-115px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(70px);
+  }
 }
 
 .hero-credit {

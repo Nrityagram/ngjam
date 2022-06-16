@@ -52,7 +52,7 @@ pageType: "home"
         data-metadata-tablet="Darial Sneed"
         data-metadata-mobile="Darial Sneed"
       ></div>
-      <!-- <div class="home-tagline"> -->
+        <!-- <div class="home-tagline"> -->
       </div>
 
       <div class="vanilla-slide">
@@ -326,12 +326,3 @@ pageType: "home"
 {% endif %}
 
 {{ content | safe }}
-
-{% if heroText %}
-  <script>
-    gsap.to(".hero-text", {
-      duration: 2,
-      y: 30
-    });
-  </script>
-{% endif %}
