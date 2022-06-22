@@ -43,7 +43,7 @@ window.addEventListener('load', (event) => {
 function _setnavbar_bgcolour() {
 	let fromTop = window.scrollY;
 
-	if (fromTop > 30) {
+	if (fromTop >= 0) {
 		// logoImgMob.style.height = '30px';
 		logoImgDesk.style.height = '60px';
 		navBarDeskElem.style.height = navbar_desk_height_onscroll;
@@ -53,7 +53,7 @@ function _setnavbar_bgcolour() {
 		}
 	}
 
-	if (fromTop < 30) {
+	if (fromTop < 1) {
 		logoImgDesk.style.height = '92px';
 		navBarDeskElem.style.height = navbar_desk_height;
 		navBarDeskElem.style.background = navbar_bg_color_trans;
