@@ -224,6 +224,9 @@ $wnd-lg: 1230px;
     }
     &.medium {
         grid-template-columns: 1fr 67vw 1fr;
+        @media (max-width: $wnd-md) {
+            grid-template-columns: 1fr 75vw 1fr;
+        }
     }
     &.narrow {
         grid-template-columns: 1fr 52vw 1fr;

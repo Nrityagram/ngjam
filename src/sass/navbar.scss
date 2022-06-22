@@ -8,6 +8,9 @@
 
 nav {
   position: sticky;
+  &.not-sticky {
+    position: static;
+  }
   top: 0;
   font-family: var(--sans-serif-font-family);
   font-weight: var(--thin-font-weight);

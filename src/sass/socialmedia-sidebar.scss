@@ -1,39 +1,49 @@
+// window width limit for tablet
+$wnd-tab: 800px;
+// window width limit for desktop
+$wnd-desk: 801px;
+
 .socialmedia-sidebar {
-    display: block;
-    position: fixed;
-    top: 70%;
-    left: 1vw;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    z-index: 500;
-    li {
-        position: relative;
-    }
-    img {
-        width: calc(27% + 0.5vw);
-        height: calc(27% + 0.5vw);
-        padding-top: 0.3rem;
-        cursor: pointer;
-        &#ytube {
-            height: calc(22% + 0.5vw);
-        }
-    }
+	display: block;
+	position: fixed;
+	top: 70%;
+	left: 1vw;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	z-index: 500;
+	li {
+		position: relative;
+	}
+	img {
+		width: calc(27% + 0.5vw);
+		height: calc(27% + 0.5vw);
+		padding-top: 0.3rem;
+		cursor: pointer;
+		// tablet & mobile
+		@media screen and (max-width: $wnd-tab) {
+			width: 17px;
+		}
+		&#ytube {
+			// padding-top: 0;
+			height: 18px;
+		}
+	}
 }
 
 .socialmedia-sidebar li[contact-descr]:hover::after,
 .socialmedia-sidebar li[contact-descr]:focus::after {
-    font-family: 'Lato', sans-serif;
-    content: attr(contact-descr);
-    position: absolute;
-    left: 25px;
-    top: 0.2rem;
-    width: max-content;
-    border-radius: 0.2rem;
-    background-color: #757575;
-    padding: 0.3rem;
-    text-align: center;
-    color: #ffffff;
-    font-size: 0.6rem;
-    z-index: 6;
+	font-family: 'Lato', sans-serif;
+	content: attr(contact-descr);
+	position: absolute;
+	left: 25px;
+	top: 0.2rem;
+	width: max-content;
+	border-radius: 0.2rem;
+	background-color: #757575;
+	padding: 0.3rem;
+	text-align: center;
+	color: #ffffff;
+	font-size: 0.6rem;
+	z-index: 6;
 }

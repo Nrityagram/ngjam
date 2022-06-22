@@ -1,41 +1,41 @@
 html,
 body {
-  min-height: -moz-fit-content;
-  min-height: -webkit-fit-content;
-  margin: 0;
-  padding: 0;
-  font-family: "EB Garamond", serif;
-  color: var(--body-text-color);
-  // makes the font weight look lighter -- remove to match the orig site
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-  background-color: #000;
-  font-size: var(--mobile-body-fontsize);
-  position: relative;
+	min-height: -moz-fit-content;
+	min-height: -webkit-fit-content;
+	margin: 0;
+	padding: 0;
+	font-family: 'EB Garamond', serif;
+	color: var(--body-text-color);
+	// makes the font weight look lighter -- remove to match the orig site
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
+	background-color: #000;
+	font-size: var(--mobile-body-fontsize);
+	position: relative;
 }
 
 body::-webkit-scrollbar {
-  width: 13px;
+	width: 13px;
 }
 
 body {
-  scrollbar-width: thin;
-  scrollbar-color: var(--grey-color) var(--very-light-grey-color);
+	scrollbar-width: thin;
+	scrollbar-color: var(--grey-color) var(--very-light-grey-color);
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--very-light-grey-color);
+	background: var(--very-light-grey-color);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--grey-color);
-  border-radius: 6px;
-  border: 3px solid var(--very-light-grey-color);
+	background-color: var(--grey-color);
+	border-radius: 6px;
+	border: 3px solid var(--very-light-grey-color);
 }
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 //  Enable smooth scrolling on the whole document
@@ -46,59 +46,64 @@ body::-webkit-scrollbar-thumb {
 
 // protect image download by blocking mouse events
 img {
-  pointer-events: none;
+	pointer-events: none;
 }
 
 :focus {
-  outline: none;
+	outline: none;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
-// Desktop + Tablet
+// Tablet & Mobile
+body {
+	font-size: var(--mobile-body-fontsize);
+	font-weight: var(--light-serif-font-weight);
+	font-family: 'EB Garamond', serif;
+}
+// Desktop
 @media only screen and (min-width: 800px) {
-  body {
-    font-size: var(--desktop-body-fontsize);
-    font-weight: var(--light-serif-font-weight);
-    font-family: 'EB Garamond',
-      serif;
-  }
+	body {
+		font-size: var(--desktop-body-fontsize);
+		font-weight: var(--light-serif-font-weight);
+		font-family: 'EB Garamond', serif;
+	}
 }
 
-@import "variables";
-@import "navbar";
-@import "navbar-desk";
-@import "vanillaSlideshow";
-@import "hero";
+@import 'variables';
+@import 'navbar';
+@import 'navbar-desk';
+@import 'vanillaSlideshow';
+@import 'hero';
 // @import "hero-fixed";
 // @import "content";
 
-@import "typography";
+@import 'typography';
 // Grid Layout Style
-@import "grid-layout";
-@import "pullquote";
+@import 'grid-layout';
+@import 'pullquote';
 
-@import "footer";
+@import 'footer';
 // Home Masthead
-@import "home";
+@import 'home';
 // @import "video-wrapper";
-@import "owl-carousel-custom";
-@import "cta";
-@import "red-glass-button";
-@import "image-plus";
+@import 'owl-carousel-custom';
+@import 'cta';
+@import 'red-glass-button';
+@import 'image-plus';
 // @import "hover-card";
 // @import "flip-card";
-@import "slideup-card";
+@import 'slideup-card';
 // @import "shoutout-box";
 // @import "layouts";
-@import "flickity-carousels";
+@import 'flickity-carousels';
 // @import "card";
-@import "buttons";
-@import "sm-wrappers";
-@import "socialmedia-sidebar";
-@import "timeline";
-@import "performancemap";
-@import "media-lightgallery";
-@import "trustee-layout";
-@import "modal";
-@import "ng-danamojostyle";
-@import "vardan-layout";
+@import 'buttons';
+@import 'sm-wrappers';
+@import 'socialmedia-sidebar';
+@import 'timeline';
+@import 'performancemap';
+@import 'media-lightgallery';
+@import 'trustee-layout';
+@import 'modal';
+@import 'ng-danamojostyle';
+@import 'vardan-layout';

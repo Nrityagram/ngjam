@@ -1,0 +1,286 @@
+<div class="mobile">
+    <input type="checkbox" id="menu"/>
+    <div class="navbar">
+        <a href="/"><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"/></a>
+        <label for="menu" id="ham-icon-wrapper">
+            <div id="ham-icon"></div>
+        </label>
+    </div>
+    <div class="multi-level" id="ml1">
+        <div class="item">
+            <input type="checkbox" id="ml1-A"/>
+            <div class="label-plus">
+                <a href="/about/">About</a>
+                <label for="ml1-A">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+            <ul>
+                <a href="/about">
+                    <li>About Us</li>
+                </a>
+                <a href="/history">
+                    <li>History</li>
+                </a>
+                <a href="/space">
+                    <li>Space</li>
+                </a>
+                <!-- <li> <div class="sub-item"> <ul> <a href="/space/#temple" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Temple</li></a > <a href="/space/#yoga" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Yoga Centre</li></a > <a href="/space/#odissi" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Odissi Gurukul</li></a > <a href="/space/#dining" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Dining Hall</li></a > <a href="/space/#cottages" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Cottages</li></a > <a href="/space/#kula" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Kula</li></a > <a href="/space/#amphitheatre" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Amphitheatre</li></a > </ul> </div> </li> -->
+                <a href="/future">
+                    <li>Future</li>
+                </a>
+                <li>
+                    <div class="sub-item">
+                        <ul>
+                            <a href="/future/#arts-centre" {% if '/future' in page.url %} onclick="_close_menu();" {% endif %}>
+                                <li>Performing Arts Centre</li>
+                            </a >
+                            <a href="/future/#resource-centre" {% if '/future' in page.url %} onclick="_close_menu();" {% endif %}>
+                                <li>Nrityagyān Resource Centre</li>
+                            </a >
+                        </ul>
+                    </div>
+                </li>
+                <a href="/board">
+                    <li>Board of Trustees</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="ml1-B"/>
+            <div class="label-plus">
+                <a href="/visit/">Visit</a>
+                <label for="ml1-B">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+            <ul>
+                <a href="/thingstodo">
+                    <li>Things to do</li>
+                </a>
+                <a href="/findyourway">
+                    <li>Find your Way</li>
+                </a>
+                <a href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656" target="_blank">
+                    <li>Virtual Tour</li>
+                </a >
+            </ul>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="ml1-C"/>
+            <div class="label-plus">
+                <a href="/support/">Support</a>
+                <label for="ml1-C">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+            <ul>
+                <a href="/vardan">
+                    <li>Join Vardān</li>
+                </a>
+                <li>
+                    <div class="sub-item">
+                        <ul>
+                            <a href="/friendsofng/">
+                                <li>Friends of Nrityagram</li>
+                            </a>
+                            <a href="/ngangels/">
+                                <li>Nrityagram &nbsp;Angels</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <a href="/donate/">
+                    <li>Donate</li>
+                </a>
+                <a href="/corpusfund/">
+                    <li>Support the Corpus Fund</li>
+                </a>
+                <a href="/otherwaystogive/">
+                    <li>Other ways to Give</li>
+                </a>
+                <a href="/sponsorship/">
+                    <li>Sponsorship</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="label-plus">
+                <a href="/press/">Press</a>
+            </div>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="ml1-D"/>
+            <label for="ml1-D">Media<i class="fas fa-chevron-right"></i>
+            </label>
+            <ul>
+                <a href="/showtime">
+                    <li>Showtime</li>
+                </a>
+                <a href="/behindthescenes">
+                    <li>Behind the Scenes</li>
+                </a>
+                <a href="/lifeatng">
+                    <li>Life at Nrityagram</li>
+                </a>
+                <a href="/downtime">
+                    <li>Downtime</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="multi-level" id="ml2">
+        <div class="item">
+            <input type="checkbox" id="ml2-A"/>
+            <div class="label-plus">
+                <a href="/ensemble/">Ensemble</a>
+                <label for="ml2-A">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+            <ul>
+                <a href="/repertoire">
+                    <li>Repertoire</li>
+                </a>
+                <!-- <li> <div class="sub-item"> <ul> <a href="/repertoire/#sri" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Śrī: In Search of the Goddess</li></a > <a href="/repertoire/#ansh" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Ansh</li></a > <a href="/repertoire/#sspace" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Sacred Space</li></a > <a href="/repertoire/#pratima" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Pratimā: Reflection</li></a > <a href="/repertoire/#sriyah" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Śriyaḥ</li></a > <a href="/repertoire/#samhara" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Saṃhāra</li></a > <a href="/repertoire/#samyoga" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Saṃyoga</li></a > <a href="/repertoire/#lovelong" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Songs of Love and Longing</li></a > <a href="/repertoire/#yadu" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Yadunandana</li></a > <a href="/repertoire/#ahuti" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Āhuti</li></a > <a href="/repertoire/#vinati" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Vinati</li></a > </ul> </div> </li> -->
+                <a href="/performancemap">
+                    <li>Performances</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="ml2-B"/>
+            <div class="label-plus">
+                <a href="/gurukula/">School</a>
+                <label for="ml2-B">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+            <ul>
+                <a href="/danceprofessional/">
+                    <li>Dance Professionals</li>
+                </a>
+                <a href="/danceunlimited">
+                    <li>Dance Unlimited</li>
+                </a>
+                <li>
+                    <div class="sub-item">
+                        <ul>
+                            <a href="/danceunlimited/#residential" {% if '/danceunlimited' in page.url %} onclick="_close_menu();" {% endif %}>
+                                <li>Residential Workshops</li>
+                            </a >
+                            <a href="/danceunlimited/#parttime" {% if '/danceunlimited' in page.url %} onclick="_close_menu();" {% endif %}>
+                                <li>Non-Residential Training</li>
+                            </a >
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="ml2-C"/>
+            <div class="label-plus">
+                <a href="/community/">Community</a>
+                <label for="ml2-C">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+            <ul>
+                <a href="/danceaware/">
+                    <li>Dance Awareness</li>
+                </a>
+                <a href="/villageoutreach">
+                    <li>Village Outreach</li>
+                </a>
+                <a href="/supportingartists">
+                    <li>Supporting Artistes</li>
+                </a>
+                <a href="/popularisingarts">
+                    <li>Popularising the Arts</li>
+                </a>
+                <li>
+                    <div class="sub-item">
+                        <ul>
+                            <a href="/popularisingarts/#vasant" {% if '/popularisingarts' in page.url %} onclick="_close_menu();" {% endif %}>
+                                <li>Vasantahabba</li>
+                            </a >
+                            <a href="/popularisingarts/#ajji" {% if '/popularisingarts' in page.url %} onclick="_close_menu();" {% endif %}>
+                                <li>Ajji Kathegaḷu</li>
+                            </a >
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="label-plus">
+                <a href="/rasa/">Rasa</a>
+            </div>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="ml2-D"/>
+            <label for="ml2-D">People<i class="fas fa-chevron-right"></i>
+            </label>
+            <ul>
+                <a href="/protima">
+                    <li>Protima Gauri</li>
+                </a>
+                <a href="/surupa">
+                    <li>Surupa Sen</li>
+                </a>
+                <a href="/pavithra">
+                    <li>Pavithra Reddy</li>
+                </a>
+                <a href="/lynne">
+                    <li>Lynne Fernandez</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="button-bars">
+        <div class="button-bar">
+            <div class="block button">
+                <a href="mailto:info@nrityagram.org">
+                    <i class="far fa-envelope"></i>
+                &nbsp; info@nrityagram.org</a >
+            </div>
+            <div class="block button">
+                <a href="tel:+918028466312">
+                    <i class="fas fa-phone-alt"></i>
+                &nbsp; +91 80 28466312 / 3 / 4</a >
+            </div>
+            <div class="block button">
+                <a onclick="openSibForm();">
+                    <i class="fas fa-newspaper"></i>
+                             &nbsp; SUBSCRIBE TO NEWSLETTER
+                            </a>
+            </div>
+        </div>
+        <div class="button-bar">
+            <div class="button round">
+                <a href="https://www.facebook.com/nrityagram" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <div class="button round">
+                <a href="https://www.instagram.com/nrityagram/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="button round">
+                <a href="https://www.youtube.com/user/Nrityagram" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <!-- <div class="button round"> <a href="https://spatial.chat/s/nrityagram" target="_blank"> <i class="far fa-comments"></i> </a> </div> -->
+        </div>
+    </div>
+</div>
