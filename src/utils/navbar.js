@@ -13,7 +13,7 @@ var heroType = document.getElementById('hero-type').dataset.heroType;
 // Global variables
 const navbar_bg_color_solid = 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%)';
 var navbar_bg_color_trans = 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)';
-const navbar_height = '100px';
+const navbar_height = '50px';
 const navbar_height_onscroll = '60px';
 const navbar_desk_height = '110px';
 const navbar_desk_height_onscroll = '90px';

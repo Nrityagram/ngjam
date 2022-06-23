@@ -31,7 +31,8 @@ nav {
 }
 
 .mobile {
-  background-color: #000;
+  // background-color: rgba(0, 0, 0, 0.2);
+  background-color: transparent;
   height: 50px;
   padding: 0 16px;
   display: -ms-flexbox;
@@ -58,6 +59,7 @@ nav {
   max-width: 0;
   width: 0;
   height: 100vh;
+  visibility: hidden;
   -moz-transform: translate3d(100vw, 0, 0);
   -o-transform: translate3d(100vw, 0, 0);
   -ms-transform: translate3d(100vw, 0, 0);
@@ -70,7 +72,6 @@ nav {
   z-index: 1;
   overflow: hidden;
   background-color: #000;
-  visibility: hidden;
 }
 .mobile .m-menu__header {
   padding: 0 16px;
@@ -95,14 +96,14 @@ nav {
   width: 100%;
 }
 .mobile .m-menu .m-menu {
+  max-width: 0;
+  width: 0;
+  visibility: hidden;
   -moz-transform: translate3d(100vw, 0, 0);
   -o-transform: translate3d(100vw, 0, 0);
   -ms-transform: translate3d(100vw, 0, 0);
   -webkit-transform: translate3d(100vw, 0, 0);
   transform: translate3d(100vw, 0, 0);
-  max-width: 0;
-  width: 0;
-  visibility: hidden;
 }
 .mobile .m-menu ul {
   height: 100%;
@@ -119,6 +120,7 @@ nav {
   font-size: 1rem;
   border-bottom: 1px solid #e8e8e8;
   position: relative;
+  
 }
 .mobile .m-menu ul li a {
   padding: 0;
