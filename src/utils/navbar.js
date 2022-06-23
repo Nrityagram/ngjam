@@ -25,6 +25,7 @@ var initial_scrollY_pos = 0;
 
 window.scroll({ behavior: 'smooth' });
 
+// Commenting this remoevs the janky behavior of menu when page loads
 // window.addEventListener('load', (event) => {
 // 	if (pageType == 'home') {
 // 		navbar_bg_color_trans = 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)';

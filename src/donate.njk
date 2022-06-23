@@ -82,15 +82,24 @@
 
     const donationType = "donate";
 
+    if (typeof modal.showModal !== 'function') {
+        modal.hidden = true;
+    }
+
     openModal.addEventListener('click', () => {
         // Clear any previous selection
         const allOptions = document.querySelectorAll('.citizen-type');
         allOptions.forEach((option) => {
             option.checked = false;
         });
-        modal.showModal();
-        // Disable scroll
-        body.style.overflow = 'hidden';
+        if (typeof modal.showModal !== 'function') {
+            modal.hidden = true;
+            alert("Please update your browser to the latest version");
+        } else {
+            modal.showModal();
+            // Disable scroll
+            body.style.overflow = 'hidden';
+        }
     });
 
     closeModal.addEventListener('click', () => {
