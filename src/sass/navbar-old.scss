@@ -1,0 +1,313 @@
+.desk {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+nav {
+  position: sticky;
+  &.not-sticky {
+    position: static;
+  }
+  top: 0;
+  font-family: var(--sans-serif-font-family);
+  font-weight: var(--thin-font-weight);
+  width: 100%;
+  transition: height 0.5s;
+  z-index: var(--navbar-z-index);
+}
+
+.navbar .logo {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  height: 80px;
+  width: auto;
+  transition: height 0.5s;
+}
+
+nav .mobile ul {
+  list-style: none;
+}
+
+nav .mobile a {
+  text-decoration: none;
+  // text-decoration-style: solid;
+  // text-decoration-color: var(--ham-link-underline-color);
+  // text-underline-offset: 4px;
+}
+
+.mobile .navbar {
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.4em;
+  padding-right: 0.7rem;
+  background: var(--navbar-bg-color);
+  transition: all 0.5s;
+}
+
+.mobile .navbar.trans {
+  background-color: transparent;
+}
+
+// Functionality
+nav input[type="checkbox"],
+.mobile .multi-level,
+.mobile .item ul,
+.mobile .button-bars {
+  display: none;
+}
+
+.mobile .sub-item ul {
+  // This is only for the NG menu style
+  display: block;
+  //   display: none;
+}
+
+.mobile #menu:checked ~ .multi-level,
+.mobile .item input:checked ~ ul {
+  display: block;
+}
+
+.mobile #menu:checked ~ .button-bars {
+  display: flex;
+}
+
+// Styling Mobile Menu
+.mobile {
+  min-height: 100%;
+  a {
+    color: var(--ham-menu-subitem-color);
+  }
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile ul,
+.mobile li,
+.mobile .item label {
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+  padding-left: 1.2em;
+  font-weight: var(--thin-font-weight);
+}
+
+.mobile .item > label {
+  background-color: var(--ham-menu-bg-color);
+}
+
+.mobile .item > ul a li {
+  font-size: 18px;
+}
+
+.mobile .sub-item > ul a li {
+  font-size: 16px;
+}
+
+.mobile .sub-item label {
+  padding-left: 0;
+}
+
+.mobile > label {
+  padding: 0;
+}
+
+.mobile ul {
+  background-color: var(--ham-menu-accent-color);
+}
+
+.mobile .multi-level .item > label {
+  border-bottom: 1px solid var(--ham-menu-border-color);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: var(--medium-font-weight);
+}
+
+.mobile .multi-level .item:first-child > label {
+  border-top: 1px solid var(--ham-menu-border-color);
+}
+
+.mobile .multi-level .item > .label-plus {
+  border-bottom: 1px solid var(--ham-menu-border-color);
+  a {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+.mobile .multi-level .item:first-child > .label-plus {
+  border-top: 1px solid var(--ham-menu-border-color);
+}
+
+.mobile .item > label {
+  color: var(--ham-menu-item-color);
+  font-weight: var(--thin-font-weight);
+  //   this makes the label element lie above the arrow
+  //   so you can click anywhere on the label
+  z-index: calc(var(--navbar-z-index) + 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile .multi-level .item > label i {
+  padding-right: 2em;
+  font-size: 0.9em;
+  color: var(--ham-menu-chevron-color);
+  transform: rotate(0deg);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.mobile .multi-level .item > .label-plus {
+  color: var(--ham-menu-item-color);
+  font-weight: var(--medium-font-weight);
+  line-height: 50px;
+  z-index: calc(var(--navbar-z-index) + 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    flex-basis: 80%;
+    padding-left: 1.2em;
+    text-decoration: none;
+    color: var(--ham-menu-item-color);
+  }
+}
+
+.mobile .multi-level .item > .label-plus label {
+  display: inline-block;
+  height: 100%;
+  flex-basis: 15%;
+  position: relative;
+  padding-bottom: 0.2em;
+}
+
+.mobile .multi-level .item > .label-plus label i {
+  position: absolute;
+  top: -5px;
+  right: 30px;
+  font-size: 0.65em;
+  color: var(--ham-menu-chevron-color);
+  transform: rotate(0deg);
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
+#ham-icon-wrapper {
+  padding: 1em 0.5em;
+}
+
+// Animating the hamburger menu icon
+#ham-icon {
+  display: block;
+  position: relative;
+}
+
+#ham-icon,
+#ham-icon::before,
+#ham-icon::after {
+  width: 1.2em;
+  height: 3px;
+  background: var(--ham-menu-icon-color);
+
+  transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+#ham-icon::before,
+#ham-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+#ham-icon::before {
+  bottom: 8px;
+}
+#ham-icon::after {
+  top: 8px;
+}
+
+.ham-open#ham-icon {
+  transform: rotate(45deg);
+}
+
+.ham-open#ham-icon::before {
+  opacity: 0;
+}
+
+.ham-open#ham-icon::after {
+  transform: rotate(90deg) translate(-8px);
+}
+
+.mobile label:hover {
+  cursor: pointer;
+}
+
+.mobile .multi-level .item input:checked + label i {
+  transform: rotate(90deg);
+}
+
+.mobile .multi-level .item > input:checked + .label-plus label i {
+  transform: rotate(90deg);
+  top: -10px;
+}
+
+.mobile .button-bars {
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--ham-menu-bg-color);
+  border-top: 1px solid var(--ham-menu-border-color);
+  flex-grow: 2;
+}
+
+.mobile .button-bar {
+  padding: 0.1em 0.5em;
+  &:first-child {
+    padding-top: 0.6em;
+  }
+
+  .button {
+    background-color: var(--ham-menu-bg-color);
+    border: none;
+    border-radius: 3px;
+    color: var(--primary-color);
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    &.block {
+      display: block;
+      text-align: left;
+      // padding-left: 8px;
+    }
+    font-size: 16px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    &.round {
+      padding: 6px 11px;
+      text-align: center;
+      border-radius: 50%;
+      i {
+        font-size: 18px;
+      }
+    }
+    a {
+      color: var(--primary-color);
+      font-size: 14px;
+      font-weight: var(--medium-font-weight);
+      text-decoration: none;
+    }
+  }
+}

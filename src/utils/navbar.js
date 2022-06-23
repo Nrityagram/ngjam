@@ -25,20 +25,20 @@ var initial_scrollY_pos = 0;
 
 window.scroll({ behavior: 'smooth' });
 
-window.addEventListener('load', (event) => {
-	if (pageType == 'home') {
-		navbar_bg_color_trans = 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)';
-		// navBarDeskElem.style.background = navbar_bg_color_trans;
-		// navBarMobElem.style.background = navbar_bg_color_trans;
-	}
-	navBarDeskElem.style.background = navbar_bg_color_trans;
+// window.addEventListener('load', (event) => {
+// 	if (pageType == 'home') {
+// 		navbar_bg_color_trans = 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)';
+// 		// navBarDeskElem.style.background = navbar_bg_color_trans;
+// 		// navBarMobElem.style.background = navbar_bg_color_trans;
+// 	}
+// 	navBarDeskElem.style.background = navbar_bg_color_trans;
 
-	if (heroType == 'none') {
-		navBarDeskElem.style.background = navbar_bg_color_solid;
-		// navBarMobElem.style.background = navbar_bg_color_solid;
-	}
+// 	if (heroType == 'none') {
+// 		navBarDeskElem.style.background = navbar_bg_color_solid;
+// 		// navBarMobElem.style.background = navbar_bg_color_solid;
+// 	}
 
-});
+// });
 
 function _setnavbar_bgcolour() {
 	let fromTop = window.scrollY;
