@@ -46,3 +46,23 @@ pageType: 'inner'
 	}
 </script>
 {% endif %}
+
+<script>
+  const ioCards = document.querySelectorAll('.io-card');
+  if( ioCards.length > 0 ) {
+    // page has Intersection Observer cards
+    const observer = new IntersectionObserver( entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, {
+      threshold: 0.5,
+    });
+
+    ioCards.forEach(ioCard => {
+      observer.observe(ioCard);
+    })
+  }
+</script>
