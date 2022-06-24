@@ -1,6 +1,11 @@
 .img-plus {
 	width: 100%;
 	height: 100%;
+
+    &.no-stretch {
+        height: fit-content;
+        aspect-ratio: 756/465;
+    }
     
 	img {
 		width: 100%;
@@ -12,11 +17,10 @@
 	overflow: hidden;
 	margin: 0 auto;
 	position: relative;
-	// &.stack {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// }
+	
+    &.sharp-corners {
+        border-radius: 0;
+    }
 
 	&.more-top-pad {
 		padding-top: 0.5em;
@@ -77,13 +81,21 @@
 		font-size: 2.1em;
 	}
 
-	// .img-subtitle {
-	//     color: #fff;
-	//     font-size: 1.75em;
-	//     position: absolute;
-	//     top: 52%;
-	//     right: 20px;
-	//     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-	// }
+	.img-magnify {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 22px;
+            height: auto;
+        }
+    }
 }
 

@@ -1105,8 +1105,23 @@
                                                 <!-- <script src="https://www.google.com/recaptcha/api.js?hl=en"></script> -->
                                             </dialog>
 
+                                            <dialog id="image-fullscreen">
+                                                <div class="modal-header black-bg large">
+                                                    <div class="close-img-button" aria-label="close">&#215;</div>
+                                                </div>
+                                                <div class="modal-content no-padding">
+                                                    <div class="img-plus sharp-corners">
+                                                        <picture>
+                                                            <img id="image-fullscreen-url">
+                                                        </picture>
+                                                        <div class="img-credit" id="image-fullscreen-credit"></div>
+                                                    </div>
+                                                </div>
+                                            </dialog>
+
                                             <script type="text/javascript">
                                                 const sib_modal = document.querySelector('#sib-subscribe-form');
+                                                const img_zoom_modal = document.querySelector('#image-fullscreen');
                                                 // const openModal = document.querySelector('.open-subscribe-modal');
                                                 const sib_closeModal = document.querySelector('.close-subscribe-button');
                                                 const sib_body = document.querySelector('body');
@@ -1115,6 +1130,7 @@
                                                 // dialog contents by default.
                                                 if ( typeof sib_modal.showModal !== 'function' ) {
                                                     sib_modal.hidden = true;
+                                                    img_zoom_modal.hidden = true;
                                                 }
 
                                                 function openSibForm() {
@@ -1138,6 +1154,31 @@
                                                     sib_modal.close();
                                                     // Enable scroll
                                                     sib_body.style.overflow = 'auto';
+                                                });
+                                            </script>
+
+                                            <script type="text/javascript">
+                                                const imgModal = document.querySelector('#image-fullscreen');
+                                                const openImgModal = document.querySelectorAll('.open-img-modal');
+                                                const closeImgModal = document.querySelector('.close-img-button');
+                                                const dialogImgElem = document.querySelector('#image-fullscreen-url');
+                                                const dialogImgElemCredit = document.querySelector('#image-fullscreen-credit');
+                                                const iBody = document.querySelector('body');
+
+                                                openImgModal.forEach((targetOpenModal) => {
+                                                    targetOpenModal.addEventListener('click', () => {
+                                                        dialogImgElem.src = targetOpenModal.dataset.imgUrl;
+                                                        dialogImgElemCredit.innerHTML = targetOpenModal.dataset.imgCredit;
+                                                        imgModal.showModal();
+                                                        // Disable scroll
+                                                        iBody.style.overflow = 'hidden';
+                                                    });
+                                                });
+
+                                                closeImgModal.addEventListener('click', () => {
+                                                    imgModal.close();
+                                                    // Enable scroll
+                                                    iBody.style.overflow = 'auto';
                                                 });
                                             </script>
 
