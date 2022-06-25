@@ -4,8 +4,10 @@
 
     &.no-stretch {
         height: fit-content;
-        aspect-ratio: 756/465;
     }
+	&.aspectratio {
+		aspect-ratio: 756/465;
+	}
     
 	img {
 		width: 100%;
