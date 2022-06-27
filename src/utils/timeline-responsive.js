@@ -80,7 +80,7 @@
   function callbackFunc() {
     // set pad to 5 for mobile + ipad (portrait) screens
     if (width > 768) {
-      pad = 60;
+      pad = 70;
     } else {
       pad = 0;
     }
