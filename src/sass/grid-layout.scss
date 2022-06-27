@@ -296,7 +296,13 @@ $wnd-lg: 1230px;
     
     align-items: end;
     .align-top {
+        height: 100%;
         align-self: flex-start;
+        &.space-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
     
     &.extra-gap {
