@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(lazyImagesPlugin, {
     imgSelector: "img", // custom image selector, IMP to keep img in last position
-    // cacheFile: "", // don't cache results to a file
+    cacheFile: "", // don't cache results to a file
   });
 
   return {

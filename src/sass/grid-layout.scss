@@ -532,8 +532,8 @@ a {
         &:visited {
             color: #000;
         }
-        text-decoration: underline;
-        text-decoration-color: var(--semi-grey-color);
+        text-decoration: underline dotted;
+        text-decoration-color: var(--semi-grey-color2);
         text-underline-offset: 0.1em;
     }
 }
