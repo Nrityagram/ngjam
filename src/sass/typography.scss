@@ -35,6 +35,35 @@ p {
         }
     }
 }
+.semi-grey-text {
+    color: var(--semi-grey-color);
+
+    a {
+        text-decoration-color: var(--semi-grey-color) !important;
+
+        &:link {
+            color: var(--semi-grey-color) !important;
+        }
+
+        &:visited {
+            color: var(--semi-grey-color) !important;
+        }
+    }
+}
+.light-grey-text {
+    color: var(--light-grey-color2);
+    a {
+        text-decoration-color: var(--light-grey-color2) !important;
+
+        &:link {
+            color: var(--light-grey-color2) !important;
+        }
+
+        &:visited {
+            color: var(--light-grey-color2) !important;
+        }
+    }
+}
 .black-text {
     color: #000;
 }
