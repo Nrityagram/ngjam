@@ -1914,7 +1914,7 @@ $(document).ready(function () {
   })
     .addTo(deskmap)
     .bindPopup(
-      "<city>Den Haag, The Netherlands</city><production>Bijayini Solo</production><location>Theater Zwembad De Regentes<date>25 FEB 2003</date></location><location>Korzo Main Stage<date>20 SEP 2006</date></location><production>Pratimā: Reflection</production><location>Korzo Main Stage<date>23 NOV 2008</date></location>",
+      "<city>Den Haag, The Netherlands</city><production>Bijayini Solo</production><location>Theater Zwembad De Regentes<date>25 FEB 2003</date></location><location>Korzo Main Stage<date>20 SEP 2006</date></location><production>Pratimā: Reflection</production><location>Korzo Main Stage<date>23 NOV 2008</date></location><production>Vinati: Songs from the Gita Govinda</production><location>Korzo Main Stage<date>20 MAY 2022</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // Den Haag, The Netherlands
   L.marker([53.219065, 6.568008], {
@@ -3877,7 +3877,7 @@ $(document).ready(function () {
   })
     .addTo(mobmap)
     .bindPopup(
-      "<city>Den Haag, The Netherlands</city><production>Bijayini Solo</production><location>Theater Zwembad De Regentes<date>25 FEB 2003</date></location><location>Korzo Main Stage<date>20 SEP 2006</date></location><production>Pratimā: Reflection</production><location>Korzo Main Stage<date>23 NOV 2008</date></location>",
+      "<city>Den Haag, The Netherlands</city><production>Bijayini Solo</production><location>Theater Zwembad De Regentes<date>25 FEB 2003</date></location><location>Korzo Main Stage<date>20 SEP 2006</date></location><production>Pratimā: Reflection</production><location>Korzo Main Stage<date>23 NOV 2008</date></location><production>Vinati: Songs from the Gita Govinda</production><location>Korzo Main Stage<date>20 MAY 2022</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // Den Haag, The Netherlands
   L.marker([53.219065, 6.568008], {
