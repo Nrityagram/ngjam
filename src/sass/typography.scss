@@ -1,10 +1,10 @@
 p {
     // font-size: var(--desktop-body-fontsize);
     &.emphasis {
-        color: var(--primary-color) !important;
+        color: var(--primary-color2) !important;
         a {
-            color: var(--primary-color) !important;
-            text-decoration-color: var(--primary-color) !important;
+            color: var(--primary-color2) !important;
+            text-decoration-color: var(--primary-color2) !important;
         }
         &.emphasis--bold {
             font-weight: var(--medium-serif-font-weight);
@@ -24,14 +24,14 @@ p {
 }
 
 .red-text {
-    color: var(--primary-color);
+    color: var(--primary-color2);
     a {
-        text-decoration-color: var(--primary-color) !important;
+        text-decoration-color: var(--primary-color2) !important;
         &:link {
-            color: var(--primary-color) !important;
+            color: var(--primary-color2) !important;
         }
         &:visited {
-            color: var(--primary-color) !important;
+            color: var(--primary-color2) !important;
         }
     }
 }
@@ -77,7 +77,7 @@ p {
 }
 
 h1, h2, h3 {
-    color: var(--primary-color);
+    color: var(--primary-color2);
 }
 
 // Styling of summary+details accordion elements
