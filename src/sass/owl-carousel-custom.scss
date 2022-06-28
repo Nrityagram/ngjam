@@ -6,6 +6,7 @@
     transform: scale(1);
     transition: 0.75s ease all;
     position: relative;
+    height: fit-content;
 
     &.rounded {
       border-radius: 12px;
@@ -21,6 +22,17 @@
       bottom: 30px;
       right: 1px;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .photo-caption {
+      color: #fff;
+      font-size: var(--medium-fontsize);
+      font-family: var(--serif-font-family);
+      position: absolute;
+      bottom: 10px;
+      left: 50.25%;
+      transform: translateX(-50%);
+      text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
     }
   }
 }
