@@ -12,10 +12,10 @@ $wnd-lg: 1230px;
 
     // bottom space  ~= 1.5 * top space
     padding: 50px 0 75px;
-    h1, h2, h3, p, table {
+    h1, h2, h3, h4, p, table {
         margin-top: 0;
     }
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
         margin-bottom: 0.5em;
         &.center {
             margin: 0 auto 0.5em;
@@ -145,7 +145,7 @@ $wnd-lg: 1230px;
     }
     &.red {
         background-color: var(--primary-color);
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             color: #fff !important;
         }
         p {
@@ -226,6 +226,9 @@ $wnd-lg: 1230px;
         }
         &.multi-row-subgrids {
             grid-gap: 1.5em;
+            &.x-grid-gap {
+                grid-gap: 3em;
+            }
         }
     }
     &.medium {
@@ -235,6 +238,9 @@ $wnd-lg: 1230px;
         }
         &.multi-row-subgrids {
             grid-gap: 1.5em;
+            &.x-grid-gap {
+                grid-gap: 3em;
+            }
         }
     }
     &.narrow {
@@ -283,16 +289,29 @@ $wnd-lg: 1230px;
         margin: 0 auto;
     }
 
+    &.border {
+        padding-bottom: 2em;
+        border-bottom: 1px solid var(--light-grey-color);
+    }
+
     display: grid;
     grid-gap: 1em;
     
     &.wide-narrow {
         grid-template-columns: 1.5fr 1fr;
     }
+    &.wide-narrow-lrg-gap {
+        grid-template-columns: 1.5fr 1fr;
+        grid-gap: 3em !important;
+    }
     &.narrow-wide {
         // grid-template-columns: 0.85fr 2.15fr;
         grid-template-columns: 1fr 1.5fr;
         grid-gap: 0.75em !important;
+    }
+    &.narrow-wide-lrg-gap {
+        grid-template-columns: 1fr 1.5fr;
+        grid-gap: 3em !important;
     }
     &.equal {
         grid-template-columns: 1fr 1fr;

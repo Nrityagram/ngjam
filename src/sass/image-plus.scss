@@ -11,6 +11,9 @@
 	&.aspectratio-1-4 {
 		aspect-ratio: 800/566;
 	}
+	&.aspectratio-sq {
+		aspect-ratio: 1 / 1;
+	}
     
 	img {
 		width: 100%;
