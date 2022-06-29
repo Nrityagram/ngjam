@@ -233,6 +233,9 @@ $wnd-lg: 1230px;
         @media (max-width: $wnd-md) {
             grid-template-columns: 1fr 75vw 1fr;
         }
+        &.multi-row-subgrids {
+            grid-gap: 1.5em;
+        }
     }
     &.narrow {
         grid-template-columns: 1fr 52vw 1fr;
@@ -287,7 +290,8 @@ $wnd-lg: 1230px;
         grid-template-columns: 2fr 1fr;
     }
     &.narrow-wide {
-        grid-template-columns: 0.85fr 2.15fr;
+        // grid-template-columns: 0.85fr 2.15fr;
+        grid-template-columns: 1fr 1.5fr;
         grid-gap: 0.75em !important;
     }
     &.equal {
