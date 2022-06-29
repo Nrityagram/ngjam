@@ -508,8 +508,8 @@ main {
     // font-size: var(--medium-fontsize);
     a {
         color: var(--semi-grey-color);
-        text-decoration: underline;
-        text-decoration-color: var(--light-grey-color);
+        text-decoration: underline dotted;
+        text-decoration-color: var(--grey-color);
         text-underline-offset: 0.1em;
         &:link {
             color: var(--semi-grey-color);

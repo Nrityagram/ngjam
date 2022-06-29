@@ -73,7 +73,7 @@
                     width: 20px;
                     height: 20px;
                     border-radius: 50%;
-                    background: var(--primary-color3);
+                    background: var(--primary-color4);
                     box-shadow: none;
                 }
                 /* draws the arrow */
@@ -85,7 +85,7 @@
                     border-style: solid;
                     top: 11px;
                     background: transparent;
-                    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0);
                 }
                 /* Gap btw rt-side box and timeline */
                 /* Only right-side boxes on mobile */
