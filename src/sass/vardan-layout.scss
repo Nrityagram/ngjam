@@ -23,13 +23,13 @@
 	&:hover {
 		cursor: pointer;
 		p {
-			color: var(--primary-color);
+			color: var(--primary-color4);
 		}
 		box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
 	}
 	&.active {
 		p {
-			color: var(--primary-color);
+			color: var(--primary-color4);
 		}
 		box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
 	}
