@@ -287,7 +287,7 @@ $wnd-lg: 1230px;
     grid-gap: 1em;
     
     &.wide-narrow {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
     }
     &.narrow-wide {
         // grid-template-columns: 0.85fr 2.15fr;
