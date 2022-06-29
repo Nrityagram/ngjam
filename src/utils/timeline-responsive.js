@@ -54,6 +54,7 @@
     var div = items[idx].firstElementChild;
     var dot = div.getElementsByClassName("dot")[0];
     var tooltip = div.getElementsByClassName("tooltip")[0];
+    var tooltipShadow = div.getElementsByClassName("tooltip-shadow")[0];
     // set the margin-top of div to 10px
     div.style.marginTop = "10px";
     if (side) {
@@ -63,6 +64,10 @@
       tooltip.style.left = "-24px";
       tooltip.style.borderWidth = "12px 24px 12px 0";
       tooltip.style.borderColor = "transparent #f7f7f3 transparent transparent";
+      // arrow shadow pointing to timeline from rt-side
+      tooltipShadow.style.left = "-24px";
+      tooltipShadow.style.borderWidth = "12px 24px 12px 0";
+      tooltipShadow.style.borderColor = "transparent #cbcbcb transparent transparent";
       // set box on right of timeline
       div.style.left = "38px";
     } else {
@@ -72,6 +77,10 @@
       tooltip.style.left = "400px";
       tooltip.style.borderWidth = "12px 0 12px 24px";
       tooltip.style.borderColor = "transparent transparent transparent #f7f7f3";
+      // arrow shadow pointing to timeline from lft-side
+      tooltipShadow.style.left = "400px";
+      tooltipShadow.style.borderWidth = "12px 0 12px 24px";
+      tooltipShadow.style.borderColor = "transparent transparent transparent #a7a7a3";
       // set box on left of timeline
       div.style.left = "-431px";
     }

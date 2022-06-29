@@ -87,6 +87,17 @@
                     background: transparent;
                     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0);
                 }
+                /* draws the shadow of arrow */
+                &.tooltip-shadow {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    top: 13px;
+                    background: transparent;
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0);
+                }
                 /* Gap btw rt-side box and timeline */
                 /* Only right-side boxes on mobile */
                 left: 38px;
