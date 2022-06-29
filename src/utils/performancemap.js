@@ -1844,7 +1844,7 @@ $(document).ready(function () {
   })
     .addTo(deskmap)
     .bindPopup(
-      "<city>Edinburgh, UK</city><production>Bijayini Solo</production><location>Edinburgh Fringe Festival, Dance Base<date>7-10, 12-16 AUG 2003</date></location><production>Surupa & Bijayini</production><location>Edinburgh Fringe Festival, Dance Base<date>13-22 AUG 2004</date></location><production>Śriyaḥ</production><location>Edinburgh International Festival, King’s Theatre<date>26-29 AUG 2011</date></location>",
+      "<city>Edinburgh, UK</city><production>Bijayini Solo</production><location>Edinburgh Fringe Festival, Dance Base<date>7-10, 12-16 AUG 2003</date></location><production>Surupa & Bijayini</production><location>Edinburgh Festival Fringe, Dance Base<date>13-22 AUG 2004</date></location><production>Śriyaḥ</production><location>Edinburgh International Festival, King’s Theatre<date>26-29 AUG 2011</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // Edinburgh, UK
   L.marker([48.8667, 2.3333], {
@@ -3807,7 +3807,7 @@ $(document).ready(function () {
   })
     .addTo(mobmap)
     .bindPopup(
-      "<city>Edinburgh, UK</city><production>Bijayini Solo</production><location>Edinburgh Fringe Festival, Dance Base<date>7-10, 12-16 AUG 2003</date></location><production>Surupa & Bijayini</production><location>Edinburgh Fringe Festival, Dance Base<date>13-22 AUG 2004</date></location><production>Śriyaḥ</production><location>Edinburgh International Festival, King’s Theatre<date>26-29 AUG 2011</date></location>",
+      "<city>Edinburgh, UK</city><production>Bijayini Solo</production><location>Edinburgh Fringe Festival, Dance Base<date>7-10, 12-16 AUG 2003</date></location><production>Surupa & Bijayini</production><location>Edinburgh Festival Fringe, Dance Base<date>13-22 AUG 2004</date></location><production>Śriyaḥ</production><location>Edinburgh International Festival, King’s Theatre<date>26-29 AUG 2011</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // Edinburgh, UK
   L.marker([48.8667, 2.3333], {
