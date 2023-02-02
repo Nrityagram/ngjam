@@ -30,8 +30,5 @@
   },
   "browserslist": [
     "last 2 versions"
-  ],
-  "devDependencies": {
-    "eleventy-plugin-lazyimages": "^2.1.2"
-  }
+  ]
 }
