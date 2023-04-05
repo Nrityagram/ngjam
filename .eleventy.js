@@ -1,5 +1,3 @@
-const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/sass/");
   eleventyConfig.addPassthroughCopy("./src/img");
@@ -10,11 +8,6 @@ module.exports = function (eleventyConfig) {
     return `<div class="video-container"><iframe class="responsive-iframe" src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe></div>`;
   });
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-
-  eleventyConfig.addPlugin(lazyImagesPlugin, {
-    imgSelector: "img", // custom image selector, IMP to keep img in last position
-    // cacheFile: "", // don't cache results to a file
-  });
 
   return {
     dir: {
