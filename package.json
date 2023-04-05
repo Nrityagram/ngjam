@@ -19,7 +19,7 @@
   "author": "achanda101",
   "license": "GPLv3",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy": "^2.0.0",
     "autoprefixer": "^10.4.7",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.9",
