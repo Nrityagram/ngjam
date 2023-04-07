@@ -1,6 +1,10 @@
-var logoImgDesk = document.getElementsByClassName('logo')[0];
+var logoImgDesk = document.getElementsByClassName('logo')[ 0 ];
+var logoImgMobile = document.getElementsByClassName('m-logo')[0];
 var navElem = document.getElementsByTagName('nav')[0];
-var navBarDeskElem = document.getElementsByClassName('navbar')[0];
+var navBarDeskElem = document.getElementsByClassName('navbar')[ 0 ];
+
+var navbarMobile = document.getElementsByClassName('mobile')[ 0 ];
+
 // var hamMenuElem = document.getElementById('menu');
 // var hamIcon = document.getElementById('ham-icon');
 var mainElem = document.getElementsByTagName('main')[0];
@@ -13,10 +17,11 @@ var heroType = document.getElementById('hero-type').dataset.heroType;
 // Global variables
 const navbar_bg_color_solid = 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%)';
 var navbar_bg_color_trans = 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)';
-const navbar_height = '50px';
-const navbar_height_onscroll = '60px';
+
 const navbar_desk_height = '110px';
 const navbar_desk_height_onscroll = '90px';
+const navbar_mob_height = '100px';
+const navbar_mob_height_onscroll = '80px';
 
 // save scrollY position when ham menu opens
 // and use it to scroll back the page below when menu closes
@@ -25,47 +30,42 @@ var initial_scrollY_pos = 0;
 
 window.scroll({ behavior: 'smooth' });
 
-// Commenting this remoevs the janky behavior of menu when page loads
-// window.addEventListener('load', (event) => {
-// 	if (pageType == 'home') {
-// 		navbar_bg_color_trans = 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)';
-// 		// navBarDeskElem.style.background = navbar_bg_color_trans;
-// 		// navBarMobElem.style.background = navbar_bg_color_trans;
-// 	}
-// 	navBarDeskElem.style.background = navbar_bg_color_trans;
-
-// 	if (heroType == 'none') {
-// 		navBarDeskElem.style.background = navbar_bg_color_solid;
-// 		// navBarMobElem.style.background = navbar_bg_color_solid;
-// 	}
-
-// });
-
 function _setnavbar_bgcolour() {
 	let fromTop = window.scrollY;
 
 	if (fromTop >= 0) {
-		// logoImgMob.style.height = '30px';
 		logoImgDesk.style.height = '60px';
 		navBarDeskElem.style.height = navbar_desk_height_onscroll;
+		logoImgMobile.style.height = '55px';
+		navbarMobile.style.height = navbar_mob_height_onscroll;
+
+		// setting navbar bg color to solid
+		navbarMobile.style.background = navbar_bg_color_solid;
 		navBarDeskElem.style.background = navbar_bg_color_solid;
 		if (heroType == 'none') {
 			navBarDeskElem.style.background = navbar_bg_color_solid;
+			navbarMobile.style.background = navbar_bg_color_solid;
 		}
 	}
 
 	if (fromTop < 1) {
 		logoImgDesk.style.height = '92px';
 		navBarDeskElem.style.height = navbar_desk_height;
+		logoImgMobile.style.height = '68px';
+		navbarMobile.style.height = navbar_mob_height;
+
+		// setting navbar bg color to transparent
+		navbarMobile.style.background = navbar_bg_color_trans;
 		navBarDeskElem.style.background = navbar_bg_color_trans;
 		if (heroType == 'none') {
 			navBarDeskElem.style.background = navbar_bg_color_solid;
+			navbarMobile.style.background = navbar_bg_color_solid;
 		}
 	}
 
 	if (heroType == 'none') {
 		navBarDeskElem.style.background = navbar_bg_color_solid;
-		// navBarMobElem.style.background = navbar_bg_color_solid;
+		navbarMobile.style.background = navbar_bg_color_solid;
 	}
 }
 
@@ -73,36 +73,7 @@ window.addEventListener('scroll', () => {
 	_setnavbar_bgcolour();
 });
 
-// hamMenuElem.addEventListener('click', () => {
-// 	if (hamMenuElem.checked) {
-// 		initial_scrollY_pos = window.scrollY;
-// 		window.scrollTo(0, 0);
-// 		console.log('open menu scrollY = ' + initial_scrollY_pos);
-// 		mobileElem.style.minHeight = '100vh';
-// 		if (contentElem) {
-// 			contentElem.style.overflow = 'hidden';
-// 			mainElem.style.position = 'fixed';
-// 			navBarMobElem.style.background = navbar_bg_color_solid;
-// 		}
-// 		logoImgMob.style.height = '40px';
-// 		logoImgDesk.style.height = '80px';
-// 		navBarMobElem.style.height = navbar_height_onscroll;
-// 		hamIcon.classList.add('ham-open');
-// 		// hamIcon.classList.toggle("ham-open");
-// 	} else {
-// 		mobileElem.style.minHeight = '100%';
-// 		if (contentElem) {
-// 			contentElem.style.overflow = 'auto';
-// 			mainElem.style.position = 'static';
-// 			_setnavbar_bgcolour();
-// 		}
-// 		// hamIcon.classList.toggle("ham-open");
-// 		if (hamIcon.classList.contains('ham-open')) {
-// 			hamIcon.classList.remove('ham-open');
-// 		}
-// 		window.scrollTo(0, initial_scrollY_pos);
-// 	}
-// });
+
 
 if (window.innerWidth > 799) {
 	if (heroImage) {

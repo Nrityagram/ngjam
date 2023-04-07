@@ -12,6 +12,12 @@ $wnd-lg: 1200px;
 	background-color: #000;
 }
 
+@media only screen and (max-width: 800px) {
+	.hero-image-container {
+		margin-top: calc(var(--navbar-mob-height) * (-1));
+	}
+}
+
 .hero-image {
 	width: 100%;
 	height: 100vh;

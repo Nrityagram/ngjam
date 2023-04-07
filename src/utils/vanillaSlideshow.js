@@ -9,7 +9,7 @@ var vanillaSlideshow = (function () {
 
   // default properties
   var defaults = {
-    delay: 5000,
+    delay: 4000,
     arrows: true,
     indicators: true,
     random: false,
@@ -284,8 +284,8 @@ var vanillaSlideshow = (function () {
           .addEventListener("pointerdown", function () {
             _previousSlide();
           });
-        document.getElementById(arrowPrevious).style.display = "block";
-        document.getElementById(arrowNext).style.display = "block";
+        // document.getElementById(arrowPrevious).style.display = "block";
+        // document.getElementById(arrowNext).style.display = "block";
       }
 
       if (defaults.indicators) {
