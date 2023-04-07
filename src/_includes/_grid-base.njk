@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{{ title }} | Nrityagram Dance Village, India</title>
-        <link rel="preconnect" href="https://res.cloudinary.com"/>
+        <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" media="print" onload="this.media='all'"/>
-        <link rel="shortcut icon" href="{{ '/img/ng_logo-favicon.png' | url }}"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" media="print" onload="this.media='all'" />
+        <link rel="shortcut icon" href="{{ '/img/ng_logo-favicon.png' | url }}" />
 
         <!-- Stylesheet for SendInBlue Subscription Form -->
-        <link rel="stylesheet" href="{{ '/utils/sendinblue.min.css' | url }}" media="print" onload="this.media='all'"/>
+        <link rel="stylesheet" href="{{ '/utils/sendinblue.min.css' | url }}" media="print" onload="this.media='all'" />
         <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" media="print" onload="this.media='all'">
         <!-- End of Stylesheet for SendInBlue Subscription Form -->
 
         {% if carousels %}
-            <link rel="stylesheet" href="{{ '/utils/flickity.min.css' | url }}" media="print" onload="this.media='all'"/>
+            <link rel="stylesheet" href="{{ '/utils/flickity.min.css' | url }}" media="print" onload="this.media='all'" />
         {% endif %}
         {% if slider %}
-            <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}" media="print" onload="this.media='all'"/>
-            <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}" media="print" onload="this.media='all'"/>
+            <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}" media="print" onload="this.media='all'" />
+            <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}" media="print" onload="this.media='all'" />
         {% endif %}
         {% if gismap %}
             <link
@@ -28,7 +28,6 @@
       href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
       crossorigin="" media="print" onload="this.media='all'"
-/>
         {% endif %}
 
         {% if lightgallery %}
@@ -38,12 +37,11 @@
             <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css" media="print" onload="this.media='all'"
-/>
         {% endif %}
 
         <!-- CRITICAL CSS -->
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ '/css/grid-style.css' | url }}"/>
+        <link rel="stylesheet" href="{{ '/css/grid-style.css' | url }}" />
         <!-- END OF CRITICAL CSS -->
     </head>
     <body>
@@ -58,606 +56,659 @@
                 <div class="mobile">
                     <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
                     <label class="m-menu__toggle" for="menu">
+                        <!-- hamburger icon -->
                         <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
                             <line x1="3" y1="12" x2="21" y2="12"></line>
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                     </label>
-                    <a href="/"><img src="https://res.cloudinary.com/nrityagram/image/upload/c_scale,h_40/v1610684681/ng_logo_orig_ixgpdu.png" alt="" class="m-logo"/></a>
+                    <a href="/"><img src="https://res.cloudinary.com/nrityagram/image/upload/c_scale,h_40/v1610684681/ng_logo_orig_ixgpdu.png" alt="" class="m-logo" /></a>
 
-                    <div class="m-menu">
-                        <div class="m-menu__header">
-                            <label class="m-menu__toggle" for="menu">
-                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                                </svg>
-                            </label>
-                            <span></span>
-                        </div>
-                        <ul>
-                            <li>
-                                <label class="a-label__chevron"
-                                       for="item-5">Ensemble</label>
-                                <input type="checkbox"
-                                       id="item-5"
-                                       name="item-5"
-                                       class="m-menu__checkbox">
-                                <div class="m-menu">
-                                    <div class="m-menu__header">
-                                        <span>Ensemble</span>
-                                        <label class="m-menu__toggle"
-                                               for="item-5">
-                                            <svg width="35"
-                                                 height="35"
-                                                 viewBox="0 0 24 24"
-                                                 fill="none"
-                                                 stroke="#d21f26"
-                                                 stroke-width="2"
-                                                 stroke-linecap="butt"
-                                                 stroke-linejoin="arcs">
-                                                <path d="M19 12H6M12 5l-7 7 7 7" />
-                                            </svg>
-                                        </label>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <a href="/ensemble">
-                                                <label>Nrityagram Ensemble</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <span class="a__chevron">
-                                                <a href="/repertoire">Répertoire</a>
-                                                <label class="a-label__chevron"
-                                                       for="item-5-2"></label>
-                                            </span>
-                                            <input type="checkbox"
-                                                   id="item-5-2"
-                                                   name="item-5"
-                                                   class="m-menu__checkbox">
-                                            <div class="m-menu">
-                                                <div class="m-menu__header">
-                                                    <span>Répertoire</span>
-                                                    <label class="m-menu__toggle"
-                                                           for="item-5-2">
-                                                        <svg width="35"
-                                                             height="35"
-                                                             viewBox="0 0 24 24"
-                                                             fill="none"
-                                                             stroke="#d21f26"
-                                                             stroke-width="2"
-                                                             stroke-linecap="butt"
-                                                             stroke-linejoin="arcs">
-                                                            <path d="M19 12H6M12 5l-7 7 7 7" />
-                                                        </svg>
-                                                    </label>
-                                                </div>
-                                                <ul>
-                                                    <li>
-                                                        <a href="/repertoire/#sri"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Śrī: In Search of the Goddess</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#ansh"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Ansh</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#sspace"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Sacred Space</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#pratima"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Pratimā: Reflection</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#sriyah"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Śriyaḥ</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#samhara"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Saṃhāra</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#samyoga"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Saṃyoga</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#lovelong"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Songs of Love and Longing</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#yadu"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Yadunandana</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#ahuti"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Āhuti</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/repertoire/#vinati"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Vinati: Songs from the Gita Govinda</label>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="/performancemap">
-                                                <label>Performances</label>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <label class="a-label__chevron"
-                                       for="item-6">School</label>
-                                <input type="checkbox"
-                                       id="item-6"
-                                       name="item-6"
-                                       class="m-menu__checkbox">
-                                <div class="m-menu">
-                                    <div class="m-menu__header">
-                                        <span>School</span>
-                                        <label class="m-menu__toggle"
-                                               for="item-6">
-                                            <svg width="35"
-                                                 height="35"
-                                                 viewBox="0 0 24 24"
-                                                 fill="none"
-                                                 stroke="#d21f26"
-                                                 stroke-width="2"
-                                                 stroke-linecap="butt"
-                                                 stroke-linejoin="arcs">
-                                                <path d="M19 12H6M12 5l-7 7 7 7" />
-                                            </svg>
-                                        </label>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <a href="/gurukula">
-                                                <label>Nrityagram Gurukula</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/danceprofessional">
-                                                <label>Dance Professionals</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <span class="a__chevron">
-                                                <a href="/danceunlimited">Dance Unlimited</a>
-                                                <label class="a-label__chevron"
-                                                       for="item-6-3"></label>
-                                            </span>
-                                            <input type="checkbox"
-                                                   id="item-6-3"
-                                                   name="item-6"
-                                                   class="m-menu__checkbox">
-                                            <div class="m-menu">
-                                                <div class="m-menu__header">
-                                                    <span>Dance Unlimited</span>
-                                                    <label class="m-menu__toggle"
-                                                           for="item-6-3">
-                                                        <svg width="35"
-                                                             height="35"
-                                                             viewBox="0 0 24 24"
-                                                             fill="none"
-                                                             stroke="#d21f26"
-                                                             stroke-width="2"
-                                                             stroke-linecap="butt"
-                                                             stroke-linejoin="arcs">
-                                                            <path d="M19 12H6M12 5l-7 7 7 7" />
-                                                        </svg>
-                                                    </label>
-                                                </div>
-                                                <ul>
-                                                    <li>
-                                                        <a href="/danceunlimited/#residential"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Residential Workshops</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/danceunlimited/#parttime"
-                                                           onClick="document.location.reload(true)">
-                                                            <label>Non-Residential Training</label>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="a__chevron">
-                                    <a href="/community">Community</a>
+                    <div class="m-menu top-level">
+                        <div>
+                            <div class="m-menu__header">
+                                <label class="m-menu__toggle" for="menu">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </label>
+                                <span></span>
+                            </div>
+                            <ul>
+                                <li>
                                     <label class="a-label__chevron"
-                                           for="item-7"></label>
-                                </span>
-                                <input type="checkbox"
-                                       id="item-7"
-                                       name="item-7"
-                                       class="m-menu__checkbox">
-                                <div class="m-menu">
-                                    <div class="m-menu__header">
-                                        <span>Nrityagram Community</span>
-                                        <label class="m-menu__toggle"
-                                               for="item-7">
-                                            <svg width="35"
-                                                 height="35"
-                                                 viewBox="0 0 24 24"
-                                                 fill="none"
-                                                 stroke="#d21f26"
-                                                 stroke-width="2"
-                                                 stroke-linecap="butt"
-                                                 stroke-linejoin="arcs">
-                                                <path d="M19 12H6M12 5l-7 7 7 7" />
-                                            </svg>
-                                        </label>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <a href="/community/#villageoutreach"
-                                               onClick="document.location.reload(true)">
-                                                <label>Village Outreach</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/community/#popularisingarts"
-                                               onClick="document.location.reload(true)">
-                                                <label>Popularising the Arts</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/community/#supportingartists"
-                                               onClick="document.location.reload(true)">
-                                                <label>Supporting Artistes</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/community/#danceaware"
-                                               onClick="document.location.reload(true)">
-                                                <label>Dance Awareness</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/community/#quietspace"
-                                               onClick="document.location.reload(true)">
-                                                <label>Quiet Space</label>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <label class="a-label__chevron"
-                                       for="item-8">People</label>
-                                <input type="checkbox"
-                                       id="item-8"
-                                       name="item-8"
-                                       class="m-menu__checkbox">
-                                <div class="m-menu">
-                                    <div class="m-menu__header">
-                                        <span>People</span>
-                                        <label class="m-menu__toggle"
-                                               for="item-8">
-                                            <svg width="35"
-                                                 height="35"
-                                                 viewBox="0 0 24 24"
-                                                 fill="none"
-                                                 stroke="#d21f26"
-                                                 stroke-width="2"
-                                                 stroke-linecap="butt"
-                                                 stroke-linejoin="arcs">
-                                                <path d="M19 12H6M12 5l-7 7 7 7" />
-                                            </svg>
-                                        </label>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <a href="/protima">
-                                                <label>Protima Gauri</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/surupa">
-                                                <label>Surupa Sen</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/pavithra">
-                                                <label>Pavithra Reddy</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/lynne">
-                                                <label>Lynne Fernandez</label>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <label class="a-label__chevron" for="item-1">About</label>
-                                <input type="checkbox" id="item-1" name="item-1" class="m-menu__checkbox">
-                                <div class="m-menu">
-                                    <div class="m-menu__header">
-                                        <span>About</span>
-                                        <label class="m-menu__toggle" for="item-1">
-                                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                                                <path d="M19 12H6M12 5l-7 7 7 7"/>
-                                            </svg>
-                                        </label>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <a href="/about">
-                                                <label>About Us</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/history">
-                                                <label>History</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <span class="a__chevron">
-                                                <a href="/space">Space</a>
-                                                <label class="a-label__chevron" for="item-1-3"></label>
-                                            </span>
-                                            <input type="checkbox" id="item-1-3" name="item-1" class="m-menu__checkbox">
-                                            <div class="m-menu">
-                                                <div class="m-menu__header">
-                                                    <span>Space</span>
-                                                    <label class="m-menu__toggle" for="item-1-3">
-                                                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                                                            <path d="M19 12H6M12 5l-7 7 7 7"/>
-                                                        </svg>
-                                                    </label>
+                                        for="item-5">Ensemble</label>
+                                    <input type="checkbox"
+                                        id="item-5"
+                                        name="item-5"
+                                        class="m-menu__checkbox">
+                                    <div class="m-menu">
+                                        <div class="m-menu__header">
+                                            <span>Ensemble</span>
+                                            <label class="m-menu__toggle"
+                                                for="item-5">
+                                                <svg width="35"
+                                                    height="35"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="#d21f26"
+                                                    stroke-width="2"
+                                                    stroke-linecap="butt"
+                                                    stroke-linejoin="arcs">
+                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="/ensemble">
+                                                    <label>Nrityagram Ensemble</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="a__chevron">
+                                                    <a href="/repertoire">Répertoire</a>
+                                                    <label class="a-label__chevron"
+                                                        for="item-5-2"></label>
+                                                </span>
+                                                <input type="checkbox"
+                                                    id="item-5-2"
+                                                    name="item-5"
+                                                    class="m-menu__checkbox">
+                                                <div class="m-menu">
+                                                    <div class="m-menu__header">
+                                                        <span>Répertoire</span>
+                                                        <label class="m-menu__toggle"
+                                                            for="item-5-2">
+                                                            <svg width="35"
+                                                                height="35"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="#d21f26"
+                                                                stroke-width="2"
+                                                                stroke-linecap="butt"
+                                                                stroke-linejoin="arcs">
+                                                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                            </svg>
+                                                        </label>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/repertoire/#sri"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Śrī: In Search of the Goddess</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#ansh"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Ansh</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#sspace"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Sacred Space</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#pratima"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Pratimā: Reflection</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#sriyah"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Śriyaḥ</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#samhara"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Saṃhāra</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#samyoga"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Saṃyoga</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#lovelong"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Songs of Love and Longing</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#yadu"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Yadunandana</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#ahuti"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Āhuti</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/repertoire/#vinati"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Vinati: Songs from the Gita Govinda</label>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <ul>
-                                                    <li>
-                                                        <a href="/space/#temple" onClick="document.location.reload(true)">
-                                                            <label>Temple</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/space/#yoga" onClick="document.location.reload(true)">
-                                                            <label>Yoga Centre</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/space/#odissi" onClick="document.location.reload(true)">
-                                                            <label>Odissi Gurukul</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/space/#dining" onClick="document.location.reload(true)">
-                                                            <label>Dining Hall</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/space/#cottages" onClick="document.location.reload(true)">
-                                                            <label>Cottages</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/space/#kula" onClick="document.location.reload(true)">
-                                                            <label>Kula</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/space/#amphitheatre" onClick="document.location.reload(true)">
-                                                            <label>Amphitheatre</label>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span class="a__chevron">
-                                                <a href="/future">Future</a>
-                                                <label class="a-label__chevron" for="item-1-4"></label>
-                                            </span>
-                                            <input type="checkbox" id="item-1-4" name="item-1" class="m-menu__checkbox">
-                                            <div class="m-menu">
-                                                <div class="m-menu__header">
-                                                    <span>Future</span>
-                                                    <label class="m-menu__toggle" for="item-1-4">
-                                                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                                                            <path d="M19 12H6M12 5l-7 7 7 7"/>
-                                                        </svg>
-                                                    </label>
-                                                </div>
-                                                <ul>
-                                                    <li>
-                                                        <a href="/future/#arts-centre" onClick="document.location.reload(true)">
-                                                            <label>Performing Arts Centre</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/future/#resource-centre" onClick="document.location.reload(true)">
-                                                            <label>Nrityagyān Resource Centre</label>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="/board">
-                                                <label>Board of Trustees</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <label class="a-label__chevron" for="item-1-6">Media</label>
-                                            <input type="checkbox" id="item-1-6" name="item-1" class="m-menu__checkbox">
-                                            <div class="m-menu">
-                                                <div class="m-menu__header">
-                                                    <span>Media</span>
-                                                    <label class="m-menu__toggle" for="item-1-6">
-                                                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                                                            <path d="M19 12H6M12 5l-7 7 7 7"/>
-                                                        </svg>
-                                                    </label>
-                                                </div>
-                                                <ul>
-                                                    <li>
-                                                        <a href="/showtime">
-                                                            <label>Showtime</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/behindthescenes">
-                                                            <label>Behind the Scenes</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/lifeatng">
-                                                            <label>Life at Nrityagram</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/downtime">
-                                                            <label>Downtime</label>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <label class="a-label__chevron" for="item-2">Visit</label>
-                                <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
-                                <div class="m-menu">
-                                    <div class="m-menu__header">
-                                        <span>Visit</span>
-                                        <label class="m-menu__toggle" for="item-2">
-                                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                                                <path d="M19 12H6M12 5l-7 7 7 7"/>
-                                            </svg>
-                                        </label>
+                                            </li>
+                                            <li>
+                                                <a href="/performancemap">
+                                                    <label>Performances</label>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <a href="/visit">
-                                                <label>Visit Us</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/findyourway">
-                                                <label>Find Your Way</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656" target="_blank"></a>
-                                            <label>Virtual Tour</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <label class="a-label__chevron" for="item-3">Support</label>
-                                <input type="checkbox" id="item-3" name="item-3" class="m-menu__checkbox">
-                                <div class="m-menu">
-                                    <div class="m-menu__header">
-                                        <span>Support</span>
-                                        <label class="m-menu__toggle" for="item-3">
-                                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                                                <path d="M19 12H6M12 5l-7 7 7 7"/>
-                                            </svg>
-                                        </label>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <a href="/support">
-                                                <label>Support Us</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <span class="a__chevron">
-                                                <a href="/vardan">Join Vardān</a>
-                                                <label class="a-label__chevron" for="item-3-2"></label>
-                                            </span>
-                                            <input type="checkbox" id="item-3-2" name="item-3" class="m-menu__checkbox">
-                                            <div class="m-menu">
-                                                <div class="m-menu__header">
-                                                    <span>Join Vardān</span>
-                                                    <label class="m-menu__toggle" for="item-3-2">
-                                                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                                                            <path d="M19 12H6M12 5l-7 7 7 7"/>
-                                                        </svg>
-                                                    </label>
+                                </li>
+                                <li>
+                                    <label class="a-label__chevron"
+                                        for="item-6">School</label>
+                                    <input type="checkbox"
+                                        id="item-6"
+                                        name="item-6"
+                                        class="m-menu__checkbox">
+                                    <div class="m-menu">
+                                        <div class="m-menu__header">
+                                            <span>School</span>
+                                            <label class="m-menu__toggle"
+                                                for="item-6">
+                                                <svg width="35"
+                                                    height="35"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="#d21f26"
+                                                    stroke-width="2"
+                                                    stroke-linecap="butt"
+                                                    stroke-linejoin="arcs">
+                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="/gurukula">
+                                                    <label>Nrityagram Gurukula</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/danceprofessional">
+                                                    <label>Dance Professionals</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="a__chevron">
+                                                    <a href="/danceunlimited">Dance Unlimited</a>
+                                                    <label class="a-label__chevron"
+                                                        for="item-6-3"></label>
+                                                </span>
+                                                <input type="checkbox"
+                                                    id="item-6-3"
+                                                    name="item-6"
+                                                    class="m-menu__checkbox">
+                                                <div class="m-menu">
+                                                    <div class="m-menu__header">
+                                                        <span>Dance Unlimited</span>
+                                                        <label class="m-menu__toggle"
+                                                            for="item-6-3">
+                                                            <svg width="35"
+                                                                height="35"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="#d21f26"
+                                                                stroke-width="2"
+                                                                stroke-linecap="butt"
+                                                                stroke-linejoin="arcs">
+                                                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                            </svg>
+                                                        </label>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/danceunlimited/#residential"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Residential Workshops</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/danceunlimited/#parttime"
+                                                            onClick="document.location.reload(true)">
+                                                                <label>Non-Residential Training</label>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <ul>
-                                                    <li>
-                                                        <a href="/friendsofng">
-                                                            <label>Friends of Nrityagram</label>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/ngangels">
-                                                            <label>Nrityagram Angels</label>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="/donate">
-                                                <label>Donate</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/corpusfund">
-                                                <label>Support the Corpus Fund</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/otherwaystogive">
-                                                <label>Other ways to Give</label>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/sponsorship">
-                                                <label>Sponsorship</label>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="/press">
-                                    <label>Press</label>
-                                </a>
-                            </li>
-                        </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="a-label__chevron"
+                                            for="item-7">Community</label>
+                                    <input type="checkbox"
+                                        id="item-7"
+                                        name="item-7"
+                                        class="m-menu__checkbox">
+                                    <div class="m-menu">
+                                        <div class="m-menu__header">
+                                            <span>Community</span>
+                                            <label class="m-menu__toggle"
+                                                for="item-7">
+                                                <svg width="35"
+                                                    height="35"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="#d21f26"
+                                                    stroke-width="2"
+                                                    stroke-linecap="butt"
+                                                    stroke-linejoin="arcs">
+                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="/community"
+                                                onClick="document.location.reload(true)">
+                                                    <label>Nrityagram Community</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/community/#villageoutreach"
+                                                onClick="document.location.reload(true)">
+                                                    <label>Village Outreach</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/community/#popularisingarts"
+                                                onClick="document.location.reload(true)">
+                                                    <label>Popularising the Arts</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/community/#supportingartists"
+                                                onClick="document.location.reload(true)">
+                                                    <label>Supporting Artistes</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/community/#danceaware"
+                                                onClick="document.location.reload(true)">
+                                                    <label>Dance Awareness</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/community/#quietspace"
+                                                onClick="document.location.reload(true)">
+                                                    <label>Quiet Space</label>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="a-label__chevron"
+                                        for="item-8">People</label>
+                                    <input type="checkbox"
+                                        id="item-8"
+                                        name="item-8"
+                                        class="m-menu__checkbox">
+                                    <div class="m-menu">
+                                        <div class="m-menu__header">
+                                            <span>People</span>
+                                            <label class="m-menu__toggle"
+                                                for="item-8">
+                                                <svg width="35"
+                                                    height="35"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="#d21f26"
+                                                    stroke-width="2"
+                                                    stroke-linecap="butt"
+                                                    stroke-linejoin="arcs">
+                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="/protima">
+                                                    <label>Protima Gauri</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/surupa">
+                                                    <label>Surupa Sen</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/pavithra">
+                                                    <label>Pavithra Reddy</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/lynne">
+                                                    <label>Lynne Fernandez</label>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="a-label__chevron" for="item-1">About</label>
+                                    <input type="checkbox" id="item-1" name="item-1" class="m-menu__checkbox">
+                                    <div class="m-menu">
+                                        <div class="m-menu__header">
+                                            <span>About</span>
+                                            <label class="m-menu__toggle" for="item-1">
+                                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="/about">
+                                                    <label>About Us</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/history">
+                                                    <label>History</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="a__chevron">
+                                                    <a href="/space">Space</a>
+                                                    <label class="a-label__chevron" for="item-1-3"></label>
+                                                </span>
+                                                <input type="checkbox" id="item-1-3" name="item-1" class="m-menu__checkbox">
+                                                <div class="m-menu">
+                                                    <div class="m-menu__header">
+                                                        <span>Space</span>
+                                                        <label class="m-menu__toggle" for="item-1-3">
+                                                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                            </svg>
+                                                        </label>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/space/#temple" onClick="document.location.reload(true)">
+                                                                <label>Temple</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/space/#yoga" onClick="document.location.reload(true)">
+                                                                <label>Yoga Centre</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/space/#odissi" onClick="document.location.reload(true)">
+                                                                <label>Odissi Gurukul</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/space/#dining" onClick="document.location.reload(true)">
+                                                                <label>Dining Hall</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/space/#cottages" onClick="document.location.reload(true)">
+                                                                <label>Cottages</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/space/#kula" onClick="document.location.reload(true)">
+                                                                <label>Kula</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/space/#amphitheatre" onClick="document.location.reload(true)">
+                                                                <label>Amphitheatre</label>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="a__chevron">
+                                                    <a href="/future">Future</a>
+                                                    <label class="a-label__chevron" for="item-1-4"></label>
+                                                </span>
+                                                <input type="checkbox" id="item-1-4" name="item-1" class="m-menu__checkbox">
+                                                <div class="m-menu">
+                                                    <div class="m-menu__header">
+                                                        <span>Future</span>
+                                                        <label class="m-menu__toggle" for="item-1-4">
+                                                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                            </svg>
+                                                        </label>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/future/#arts-centre" onClick="document.location.reload(true)">
+                                                                <label>Performing Arts Centre</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/future/#resource-centre" onClick="document.location.reload(true)">
+                                                                <label>Nrityagyān Resource Centre</label>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="/board">
+                                                    <label>Board of Trustees</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <label class="a-label__chevron" for="item-1-6">Media</label>
+                                                <input type="checkbox" id="item-1-6" name="item-1" class="m-menu__checkbox">
+                                                <div class="m-menu">
+                                                    <div class="m-menu__header">
+                                                        <span>Media</span>
+                                                        <label class="m-menu__toggle" for="item-1-6">
+                                                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                            </svg>
+                                                        </label>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/showtime">
+                                                                <label>Showtime</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/behindthescenes">
+                                                                <label>Behind the Scenes</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/lifeatng">
+                                                                <label>Life at Nrityagram</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/downtime">
+                                                                <label>Downtime</label>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="a-label__chevron" for="item-2">Visit</label>
+                                    <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+                                    <div class="m-menu">
+                                        <div class="m-menu__header">
+                                            <span>Visit</span>
+                                            <label class="m-menu__toggle" for="item-2">
+                                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="/visit">
+                                                    <label>Visit Us</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/findyourway">
+                                                    <label>Find Your Way</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656" target="_blank"></a>
+                                                <label>Virtual Tour</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="a-label__chevron" for="item-3">Support</label>
+                                    <input type="checkbox" id="item-3" name="item-3" class="m-menu__checkbox">
+                                    <div class="m-menu">
+                                        <div class="m-menu__header">
+                                            <span>Support</span>
+                                            <label class="m-menu__toggle" for="item-3">
+                                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="/support">
+                                                    <label>Support Us</label>
+                                                </a>
+                                            </li>
+                                            {# <li>
+                                                <span class="a__chevron">
+                                                    <a href="/vardan">Join Vardān</a>
+                                                    <label class="a-label__chevron" for="item-3-2"></label>
+                                                </span>
+                                                <input type="checkbox" id="item-3-2" name="item-3" class="m-menu__checkbox">
+                                                <div class="m-menu">
+                                                    <div class="m-menu__header">
+                                                        <span>Join Vardān</span>
+                                                        <label class="m-menu__toggle" for="item-3-2">
+                                                            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d21f26" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                                                <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                            </svg>
+                                                        </label>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/friendsofng">
+                                                                <label>Friends of Nrityagram</label>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/ngangels">
+                                                                <label>Nrityagram Angels</label>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li> #}
+                                            <li>
+                                                <a href="/donate">
+                                                    <label>Donate</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/corpusfund">
+                                                    <label>Support the Corpus Fund</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/otherwaystogive">
+                                                    <label>Other ways to Give</label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/sponsorship">
+                                                    <label>Sponsorship</label>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/press">
+                                        <label>Press</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a onclick="openSibForm();">
+                                        <label>Subscribe</label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="socialmedia-sidebar-mob">
+                                <li contact-descr="+91 80 28466312 / 3 / 4">
+                                    <a href="tel:+918028466312">
+                                        <img src="{{ '/img/social/phone.png' | url }}" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li contact-descr="info@nrityagram.org">
+                                    <a href="mailto:info@nrityagram.org" target="_blank">
+                                        <img src="{{ '/img/social/email.png' | url }}" loading="lazy" />
+                                    </a>
+                                </li>
+                                <!-- <li contact-descr="Events Calendar">
+                                        <a href="https://calendar.google.com/calendar/embed?src=nrityagram.org_qbkn1gon81ldld7ktpk0afr3pk%40group.calendar.google.com&ctz=Asia%2FKolkata" target="_blank">
+                                        <img src="{{ '/img/social/calendar.png' | url }}" loading="lazy"/>
+                                        </a>
+                                    </li> -->
+                                <!-- <li contact-descr="Blog">
+                                        <a href="#" target="_blank">
+                                        <img src="{{ '/img/social/blog.png' | url }}" loading="lazy" />
+                                        </a>
+                                    </li> -->
+                                <li>
+                                    <a href="https://www.facebook.com/nrityagram/" target="_blank">
+                                        <img src="{{ '/img/social/fb-sq-icon2.png' | url }}" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/nrityagram/" target="_blank">
+                                        <img src="{{ '/img/social/instagram.png' | url }}" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/user/Nrityagram" target="_blank">
+                                        <img src="{{ '/img/social/youtube.png' | url }}" loading="lazy" id="ytube" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        {# this div is a spacer div to raise the social media bar above
+                        the bottom band on mobile phones #}
+                        <div style="height: 10vh"></div>
                     </div>
 
                 </div>
@@ -665,7 +716,7 @@
                 <div class="desk">
                     <div class="navbar">
                         <!-- <a href="/"><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"/></a> -->
-                        <a href="/"><img src="https://res.cloudinary.com/nrityagram/image/upload/v1610684681/ng_logo_orig_ixgpdu.png" alt="" class="logo"/></a>
+                        <a href="/"><img src="https://res.cloudinary.com/nrityagram/image/upload/v1610684681/ng_logo_orig_ixgpdu.png" alt="" class="logo" /></a>
                         <div class="menu-groups">
                             <div class="multi-level" id="ml1">
                                 <div class="item">
@@ -1128,17 +1179,17 @@
                                             <ul class="socialmedia-sidebar">
                                                 <li contact-descr="+91 80 28466312 / 3 / 4">
                                                     <a href="tel:+918028466312">
-                                                        <img src="{{ '/img/social/phone.png' | url }}" loading="lazy"/>
+                                                        <img src="{{ '/img/social/phone.png' | url }}" loading="lazy" />
                                                     </a>
                                                 </li>
                                                 <li contact-descr="info@nrityagram.org">
                                                     <a href="mailto:info@nrityagram.org" target="_blank">
-                                                        <img src="{{ '/img/social/email.png' | url }}" loading="lazy"/>
+                                                        <img src="{{ '/img/social/email.png' | url }}" loading="lazy" />
                                                     </a>
                                                 </li>
                                                 <li contact-descr="Subscribe to Newsletter">
                                                     <a onclick="openSibForm();">
-                                                        <img src="{{ '/img/social/news-icon-1.png' | url }}" loading="lazy"/>
+                                                        <img src="{{ '/img/social/news-icon-1.png' | url }}" loading="lazy" />
                                                     </a>
                                                 </li>
                                                 <!-- <li contact-descr="Events Calendar">
@@ -1153,17 +1204,17 @@
       </li> -->
                                                 <li>
                                                     <a href="https://www.facebook.com/nrityagram/" target="_blank">
-                                                        <img src="{{ '/img/social/fb-sq-icon2.png' | url }}" loading="lazy"/>
+                                                        <img src="{{ '/img/social/fb-sq-icon2.png' | url }}" loading="lazy" />
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="https://www.instagram.com/nrityagram/" target="_blank">
-                                                        <img src="{{ '/img/social/instagram.png' | url }}" loading="lazy"/>
+                                                        <img src="{{ '/img/social/instagram.png' | url }}" loading="lazy" />
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="https://www.youtube.com/user/Nrityagram" target="_blank">
-                                                        <img src="{{ '/img/social/youtube.png' | url }}" loading="lazy" id="ytube"/>
+                                                        <img src="{{ '/img/social/youtube.png' | url }}" loading="lazy" id="ytube" />
                                                     </a>
                                                 </li>
                                             </ul>
@@ -1179,7 +1230,7 @@
                                                         <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
                                                             <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
                                                                 <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                                                                    <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z"/>
+                                                                    <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
                                                                 </svg>
                                                                 <span class="sib-form-message-panel__inner-text">
                                 Your subscription could not be saved. Please try again.
@@ -1190,7 +1241,7 @@
                                                         <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
                                                             <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
                                                                 <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                                                                    <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z"/>
+                                                                    <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
                                                                 </svg>
                                                                 <span class="sib-form-message-panel__inner-text">
                                 Your subscription has been successful. You will shortly start receiving news about upcoming performances, new video releases, future events, and updates about our community.
@@ -1216,7 +1267,7 @@
                       </label>
 
                                                                                 <div class="entry__field">
-                                                                                    <input class="input" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" placeholder="FIRSTNAME" data-required="true" required/>
+                                                                                    <input class="input" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" placeholder="FIRSTNAME" data-required="true" required />
                                                                                 </div>
                                                                             </div>
 
@@ -1233,7 +1284,7 @@
                       </label>
 
                                                                                 <div class="entry__field">
-                                                                                    <input class="input" maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="off" placeholder="LASTNAME" data-required="true" required/>
+                                                                                    <input class="input" maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="off" placeholder="LASTNAME" data-required="true" required />
                                                                                 </div>
                                                                             </div>
 
@@ -1250,7 +1301,7 @@
                       </label>
 
                                                                                 <div class="entry__field">
-                                                                                    <input class="input" maxlength="200" type="text" id="CITY" name="CITY" autocomplete="off" placeholder="CITY" data-required="true" required/>
+                                                                                    <input class="input" maxlength="200" type="text" id="CITY" name="CITY" autocomplete="off" placeholder="CITY" data-required="true" required />
                                                                                 </div>
                                                                             </div>
 
@@ -1267,7 +1318,7 @@
                       </label>
 
                                                                                 <div class="entry__field">
-                                                                                    <input class="input" maxlength="200" type="text" id="COUNTRY" name="COUNTRY" autocomplete="off" placeholder="COUNTRY" data-required="true" required/>
+                                                                                    <input class="input" maxlength="200" type="text" id="COUNTRY" name="COUNTRY" autocomplete="off" placeholder="COUNTRY" data-required="true" required />
                                                                                 </div>
                                                                             </div>
 
@@ -1284,7 +1335,7 @@
                       </label>
 
                                                                                 <div class="entry__field">
-                                                                                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required/>
+                                                                                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
                                                                                 </div>
                                                                             </div>
 
@@ -1298,7 +1349,7 @@
                                                                             <div class="form__label-row ">
                                                                                 <div class="entry__choice">
                                                                                     <label>
-                                                                                        <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN"/>
+                                                                                        <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" />
                                                                                         <span class="checkbox checkbox_tick_positive"></span>
                                                                                         <span style="font-size:13px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#3C4858; background-color:transparent;">
                                                                                             <p style="font-size:13px;">I would like to receive Newsletters from Nrityagram and Accept the <a href="https://dev-ngjam.netlify.app/privacypolicy" target="_blank">Data Privacy Statement</a>.</p>
@@ -1341,7 +1392,7 @@
                                                                     <div class="sib-form-block" style="text-align: left">
                                                                         <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#FFFFFF; background-color:#d21f26; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
                                                                             <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
-                                                                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
+                                                                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                                                                             </svg>
                     SUBSCRIBE
                   </button>
@@ -1458,100 +1509,100 @@
                                             <!-- carousels is only for the venue logo ticker tape on homepage -->
                                             {% if carousels %}
                                                 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-                                                <script>
-                                                    var flktyWrapAroundAuto = document.getElementsByClassName("flick-carousel--wraparound-autoplay")[0];
-                                                    if (flktyWrapAroundAuto) {
-                                                        var flkty_wrap = new Flickity(flktyWrapAroundAuto, {
-                                                            wrapAround: true,
-                                                            autoPlay: 2500,
-                                                            freeScroll: true,
-                                                            prevNextButtons: false,
-                                                            pageDots: false
-                                                        });
-                                                        // This avoids FOUC -- flash of unstyled content
-                                                        flktyWrapAroundAuto.style.opacity = 1.0;
-                                                        flkty_wrap.on('pointerUp', function (event, pointer) {
-                                                            flkty_wrap.playPlayer();
-                                                        });
-                                                    }
+            <script>
+                var flktyWrapAroundAuto = document.getElementsByClassName("flick-carousel--wraparound-autoplay")[0];
+                if (flktyWrapAroundAuto) {
+                    var flkty_wrap = new Flickity(flktyWrapAroundAuto, {
+                        wrapAround: true,
+                        autoPlay: 2500,
+                        freeScroll: true,
+                        prevNextButtons: false,
+                        pageDots: false
+                    });
+                    // This avoids FOUC -- flash of unstyled content
+                    flktyWrapAroundAuto.style.opacity = 1.0;
+                    flkty_wrap.on('pointerUp', function (event, pointer) {
+                        flkty_wrap.playPlayer();
+                    });
+                }
 
-                                                    var review_content_flkty = document.getElementById("review-content-flkty");
-                                                    var review_img_flkty = document.getElementById("review-img-flkty");
-                                                    // var review_nav_buttons = document.getElementById("review-nav-buttons");
-                                                    var view_all_button = document.getElementById("view-all-button");
+                var review_content_flkty = document.getElementById("review-content-flkty");
+                var review_img_flkty = document.getElementById("review-img-flkty");
+                // var review_nav_buttons = document.getElementById("review-nav-buttons");
+                var view_all_button = document.getElementById("view-all-button");
 
-                                                    if (review_content_flkty && review_img_flkty) {
-                                                        var flkty__review_img = new Flickity('.review-img--carousel', {
-                                                            wrapAround: true,
-                                                            prevNextButtons: false,
-                                                            pageDots: false,
-                                                            draggable: false,
-                                                            asNavFor: '.review-content--carousel'
-                                                        });
-                                                        var flkty__review_content = new Flickity('.review-content--carousel', {
-                                                            wrapAround: true,
-                                                            prevNextButtons: true,
-                                                            pageDots: true,
-                                                            draggable: true
-                                                        });
-                                                        // This avoids FOUC -- flash of unstyled content
-                                                        // Turn on opacity after intialising flickity sliders
-                                                        review_content_flkty.style.opacity = 1.0;
-                                                        review_img_flkty.style.opacity = 1.0;
-                                                        // review_nav_buttons.style.opacity = 1.0;
-                                                        if (view_all_button) 
-                                                            view_all_button.style.opacity = 1.0;
-                                                        
-                                                        var previousButton = document.querySelector('.button--previous');
-                                                        if (previousButton) {
-                                                            previousButton.addEventListener('click', function () {
-                                                                flkty__review_content.previous();
-                                                                flkty__review_img.previous();
-                                                            });
-                                                        }
+                if (review_content_flkty && review_img_flkty) {
+                    var flkty__review_img = new Flickity('.review-img--carousel', {
+                        wrapAround: true,
+                        prevNextButtons: false,
+                        pageDots: false,
+                        draggable: false,
+                        asNavFor: '.review-content--carousel'
+                    });
+                    var flkty__review_content = new Flickity('.review-content--carousel', {
+                        wrapAround: true,
+                        prevNextButtons: true,
+                        pageDots: true,
+                        draggable: true
+                    });
+                    // This avoids FOUC -- flash of unstyled content
+                    // Turn on opacity after intialising flickity sliders
+                    review_content_flkty.style.opacity = 1.0;
+                    review_img_flkty.style.opacity = 1.0;
+                    // review_nav_buttons.style.opacity = 1.0;
+                    if (view_all_button) 
+                        view_all_button.style.opacity = 1.0;
+                    
+                    var previousButton = document.querySelector('.button--previous');
+                    if (previousButton) {
+                        previousButton.addEventListener('click', function () {
+                            flkty__review_content.previous();
+                            flkty__review_img.previous();
+                        });
+                    }
 
-                                                        var nextButton = document.querySelector('.button--next');
-                                                        if (nextButton) {
-                                                            nextButton.addEventListener('click', function () {
-                                                                flkty__review_content.next();
-                                                                flkty__review_img.next();
-                                                            });
-                                                        }
-                                                    }
-                                                </script>
-                                            {% endif %}
+                    var nextButton = document.querySelector('.button--next');
+                    if (nextButton) {
+                        nextButton.addEventListener('click', function () {
+                            flkty__review_content.next();
+                            flkty__review_img.next();
+                        });
+                    }
+                }
+            </script>
+        {% endif %}
 
-                                            {% if slider %}
-                                                <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        {% if slider %}
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-                                                <script src="{{ '/utils/owl.carousel.min.js' | url }}"></script>
-                                                <script src="{{ '/utils/owl_custom.js' | url }}"></script>
-                                            {% endif %}
+            <script src="{{ '/utils/owl.carousel.min.js' | url }}"></script>
+            <script src="{{ '/utils/owl_custom.js' | url }}"></script>
+        {% endif %}
 
-                                            {% if gismap %}
-                                                <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-                                                <!-- Make sure you put this AFTER Leaflet's CSS -->
-                                                <script
+        {% if gismap %}
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <!-- Make sure you put this AFTER Leaflet's CSS -->
+            <script
       src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
       integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
       crossorigin="" defer="defer"
     ></script>
-                                            {% endif %}
+        {% endif %}
 
-                                            {% if lightgallery %}
-                                                <!-- require jQuery with v1.2.21 which displays thumbnails as well as captions. v1.4 does show both. -->
-                                                <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-                                                <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.21/js/lightgallery-all.min.js"></script>
-                                                <script type="text/javascript">
-                                                    // lightGallery(document.getElementById('lightgallery'), {
-                                                    //   thumbnail: true,
-                                                    //   download: false,
-                                                    //   mode: 'lg-fade',
-                                                    //   cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-                                                    // });
-                                                    $("#lightgallery").lightGallery({download: false, mode: 'lg-fade', preload: 4, toogleThumb: true});
-                                                </script>
-                                            {% endif %}
+        {% if lightgallery %}
+            <!-- require jQuery with v1.2.21 which displays thumbnails as well as captions. v1.4 does show both. -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.21/js/lightgallery-all.min.js"></script>
+            <script type="text/javascript">
+                // lightGallery(document.getElementById('lightgallery'), {
+                //   thumbnail: true,
+                //   download: false,
+                //   mode: 'lg-fade',
+                //   cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+                // });
+                $("#lightgallery").lightGallery({download: false, mode: 'lg-fade', preload: 4, toogleThumb: true});
+            </script>
+        {% endif %}
 
-                                        </body>
-                                    </html>
+    </body>
+</html>

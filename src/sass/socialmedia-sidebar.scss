@@ -31,6 +31,12 @@ $wnd-desk: 801px;
 	}
 }
 
+@media screen and (max-width: 800px) {
+	.socialmedia-sidebar {
+		display: none;
+	}
+}
+
 .socialmedia-sidebar li[contact-descr]:hover::after,
 .socialmedia-sidebar li[contact-descr]:focus::after {
 	font-family: 'Lato', sans-serif;
@@ -46,4 +52,30 @@ $wnd-desk: 801px;
 	color: #ffffff;
 	font-size: 0.6rem;
 	z-index: 6;
+}
+
+.socialmedia-sidebar-mob {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+	margin: 0 auto;
+	li {
+		list-style: none;
+	}
+	img {
+		width: calc(27% + 0.5vw);
+		height: calc(27% + 0.5vw);
+		padding-top: 0.3rem;
+		cursor: pointer;
+
+		// tablet & mobile
+		@media screen and (max-width: $wnd-tab) {
+			width: 22px;
+		}
+
+		&#ytube {
+			// padding-top: 0;
+			height: 18px;
+		}
+	}
 }
