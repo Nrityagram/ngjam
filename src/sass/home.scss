@@ -1,98 +1,127 @@
 .home_tagline {
-  z-index: 6;
-  
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  
-  position: absolute;
-  
-  color: #f3f3f3;
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.75);
+	z-index: 6;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
 
-  &.home2 {
-    min-width: 50%;
-    text-align: left;
-    bottom: 3vh;
-    left: 60px;
-  }
+	position: absolute;
 
-  &.home1 {
-    min-width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    bottom: 1.5vh;
-  }
+	color: #f3f3f3;
+	text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.75);
 
-  &.home3 {
-    min-width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    bottom: 40%;
-    transform: translateY(-40%);
-  }
+	&.home2 {
+		min-width: 50%;
+		text-align: left;
+		bottom: 3vh;
+		left: 60px;
+	}
 
-  .tagline-text {
-    display: block;
-    // font-size: calc(17px + 1vw);
-    font-size: calc(10px + 0.90vw);
-    font-weight: var(--light-serif-font-weight);
-    
-    &.home1 {
-      max-width: 90%;
-      align-self: center;
+	&.home1 {
+		min-width: 100%;
+		margin: 0 auto;
+		justify-content: center;
+		align-content: center;
+		text-align: center;
+		bottom: 4.5svh;
+	}
+
+	@media screen and (max-width: 800px) {
+		&.home1 {
+      // bottom: 13svh;
+      bottom: 0;
+      min-height: max-content;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+		}
+	}
+
+	&.home3 {
+		min-width: 100%;
+		margin: 0 auto;
+		justify-content: center;
+		align-content: center;
+		text-align: center;
+		bottom: 40%;
+		transform: translateY(-40%);
+	}
+
+	.tagline-text {
+		display: block;
+		// font-size: calc(17px + 1vw);
+		font-size: calc(10px + 0.9vw);
+		font-weight: var(--light-serif-font-weight);
+
+		&.home1 {
+			max-width: 90%;
+			align-self: center;
+		}
+		&.home2 {
+			max-width: 100%;
+		}
+		&.home3 {
+			max-width: 90%;
+			align-self: center;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		.tagline-text {
+			font-size: calc(17px + 0.9vw);
+		}
+	}
+
+	.tagline-credit {
+		display: block;
+		// font-size: calc(7px + 0.8vw);
+		// same font size as quote
+		font-size: calc(10px + 0.9vw);
+		font-weight: var(--medium-serif-font-weight);
+		line-height: 1.3em;
+
+		&.home1 {
+			align-self: center;
+		}
+	}
+    @media screen and (max-width: 800px) {
+      .tagline-credit {
+        font-size: calc(12px + 0.9vw);
+        &.home1 {
+            padding-bottom: 13svh;
+          }
+      }
     }
-    &.home2 {
-      max-width: 100%;
-    }
-    &.home3 {
-      max-width: 90%;
-      align-self: center;
-    }
-  }
-  .tagline-credit {
-    display: block;
-    // font-size: calc(7px + 0.8vw);
-    // same font size as quote
-    font-size: calc(10px + 0.90vw);
-    font-weight: var(--medium-serif-font-weight);
-    line-height: 1.3em;
-
-    &.home1 {
-      align-self: center;
-    }
-  }
 }
 .home-credit {
-  position: absolute;
-  writing-mode: vertical-rl;
-  bottom: 2vh;
-  right: 3px;
-  font-size: var(--image-credit-font-size-large);
-  font-family: var(--sans-serif-font-family);
-  font-weight: var(--light-serif-font-weight);
-  color: var(--light-grey-color);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
-  // padding: 0.1em 0.5em;
+	position: absolute;
+	writing-mode: vertical-rl;
+	bottom: 2vh;
+	right: 3px;
+	font-size: var(--image-credit-font-size-large);
+	font-family: var(--sans-serif-font-family);
+	font-weight: var(--light-serif-font-weight);
+	color: var(--light-grey-color);
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
+	// padding: 0.1em 0.5em;
+}
+
+@media screen and (max-width: 800px) {
+  .home-credit {
+    bottom: 35svh;
+  }
 }
 
 .home-credit::before {
-  content: "Photo : ";
+	content: 'Photo : ';
 }
 
 // Desktop + Tablet
 @media only screen and (min-width: 800px) {
-  .home-credit {
-    bottom: 2vh;
-  }
+	.home-credit {
+		bottom: 2vh;
+	}
 
-  .home_tagline {
-    // bottom: 60px;
-    // bottom: 5vh;
-    bottom: 7vh;
-  }
+	.home_tagline {
+		// bottom: 60px;
+		// bottom: 5vh;
+		bottom: 7vh;
+	}
 }
