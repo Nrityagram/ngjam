@@ -1,109 +1,120 @@
 p {
-    // font-size: var(--desktop-body-fontsize);
-    &.emphasis {
-        color: var(--primary-color4) !important;
-        a {
-            color: var(--primary-color4) !important;
-            text-decoration-color: var(--primary-color4) !important;
-        }
-        &.emphasis--bold {
-            font-weight: var(--medium-serif-font-weight);
-        }
-        &.emphasis--large-font {
-            font-size: 1.3em;
-        }
-    }
-    &.large {
-        font-size: calc(10px + 1vw);
-        font-weight: var(--light-serif-font-weight);
-        color: var(--body-text-color-lighter);
-    }
-    &.small {
-        font-size: calc(12px + 0.3vw);
-    }
+	// font-size: var(--desktop-body-fontsize);
+	&.emphasis {
+		color: var(--primary-color4) !important;
+		a {
+			color: var(--primary-color4) !important;
+			text-decoration-color: var(--primary-color4) !important;
+		}
+		&.emphasis--bold {
+			font-weight: var(--medium-serif-font-weight);
+		}
+		&.emphasis--large-font {
+			font-size: 1.3em;
+		}
+	}
+	&.large {
+		font-size: calc(10px + 1vw);
+		font-weight: var(--light-serif-font-weight);
+		color: var(--body-text-color-lighter);
+	}
+	&.small {
+		font-size: calc(12px + 0.3vw);
+	}
+}
+
+@media screen and (max-width: 800px) {
+	p {
+		&.large {
+			font-size: var(--mobile-body-fontsize);
+		}
+	}
 }
 
 .red-text {
-    color: var(--primary-color4);
-    a {
-        text-decoration-color: var(--primary-color4) !important;
-        &:link {
-            color: var(--primary-color4) !important;
-        }
-        &:visited {
-            color: var(--primary-color4) !important;
-        }
-    }
+	color: var(--primary-color4);
+	a {
+		text-decoration-color: var(--primary-color4) !important;
+		&:link {
+			color: var(--primary-color4) !important;
+		}
+		&:visited {
+			color: var(--primary-color4) !important;
+		}
+	}
 }
 .semi-grey-text {
-    color: var(--semi-grey-color);
+	color: var(--semi-grey-color);
 
-    a {
-        text-decoration-color: var(--semi-grey-color) !important;
+	a {
+		text-decoration-color: var(--semi-grey-color) !important;
 
-        &:link {
-            color: var(--semi-grey-color) !important;
-        }
+		&:link {
+			color: var(--semi-grey-color) !important;
+		}
 
-        &:visited {
-            color: var(--semi-grey-color) !important;
-        }
-    }
+		&:visited {
+			color: var(--semi-grey-color) !important;
+		}
+	}
 }
 .light-grey-text {
-    color: var(--light-grey-color2);
-    a {
-        text-decoration-color: var(--light-grey-color2) !important;
+	color: var(--light-grey-color2);
+	a {
+		text-decoration-color: var(--light-grey-color2) !important;
 
-        &:link {
-            color: var(--light-grey-color2) !important;
-        }
+		&:link {
+			color: var(--light-grey-color2) !important;
+		}
 
-        &:visited {
-            color: var(--light-grey-color2) !important;
-        }
-    }
+		&:visited {
+			color: var(--light-grey-color2) !important;
+		}
+	}
 }
 .black-text {
-    color: #000;
+	color: #000;
 }
 .bold-text {
-    font-weight: var(--medium-serif-font-weight);
+	font-weight: var(--medium-serif-font-weight);
 }
 
 .strike-out {
-    color: var(--true-red);
-    text-decoration: line-through;
+	color: var(--true-red);
+	text-decoration: line-through;
 }
 
-h1, h2, h3, h4 {
-    color: var(--primary-color4);
+h1,
+h2,
+h3,
+h4 {
+	color: var(--primary-color4);
 }
 
 // Styling of summary+details accordion elements
 details summary {
-    cursor: pointer;
+	cursor: pointer;
 }
-details summary > * { 
-    display: inline;
+details summary > * {
+	display: inline;
 }
 
 summary {
-    color: var(--primary-color4);
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
-    &.no-top-pad {
-        padding-top: 0;
-    }
+	color: var(--primary-color4);
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	&.no-top-pad {
+		padding-top: 0;
+	}
 }
 
 details {
-    border-bottom: 1px solid var(--light-grey-color);
-    p {
-        margin-bottom: 0 !important;
-        padding-bottom: 0.3em;
-        &:last-child {
-            padding-bottom: 1.2em;
-        }
-    }
+	border-bottom: 1px solid var(--light-grey-color);
+	p {
+		margin-bottom: 0 !important;
+		padding-bottom: 0.3em;
+		&:last-child {
+			padding-bottom: 1.2em;
+		}
+	}
 }
