@@ -303,8 +303,21 @@ $wnd-lg: 1230px;
 
 .central-column {
 	width: 67%;
-	grid-column: 2;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	grid-gap: 1.5rem;
+	outline: 1px solid hotpink;
+
+	&.align-center {
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.central-column {
+		width: 80.5vw;
+	}
 }
 
 .two-column-grid {
