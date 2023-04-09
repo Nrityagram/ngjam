@@ -85,6 +85,10 @@ button.slideup-card,
     	box-shadow: none;
   	}
 
+	&.add-margin-top {
+		margin-top: 1.25em;
+	}
+
 	&:before {
 		content: '';
 		position: absolute;
@@ -205,11 +209,12 @@ button>.slideup-card__content__title,
 button>.slideup-card__content__copy,
 .slideup-card__content__copy {	
 	font-family: var(--serif-font-family);
+	line-height: 1.2;
 	font-weight: var(--light-serif-font-weight);
   	text-shadow: 1px 1px rgba(0,0,0,0.5);
   	width: 100%;
 	// mobile
-	margin-top: calc(4em + 0.9vw);
+	margin-top: calc(3em + 0.9vw);
 	margin-bottom: 35px;
 
 	// 800px and above
