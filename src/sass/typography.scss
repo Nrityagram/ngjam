@@ -21,9 +21,10 @@ p {
 	&.small {
 		font-size: calc(12px + 0.3vw);
 	}
-    &.center {
-        text-align: center;
-    }
+	&.center-align {
+		margin: 0 auto 0.85em;
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -92,9 +93,22 @@ h2,
 h3,
 h4 {
 	color: var(--primary-color4);
-    &.center {
-        text-align: center;
-    }
+    // center align only for mobile
+	&.center-align-sm {
+		text-align: left;
+	}
+}
+@media screen and (max-width: 800px) {
+	h1,
+	h2,
+	h3,
+	h4 {
+        // center align only for mobile
+		&.center-align-sm {
+			margin: 0 auto 0.5em;
+			text-align: center;
+		}
+	}
 }
 
 // Styling of summary+details accordion elements
