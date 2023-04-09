@@ -1569,6 +1569,37 @@
                         });
                     }
                 }
+
+                // Show only review content flickity slider for mobile
+                var review_content_flkty_mobile = document.getElementById("review-content-flkty-mobile");
+                if (review_content_flkty_mobile) {
+                    var flkty__review_content = new Flickity('.review-content--carousel-mobile', {
+                        wrapAround: true,
+                        prevNextButtons: false,
+                        pageDots: true,
+                        draggable: true
+                    });
+                    // This avoids FOUC -- flash of unstyled content
+                    // Turn on opacity after intialising flickity sliders
+                    review_content_flkty_mobile.style.opacity = 1.0;
+                    // review_nav_buttons.style.opacity = 1.0;
+                    if (view_all_button) 
+                        view_all_button.style.opacity = 1.0;
+                    
+                    var previousButton = document.querySelector('.button--previous');
+                    if (previousButton) {
+                        previousButton.addEventListener('click', function () {
+                            flkty__review_content.previous();
+                        });
+                    }
+
+                    var nextButton = document.querySelector('.button--next');
+                    if (nextButton) {
+                        nextButton.addEventListener('click', function () {
+                            flkty__review_content.next();
+                        });
+                    }
+                }
             </script>
         {% endif %}
 
