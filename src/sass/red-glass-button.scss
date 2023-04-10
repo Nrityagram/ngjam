@@ -129,6 +129,15 @@ $wnd-lg: 1200px;
   margin: 0.8em auto 0.5em;
 }
 
+@media screen and (max-width: 800px) {
+  .red-glass-button.sml {
+      font-size: calc(14px + 0.27vw);
+      padding: 1.0em 2.8em;
+      text-align: center;
+      margin: 1em auto 0;
+    }
+}
+
 .red-glass-button.wide {
   padding-top: 0.35em;
   padding-bottom: 0.35em;

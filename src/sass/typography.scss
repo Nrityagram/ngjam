@@ -103,6 +103,8 @@ h4 {
 	h2,
 	h3,
 	h4 {
+        // Reduce line height
+        line-height: 1.1;
         // center align only for mobile
 		&.center-align-sm {
 			margin: 0 auto 0.5em;
