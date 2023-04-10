@@ -1,29 +1,49 @@
 .pullquote {
-    align-self: center;
-    // border: 1px solid cadetblue;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    padding-right: 1.5em;
-    color: var(--primary-color4);
-    letter-spacing: 0.05em;
+	align-self: center;
+	// border: 1px solid cadetblue;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	padding-right: 1.5em;
+	color: var(--primary-color4);
+	letter-spacing: 0.05em;
 }
 
 .quote {
-    text-align: right;
-    &.left-align {
-        text-align: left;
-    }
-    font-size: 1.6em;
-    font-weight: var(--light-serif-font-weight);
-    // font-weight: 500;
+	text-align: right;
+	&.left-align {
+		text-align: left;
+	}
+	font-size: 1.6em;
+	font-weight: var(--light-serif-font-weight);
+	// font-weight: 500;
 }
 
 .attribution {
-    text-align: right;
-    &.left-align {
-        text-align: left;
-    }
-    font-size: 1.07em;
+	text-align: right;
+	&.left-align {
+		text-align: left;
+	}
+	font-size: 1.07em;
+}
 
+@media screen and (max-width: 800px) {
+	.pullquote {
+		align-self: left;
+        line-height: 1.2;
+	}
+	.quote {
+		text-align: left;
+		font-size: 1.4em;
+		&.left-align {
+			text-align: right;
+		}
+	}
+	.attribution {
+		text-align: left;
+        font-size: 0.9em;
+		&.left-align {
+			text-align: right;
+		}
+	}
 }
