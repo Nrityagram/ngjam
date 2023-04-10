@@ -2,6 +2,11 @@
 .insta-container {
   min-width: 25vw;
 }
+@media screen and (max-width: 800px) {
+  .insta-container {
+    min-width: 0;
+  }
+}
 
 .fb-container {
   min-width: 25vw;
