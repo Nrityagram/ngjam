@@ -17,7 +17,7 @@ title: 'Home'
 		<div class="slideup-card__grid">
 			<div
 					class="slideup-card"
-					style = "background-image: url('https://res.cloudinary.com/nrityagram/image/upload/v1653890990/ensemble-card-v8-2_xwydxb.jpg');">
+					style = "background-image: url('https://res.cloudinary.com/nrityagram/image/upload/v1653890990/ensemble-card-v8-2_xwydxb.jpg');" onClick="slideUpContent(this);">
 
 				<div class="slideup-card__content">
 					<div class="slideup-card__content__title">Ensemble</div>
@@ -1440,20 +1440,32 @@ title: 'Home'
 	</div>
 	<div class="wrapper medium title-less-top-pad">
 		<h1 class="medium-font center-align-sm">Visit Nrityagram</h1>
-		<div class="multi-column-section">
-			<div class="w-60">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1192.5589560826568!2d77.45979436871723!3d13.163328428545444!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1643316702354!5m2!1sen!2sin"
-					width="100%"
-					height="400"
-					frameborder="0"
-					style="border:0;border-radius: 12px 0 0 12px; overflow: hidden; height: 100%;"
-					allowfullscreen="" loading="lazy"
-				></iframe>
+		<div class="desk-view">
+			<div class="multi-column-section">
+				<div class="w-60">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1192.5589560826568!2d77.45979436871723!3d13.163328428545444!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1643316702354!5m2!1sen!2sin"
+						width="100%"
+						height="100%"
+						frameborder="0"
+						style="border:0;border-radius: 12px 0 0 12px; overflow: hidden; width: 100%; height: 100%; aspect-ratio: 4/3"
+						allowfullscreen="" loading="lazy"
+					></iframe>
+				</div>
+				<div class="w-40 img-wrapper">
+					<img src="https://res.cloudinary.com/nrityagram/image/upload/v1644829296/illustration-collage-V9-blur-edge-fog_i9zkzb.jpg" class="fit-height">
+				</div>
 			</div>
-			<div class="w-40 img-wrapper">
-				<img src="https://res.cloudinary.com/nrityagram/image/upload/v1644829296/illustration-collage-V9-blur-edge-fog_i9zkzb.jpg" class="fit-height">
-			</div>
+		</div>
+		<div class="mobile-view">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1192.5589560826568!2d77.45979436871723!3d13.163328428545444!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1643316702354!5m2!1sen!2sin"
+				width="100%"
+				height="100%"
+				frameborder="0"
+				style="border:0;border-radius: 12px; overflow: hidden; width: 100%; height: 100%; aspect-ratio: 1/1"
+				allowfullscreen="" loading="lazy"
+			></iframe>
 		</div>
 		<div class="red-glass-button light no-dropshadow sml media-space-above" onclick="location.href='/findyourway';">More Ways to Reach Us</div>
 	</div>

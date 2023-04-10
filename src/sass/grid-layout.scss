@@ -444,7 +444,6 @@ $wnd-lg: 1230px;
 	grid-template-rows: repeat(12, 3.2vw);
 	grid-template-columns: repeat(9, 3.2vw);
 	grid-gap: 12px;
-	outline: 1px solid orange;
 
 	&.large-mosaic {
 		grid-template-rows: repeat(12, 3.4vw);
