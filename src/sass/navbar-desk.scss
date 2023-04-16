@@ -138,7 +138,8 @@
         }
       }
 
-      &:last-child {
+      &:last-child,
+      &.sub-menu-align-right {
         ul {
           right: 0px;
         }

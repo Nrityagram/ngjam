@@ -1,33 +1,33 @@
 .desk {
-  display: none;
+	display: none;
 }
 
 .mobile {
-  display: block;
+	display: block;
 }
 
 nav {
-  position: sticky;
-  &.not-sticky {
-    position: static;
-  }
-  top: 0;
-  font-family: var(--sans-serif-font-family);
-  font-weight: var(--thin-font-weight);
-  width: 100%;
-  transition: height 0.5s;
-  z-index: var(--navbar-z-index);
-  // overflow-x: hidden;
+	position: sticky;
+	&.not-sticky {
+		position: static;
+	}
+	top: 0;
+	font-family: var(--sans-serif-font-family);
+	font-weight: var(--thin-font-weight);
+	width: 100%;
+	transition: height 0.5s;
+	z-index: var(--navbar-z-index);
+	// overflow-x: hidden;
 }
 
 .navbar .logo {
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  // height: 80px;
-  width: auto;
-  transition: height 0.5s;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	// height: 80px;
+	width: auto;
+	transition: height 0.5s;
 }
 
 .mobile {
@@ -43,8 +43,10 @@ nav {
   justify-content: space-between;
   -webkit-align-items: center;
   align-items: center;
+
   /* fade in checked menu */
   .m-logo {
+    padding-top: 10px;
     height: 68px;
     transition: height 0.5s;
   }
@@ -53,16 +55,24 @@ nav {
 .mobile .m-menu__checkbox {
   display: none;
 }
+
+.mobile label {
+  padding-top: 15px;
+}
+
 .mobile label.m-menu__toggle {
   cursor: pointer;
 }
+
 .mobile .m-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   max-width: 0;
   width: 0;
-  height: 100vh;
+  height: 100svh;
+  // height: max-content;
+
   visibility: hidden;
   -moz-transform: translate3d(100vw, 0, 0);
   -o-transform: translate3d(100vw, 0, 0);
@@ -76,14 +86,15 @@ nav {
   z-index: 1;
   overflow: hidden;
   background-color: #000;
-  &.top-level {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  // &.top-level {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  // }
 }
+
 .mobile .m-menu__header {
-  padding: 20px 20px 10px 25px;
+  padding: 12px 20px 10px 25px;
   height: 60px;
   display: -ms-flexbox;
   display: -webkit-box;
@@ -98,12 +109,14 @@ nav {
   border-bottom: 1px solid var(--navbar-mobile-border-color);
   color: #fff;
 }
+
 .mobile .m-menu__header span {
   font-size: 1.2rem;
   text-align: left;
   padding-left: 20px;
   width: 100%;
 }
+
 .mobile .m-menu .m-menu {
   max-width: 0;
   width: 0;
@@ -114,11 +127,15 @@ nav {
   -webkit-transform: translate3d(100vw, 0, 0);
   transform: translate3d(100vw, 0, 0);
 }
+
 .mobile .m-menu ul {
-  height: 100%;
+  // height: 100%;
+  // height: 100svh;
   overflow-y: auto;
 }
-.mobile .m-menu ul li a, .mobile .m-menu ul li label {
+
+.mobile .m-menu ul li a,
+.mobile .m-menu ul li label {
   display: block;
   text-align: left;
   padding: 0 30px;
@@ -130,35 +147,41 @@ nav {
   font-size: 0.8rem;
   border-bottom: 1px solid var(--navbar-mobile-border-color);
   position: relative;
-  
 }
+
 .mobile .m-menu ul li a {
   padding: 0;
   border-bottom: none;
 }
+
 .mobile .m-menu ul li span.a__chevron {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--navbar-mobile-border-color);
+
   // menu item name takes up 75% of width
   :first-child {
     width: 75%;
   }
+
   // chevron takes up remaining width
   :not(:first-child) {
     flex: 1;
   }
 }
+
 .mobile .m-menu ul li span.a__chevron a {
   padding: 0 30px;
   text-decoration: none;
   border-bottom: none;
 }
+
 .mobile .m-menu ul li span.a__chevron label.a-label__chevron {
   border-bottom: none;
 }
+
 .mobile .m-menu ul li label.a-label__chevron::after {
-  content: "";
+  content: '';
   position: absolute;
   display: inline-block;
   height: 10px;
@@ -175,9 +198,11 @@ nav {
   margin-top: -5px;
   right: 32px;
 }
+
 .mobile .m-menu ul li .-invisible {
   border-bottom: 0;
 }
+
 .mobile .m-menu .m-menu label.m-menu__toggle {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -189,7 +214,8 @@ nav {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-.mobile .m-menu__checkbox:checked ~ .m-menu {
+
+.mobile .m-menu__checkbox:checked~.m-menu {
   max-width: 100vw;
   width: 100vw;
   visibility: visible;
