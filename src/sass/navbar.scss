@@ -86,11 +86,12 @@ nav {
   z-index: 1;
   overflow: hidden;
   background-color: #000;
-  // &.top-level {
+  &.top-level {
+    height: 100svh;
   //   display: flex;
   //   flex-direction: column;
   //   justify-content: space-between;
-  // }
+  }
 }
 
 .mobile .m-menu__header {
